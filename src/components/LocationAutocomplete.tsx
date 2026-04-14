@@ -196,8 +196,8 @@ export function LocationAutocomplete({ value, onChange }: Props) {
         </ul>
       ) : null}
       <p className="text-xs text-zinc-500 dark:text-zinc-400">
-        Pick a Google Places result when possible. You can still type a custom location if search is
-        unavailable.
+        Search is limited to New York City. Pick a Google Places result when possible; you can still
+        type a custom location if search is unavailable.
       </p>
     </div>
   );

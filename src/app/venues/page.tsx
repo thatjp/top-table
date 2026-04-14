@@ -28,8 +28,8 @@ export default async function VenuesPage() {
         Venues
       </h1>
       <p className="mb-8 max-w-2xl text-zinc-600 dark:text-zinc-400">
-        Bars and halls where games have been logged with Google Places. Tap a marker or a row to
-        open that venue&apos;s leaderboard.
+        NYC bars and halls where games have been logged with Google Places. Tap a marker or a row
+        to open that venue&apos;s leaderboard.
       </p>
 
       {demoMode ? (

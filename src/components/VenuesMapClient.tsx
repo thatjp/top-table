@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { NYC_MAP_BOUNDS, NYC_MAP_CENTER } from "@/lib/nyc-map-scope";
 import type { VenueMapRow } from "@/lib/venue-leaderboard";
 
 type Props = {
@@ -23,10 +24,20 @@ export function VenuesMapClient({ venues, apiKey }: Props) {
       await loader.load();
       if (cancelled || !ref.current) return;
 
-      const first = venues[0]!;
+      const nycBounds = new google.maps.LatLngBounds(
+        { lat: NYC_MAP_BOUNDS.south, lng: NYC_MAP_BOUNDS.west },
+        { lat: NYC_MAP_BOUNDS.north, lng: NYC_MAP_BOUNDS.east },
+      );
+
       const map = new google.maps.Map(el, {
-        center: { lat: first.latitude, lng: first.longitude },
+        center: NYC_MAP_CENTER,
         zoom: 11,
+        maxZoom: 14,
+        minZoom: 10,
+        restriction: {
+          latLngBounds: nycBounds,
+          strictBounds: false,
+        },
         mapTypeControl: false,
         streetViewControl: false,
         fullscreenControl: true,
@@ -44,7 +55,7 @@ export function VenuesMapClient({ venues, apiKey }: Props) {
           window.location.href = `/venues/${encodeURIComponent(v.placeId)}`;
         });
       }
-      map.fitBounds(bounds, 48);
+      map.fitBounds(bounds, { top: 100, right: 100, bottom: 100, left: 100 });
     })().catch(() => {
       /* Map failed — list below still works */
     });

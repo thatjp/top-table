@@ -1,3 +1,5 @@
+import { NYC_PLACES_RECTANGLE } from "@/lib/nyc-map-scope";
+
 const PLACES_BASE = "https://places.googleapis.com/v1";
 
 export function getGoogleMapsServerApiKey(): string | null {
@@ -35,6 +37,11 @@ export async function fetchPlacesAutocomplete(
     body: JSON.stringify({
       input: trimmed,
       sessionToken,
+      includedRegionCodes: ["us"],
+      regionCode: "us",
+      locationRestriction: {
+        rectangle: NYC_PLACES_RECTANGLE,
+      },
     }),
   });
 
