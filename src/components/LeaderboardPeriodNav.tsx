@@ -1,27 +1,38 @@
 import Link from "next/link";
 import type { LeaderboardPeriod } from "@/lib/leaderboard";
 
-const LINKS: { period: LeaderboardPeriod; label: string; href: string }[] = [
-  { period: "all", label: "All time", href: "/" },
-  { period: "year", label: "Year", href: "/?period=year" },
-  { period: "month", label: "Month", href: "/?period=month" },
-  { period: "week", label: "Week", href: "/?period=week" },
+const LINKS: { period: LeaderboardPeriod; label: string }[] = [
+  { period: "all", label: "All time" },
+  { period: "year", label: "Year" },
+  { period: "month", label: "Month" },
+  { period: "week", label: "Week" },
 ];
+
+function hrefForPeriod(venueBasePath: string | undefined, period: LeaderboardPeriod): string {
+  const base = venueBasePath ?? "/";
+  if (period === "all") {
+    return base.includes("?") ? base.split("?")[0]! : base;
+  }
+  const sep = base.includes("?") ? "&" : "?";
+  return `${base}${sep}period=${period}`;
+}
 
 type Props = {
   current: LeaderboardPeriod;
+  /** When set, links target this path (e.g. `/venues/ChIJ…`) with `?period=` instead of home. */
+  venueBasePath?: string;
 };
 
-export function LeaderboardPeriodNav({ current }: Props) {
-
+export function LeaderboardPeriodNav({ current, venueBasePath }: Props) {
   return (
     <div className="mb-6">
       <nav
         className="flex flex-wrap gap-2"
         aria-label="Leaderboard time range"
       >
-        {LINKS.map(({ period, label, href }) => {
+        {LINKS.map(({ period, label }) => {
           const active = period === current;
+          const href = hrefForPeriod(venueBasePath, period);
           return (
             <Link
               key={period}

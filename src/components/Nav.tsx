@@ -16,6 +16,18 @@ export async function Nav() {
           Top Table
         </Link>
         <nav className="flex flex-1 flex-wrap items-center gap-3 text-sm font-medium">
+          <Link
+            href="/games/start"
+            className="new-game-nav-btn rounded-full bg-green-600 px-3 py-1.5 text-sm font-semibold text-white hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-500"
+          >
+            New game
+          </Link>
+          <Link
+            href="/venues"
+            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+          >
+            Venues
+          </Link>
           {session?.user ? (
             <>
               {session.user.isAdmin ? (

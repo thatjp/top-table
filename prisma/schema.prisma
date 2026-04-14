@@ -29,24 +29,32 @@ model User {
   gamesLogged    Game[]         @relation("LoggedBy")
   sessionsAsHost GameSession[]  @relation("SessionHost")
   sessionsAsGuest GameSession[] @relation("SessionGuest")
+  sessionsClosed GameSession[] @relation("SessionClosedBy")
 
   @@index([validated])
   @@index([isDemo])
 }
 
 model GameSession {
-  id          String   @id @default(cuid())
-  playerOneId String
-  playerTwoId String
-  startedAt   DateTime @default(now())
-  createdAt   DateTime @default(now())
+  id               String    @id @default(cuid())
+  playerOneId      String
+  playerTwoId      String?
+  inviteToken      String?   @unique
+  startedAt        DateTime?
+  incompleteAt     DateTime?
+  closedAt         DateTime?
+  closedByUserId   String?
+  createdAt        DateTime  @default(now())
 
-  playerOne User @relation("SessionHost", fields: [playerOneId], references: [id], onDelete: Cascade)
-  playerTwo User @relation("SessionGuest", fields: [playerTwoId], references: [id], onDelete: Cascade)
+  playerOne User  @relation("SessionHost", fields: [playerOneId], references: [id], onDelete: Cascade)
+  playerTwo User? @relation("SessionGuest", fields: [playerTwoId], references: [id], onDelete: Cascade)
+  closedBy   User? @relation("SessionClosedBy", fields: [closedByUserId], references: [id], onDelete: SetNull)
 
   @@index([playerOneId])
   @@index([playerTwoId])
   @@index([startedAt])
+  @@index([incompleteAt])
+  @@index([closedAt])
 }
 
 model Game {
@@ -55,6 +63,9 @@ model Game {
   loserId        String
   playedAt       DateTime
   location       String
+  placeId        String?
+  locationLat    Float?
+  locationLng    Float?
   rules          PoolRules
   loggedByUserId String
   createdAt      DateTime  @default(now())
@@ -66,4 +77,5 @@ model Game {
   @@index([winnerId])
   @@index([loserId])
   @@index([playedAt])
+  @@index([placeId])
 }

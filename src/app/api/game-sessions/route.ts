@@ -7,6 +7,7 @@ import { clientIpFromRequest } from "@/lib/client-ip";
 import { rateLimitGameSessionAllow } from "@/lib/rate-limit";
 import { originMatchesHost } from "@/lib/same-origin";
 import { verifyHostToken } from "@/lib/qr-token";
+import { findLiveActiveSessionForUser, markStaleSessionsIncompleteNow } from "@/lib/game-session-lifecycle";
 
 const bodySchema = z.object({
   token: z.string().min(1),
@@ -99,10 +100,31 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Incorrect PIN" }, { status: 403 });
   }
 
+  await markStaleSessionsIncompleteNow();
+  if (await findLiveActiveSessionForUser(hostId)) {
+    return NextResponse.json(
+      {
+        error:
+          "The host already has a match in progress. That session must finish or time out before starting another here.",
+      },
+      { status: 409 },
+    );
+  }
+  if (await findLiveActiveSessionForUser(guestId)) {
+    return NextResponse.json(
+      {
+        error:
+          "You already have a match in progress. Open it from the home page or wait for it to time out before starting another here.",
+      },
+      { status: 409 },
+    );
+  }
+
   const sessionRow = await prisma.gameSession.create({
     data: {
       playerOneId: hostId,
       playerTwoId: guestId,
+      startedAt: new Date(),
     },
     select: {
       id: true,
@@ -114,8 +136,8 @@ export async function POST(req: Request) {
 
   return NextResponse.json({
     id: sessionRow.id,
-    startedAt: sessionRow.startedAt.toISOString(),
+    startedAt: sessionRow.startedAt!.toISOString(),
     playerOneName: sessionRow.playerOne.displayName,
-    playerTwoName: sessionRow.playerTwo.displayName,
+    playerTwoName: sessionRow.playerTwo!.displayName,
   });
 }

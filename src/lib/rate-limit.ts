@@ -39,6 +39,16 @@ export function rateLimitGameSessionAllow(key: string): boolean {
   return rateLimitAllowInWindow(`game-session:${key}`, 60_000, 20);
 }
 
+/** Host starts a session with email + PIN (unauthenticated POST). */
+export function rateLimitGameSessionStartAllow(ip: string): boolean {
+  return rateLimitAllowInWindow(`game-session-start:${ip}`, 60_000, 20);
+}
+
+/** Guest joins via invite token + email + PIN (unauthenticated POST). */
+export function rateLimitGameSessionJoinAllow(ip: string): boolean {
+  return rateLimitAllowInWindow(`game-session-join:${ip}`, 60_000, 20);
+}
+
 /** Registration: per client IP, 15 min, 10 attempts (counts every POST). */
 export function rateLimitRegisterAllow(ip: string): boolean {
   return rateLimitAllowInWindow(`register:${ip}`, 900_000, 10);
@@ -47,6 +57,16 @@ export function rateLimitRegisterAllow(ip: string): boolean {
 /** Game PIN change POST: per client IP, 1 min, 15 attempts. */
 export function rateLimitPinChangeAllow(ip: string): boolean {
   return rateLimitAllowInWindow(`pin-change:${ip}`, 60_000, 15);
+}
+
+/** Places autocomplete proxy: per IP, 1 min, 40 requests. */
+export function rateLimitPlacesAutocompleteAllow(ip: string): boolean {
+  return rateLimitAllowInWindow(`places-autocomplete:${ip}`, 60_000, 40);
+}
+
+/** Places details proxy: per IP, 1 min, 30 requests. */
+export function rateLimitPlacesDetailsAllow(ip: string): boolean {
+  return rateLimitAllowInWindow(`places-details:${ip}`, 60_000, 30);
 }
 
 /** True if this key is in lockout (failed credential attempts >= max). */

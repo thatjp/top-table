@@ -19,6 +19,7 @@
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.8",
     "@prisma/client": "^6.19.3",
     "bcrypt": "^6.0.0",
     "date-fns": "^3.6.0",
@@ -32,6 +33,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@types/google.maps": "^3.58.1",
     "@tailwindcss/postcss": "^4",
     "@types/bcrypt": "^6.0.0",
     "@types/node": "^20",

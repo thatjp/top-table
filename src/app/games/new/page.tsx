@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { GameLogForm } from "@/components/GameLogForm";
+import { markStaleSessionsIncompleteNow } from "@/lib/game-session-lifecycle";
 import { prisma } from "@/lib/prisma";
 
 export const metadata: Metadata = {
@@ -43,6 +44,8 @@ export default async function NewGamePage({
     select: { validated: true, displayName: true },
   });
 
+  await markStaleSessionsIncompleteNow();
+
   const row = await prisma.gameSession.findUnique({
     where: { id: sessionId },
     include: {
@@ -54,6 +57,19 @@ export default async function NewGamePage({
     redirect("/");
   }
 
+  if (!row.playerTwoId || !row.playerTwo) {
+    redirect(`/games/session/${sessionId}`);
+  }
+
+  if (!row.startedAt) {
+    redirect(`/games/session/${sessionId}`);
+  }
+
+  if (row.closedAt) {
+    redirect("/");
+  }
+
+  const isHost = row.playerOneId === session.user.id;
   const now = new Date();
   const dateTimeLabel = now.toLocaleString(undefined, {
     dateStyle: "medium",
@@ -67,39 +83,48 @@ export default async function NewGamePage({
   const gameLengthLabel = formatGameLength(row.startedAt, now);
 
   return (
-    <div className="mx-auto flex max-w-lg flex-1 flex-col px-4 py-12">
+    <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 py-12">
       <Link
         href="/"
         className="mb-8 text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
       >
         ← Leaderboard
       </Link>
-      <h1 className="mb-2 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">Log a game</h1>
-      <div className="mb-8 text-sm text-zinc-600 dark:text-zinc-400">
-        <p>{dateTimeLabel}</p>
-        {gameLengthLabel ? (
-          <p className="mt-1">
-            Game length: <span className="text-zinc-800 dark:text-zinc-200">{gameLengthLabel}</span>
-          </p>
-        ) : null}
-      </div>
+      <div className="max-w-lg">
+        <h1 className="mb-2 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">Log a game</h1>
+        <div className="mb-8 text-sm text-zinc-600 dark:text-zinc-400">
+          <p>{dateTimeLabel}</p>
+          {gameLengthLabel ? (
+            <p className="mt-1">
+              Game length:{" "}
+              <span className="text-zinc-800 dark:text-zinc-200">{gameLengthLabel}</span>
+            </p>
+          ) : null}
+        </div>
 
-      {!me?.validated ? (
-        <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-amber-900 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-100">
-          Your account is not validated yet. You cannot log games until an admin approves your
-          profile.
-        </div>
-      ) : !opponent || !row.playerOne.validated || !row.playerTwo.validated || row.playerOne.isDemo || row.playerTwo.isDemo ? (
-        <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-amber-900 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-100">
-          This session is not eligible for logging a completed game.
-        </div>
-      ) : (
-        <GameLogForm
-          currentUserId={session.user.id}
-          currentUserName={me.displayName}
-          opponent={opponent}
-        />
-      )}
+        {!me?.validated ? (
+          <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-amber-900 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-100">
+            Your account is not validated yet. You cannot log games until an admin approves your
+            profile.
+          </div>
+        ) : !opponent || !row.playerOne.validated || !row.playerTwo.validated || row.playerOne.isDemo || row.playerTwo.isDemo ? (
+          <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-amber-900 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-100">
+            This session is not eligible for logging a completed game.
+          </div>
+        ) : !isHost ? (
+          <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-800 dark:border-zinc-700 dark:bg-zinc-900/50 dark:text-zinc-200">
+            Only the host can log the result and close this session. You can leave this page; your
+            session will update when the host saves the game.
+          </div>
+        ) : (
+          <GameLogForm
+            sessionId={sessionId}
+            currentUserId={session.user.id}
+            currentUserName={me.displayName}
+            opponent={opponent}
+          />
+        )}
+      </div>
     </div>
   );
 }

@@ -54,11 +54,19 @@ export function verifyHostToken(token: string): { userId: string } | null {
   return { userId: data.sub };
 }
 
-export function buildQrVerifyUrl(token: string): string {
+export function appOrigin(): string {
   const raw =
     process.env.NEXTAUTH_URL?.trim() ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "") ||
     "http://localhost:3000";
-  const origin = raw.replace(/\/$/, "");
-  return `${origin}/games/verify?token=${encodeURIComponent(token)}`;
+  return raw.replace(/\/$/, "");
+}
+
+export function buildQrVerifyUrl(token: string): string {
+  return `${appOrigin()}/games/verify?token=${encodeURIComponent(token)}`;
+}
+
+/** Join link for a pending session (invite token is stored on `GameSession`). */
+export function buildJoinInviteUrl(inviteToken: string): string {
+  return `${appOrigin()}/games/join?t=${encodeURIComponent(inviteToken)}`;
 }

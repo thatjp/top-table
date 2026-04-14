@@ -2,19 +2,22 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { LocationAutocomplete, type ResolvedVenue } from "@/components/LocationAutocomplete";
 
 type Player = { id: string; displayName: string };
 
 type Props = {
+  sessionId: string;
   currentUserId: string;
   currentUserName: string;
   opponent: Player;
 };
 
-export function GameLogForm({ currentUserId, currentUserName, opponent }: Props) {
+export function GameLogForm({ sessionId, currentUserId, currentUserName, opponent }: Props) {
   const router = useRouter();
   const [winnerId, setWinnerId] = useState<string | null>(null);
   const [location, setLocation] = useState("");
+  const [venue, setVenue] = useState<ResolvedVenue | null>(null);
   const [rules, setRules] = useState<"APA" | "BCA" | "Bar">("Bar");
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -35,11 +38,15 @@ export function GameLogForm({ currentUserId, currentUserName, opponent }: Props)
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          sessionId,
           opponentId: opponent.id,
           winnerId,
           loserId,
           location,
           rules,
+          placeId: venue?.placeId ?? null,
+          locationLat: venue?.locationLat ?? null,
+          locationLng: venue?.locationLng ?? null,
         }),
       });
       const data = (await res.json().catch(() => ({}))) as { error?: unknown };
@@ -98,21 +105,13 @@ export function GameLogForm({ currentUserId, currentUserName, opponent }: Props)
         </div>
       </div>
 
-      <div className="flex flex-col gap-1">
-        <label htmlFor="location" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-          Where you played
-        </label>
-        <input
-          id="location"
-          type="text"
-          required
-          maxLength={500}
-          placeholder="Bar name, city, table room…"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-          className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
-        />
-      </div>
+      <LocationAutocomplete
+        value={location}
+        onChange={(loc, resolved) => {
+          setLocation(loc);
+          setVenue(resolved);
+        }}
+      />
 
       <div className="flex flex-col gap-2">
         <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Rules</p>

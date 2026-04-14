@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
+import { ActiveGameCard } from "@/components/ActiveGameCard";
+import { IncompleteSessionsWarning } from "@/components/IncompleteSessionsWarning";
 import { LeaderboardPeriodNav } from "@/components/LeaderboardPeriodNav";
 import { LeaderboardTable } from "@/components/LeaderboardTable";
+import { auth } from "@/auth";
+import {
+  findIncompleteHostedSessions,
+  findLiveActiveSessionForUser,
+  markStaleSessionsIncompleteNow,
+} from "@/lib/game-session-lifecycle";
 import { getLeaderboard, parseLeaderboardPeriod } from "@/lib/leaderboard";
 import { DEMO_LEADERBOARD_COOKIE } from "@/lib/demo";
 
@@ -29,8 +37,28 @@ export default async function HomePage({ searchParams }: PageProps) {
   const rows = await getLeaderboard({ demo: demoMode, period });
   const minGames = minGamesLabel();
 
+  const authSession = await auth();
+  let liveActive = null as Awaited<ReturnType<typeof findLiveActiveSessionForUser>>;
+  let incompleteHosted: Awaited<ReturnType<typeof findIncompleteHostedSessions>> = [];
+  if (authSession?.user?.id) {
+    await markStaleSessionsIncompleteNow();
+    liveActive = await findLiveActiveSessionForUser(authSession.user.id);
+    incompleteHosted = await findIncompleteHostedSessions(authSession.user.id);
+  }
+
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 py-10">
+      {incompleteHosted.length > 0 ? (
+        <IncompleteSessionsWarning sessions={incompleteHosted} />
+      ) : null}
+      {liveActive ? (
+        <ActiveGameCard
+          sessionId={liveActive.id}
+          playerOneName={liveActive.playerOne.displayName}
+          playerTwoName={liveActive.playerTwo!.displayName}
+          startedAtIso={liveActive.startedAt.toISOString()}
+        />
+      ) : null}
       {demoMode ? (
         <div className="mb-6 rounded-xl border border-violet-200 bg-violet-50 px-4 py-3 text-sm text-violet-900 dark:border-violet-900 dark:bg-violet-950/50 dark:text-violet-100">
           <strong>Demo leaderboard</strong> — showing seeded demo players only

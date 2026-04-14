@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 import { clientIpFromRequest } from "@/lib/client-ip";
 import { prisma } from "@/lib/prisma";
 import { rateLimitFailuresBlocked, rateLimitFailuresRecord } from "@/lib/rate-limit";
+import { resolveUserByLoginIdentifier } from "@/lib/resolve-login-identifier";
 
 /** bcrypt hash of "secret" — used to normalize work when email is unknown (timing). */
 const BCRYPT_DUMMY =
@@ -23,13 +24,27 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     Credentials({
       name: "credentials",
       credentials: {
-        email: { label: "Email", type: "email" },
+        email: { label: "Email or display name", type: "text" },
         password: { label: "Password", type: "password" },
+        pin: { label: "Game PIN", type: "text" },
       },
       async authorize(credentials, request) {
-        const email = credentials?.email as string | undefined;
+        const loginRaw = credentials?.email as string | undefined;
+        const loginLookup = loginRaw?.trim() ?? "";
         const password = credentials?.password as string | undefined;
-        if (!email || !password) return null;
+        const pin = credentials?.pin as string | undefined;
+
+        if (!loginLookup) return null;
+
+        const hasPassword = typeof password === "string" && password.length > 0;
+        const pinOnly =
+          typeof pin === "string" &&
+          /^\d{4}$/.test(pin) &&
+          !hasPassword;
+
+        if (!pinOnly && (!hasPassword || (password?.length ?? 0) < 8)) {
+          return null;
+        }
 
         const ip = clientIpFromRequest(request);
         const failKey = `${LOGIN_FAIL_KEY_PREFIX}${ip}`;
@@ -37,17 +52,31 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           return null;
         }
 
-        const user = await prisma.user.findUnique({ where: { email } });
-        if (!user) {
-          await bcrypt.compare(password, BCRYPT_DUMMY);
+        const resolved = await resolveUserByLoginIdentifier(loginLookup);
+        if (!resolved.ok) {
+          await bcrypt.compare(pinOnly ? (pin as string) : (password as string), BCRYPT_DUMMY);
           rateLimitFailuresRecord(failKey, LOGIN_FAIL_WINDOW_MS);
           return null;
         }
+        const user = resolved.user;
 
-        const ok = await bcrypt.compare(password, user.passwordHash);
-        if (!ok) {
-          rateLimitFailuresRecord(failKey, LOGIN_FAIL_WINDOW_MS);
-          return null;
+        if (pinOnly) {
+          if (!user.pinHash) {
+            await bcrypt.compare(pin, BCRYPT_DUMMY);
+            rateLimitFailuresRecord(failKey, LOGIN_FAIL_WINDOW_MS);
+            return null;
+          }
+          const pinOk = await bcrypt.compare(pin, user.pinHash);
+          if (!pinOk) {
+            rateLimitFailuresRecord(failKey, LOGIN_FAIL_WINDOW_MS);
+            return null;
+          }
+        } else {
+          const ok = await bcrypt.compare(password!, user.passwordHash);
+          if (!ok) {
+            rateLimitFailuresRecord(failKey, LOGIN_FAIL_WINDOW_MS);
+            return null;
+          }
         }
 
         return {

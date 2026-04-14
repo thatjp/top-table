@@ -17,7 +17,12 @@ export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const isAuthed = !!token;
 
-  if (pathname.startsWith("/games") && !isAuthed) {
+  if (
+    pathname.startsWith("/games") &&
+    !isAuthed &&
+    !pathname.startsWith("/games/start") &&
+    !pathname.startsWith("/games/join")
+  ) {
     const u = new URL("/login", req.nextUrl.origin);
     u.searchParams.set("callbackUrl", pathname + req.nextUrl.search);
     return NextResponse.redirect(u);
