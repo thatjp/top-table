@@ -52,7 +52,7 @@ export function VenuesMapClient({ venues, apiKey }: Props) {
           title: v.label,
         });
         marker.addListener("click", () => {
-          window.location.href = `/venues/${encodeURIComponent(v.placeId)}`;
+          window.location.href = `/tables/${encodeURIComponent(v.placeId)}`;
         });
       }
       map.fitBounds(bounds, { top: 100, right: 100, bottom: 100, left: 100 });
@@ -74,7 +74,7 @@ export function VenuesMapClient({ venues, apiKey }: Props) {
       ref={ref}
       className="mb-8 h-[min(420px,55vh)] w-full overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800"
       role="region"
-      aria-label="Venues map"
+      aria-label="Tables map"
     />
   );
 }

@@ -19,7 +19,7 @@ function hrefForPeriod(venueBasePath: string | undefined, period: LeaderboardPer
 
 type Props = {
   current: LeaderboardPeriod;
-  /** When set, links target this path (e.g. `/venues/ChIJ…`) with `?period=` instead of home. */
+  /** When set, links target this path (e.g. `/tables/ChIJ…`) with `?period=` instead of home. */
   venueBasePath?: string;
 };
 
