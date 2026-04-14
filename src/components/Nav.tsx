@@ -15,63 +15,44 @@ export async function Nav() {
         >
           Top Table
         </Link>
-        <nav className="flex flex-wrap items-center gap-3 text-sm font-medium">
-          <Link
-            href="/"
-            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-          >
-            Leaderboard
-          </Link>
+        <nav className="flex flex-1 flex-wrap items-center gap-3 text-sm font-medium">
           {session?.user ? (
             <>
-              <Link
-                href="/games/new"
-                className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              >
-                Log game
-              </Link>
-              <Link
-                href="/me/qr"
-                className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              >
-                My QR
-              </Link>
-              <Link
-                href="/settings/pin"
-                className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              >
-                Game PIN
-              </Link>
               {session.user.isAdmin ? (
-                <>
-                  <Link
-                    href="/admin"
-                    className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-                  >
-                    Admin
-                  </Link>
-                  <AdminApprovedUsersDemo />
-                </>
+                <Link
+                  href="/admin"
+                  className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                >
+                  Admin
+                </Link>
               ) : null}
-              <span className="text-zinc-500 dark:text-zinc-500">
-                {session.user.name}
-              </span>
-              <LogoutButton />
+              <div className="ml-auto flex items-center gap-3">
+                <Link
+                  href="/profile"
+                  className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                >
+                  {session.user.name}
+                </Link>
+                <LogoutButton />
+                {session.user.isAdmin ? <AdminApprovedUsersDemo /> : null}
+              </div>
             </>
           ) : (
             <>
-              <Link
-                href="/login"
-                className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              >
-                Log in
-              </Link>
-              <Link
-                href="/register"
-                className="rounded-full bg-zinc-900 px-3 py-1.5 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
-              >
-                Register
-              </Link>
+              <div className="ml-auto flex items-center gap-3">
+                <Link
+                  href="/login"
+                  className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                >
+                  Log in
+                </Link>
+                <Link
+                  href="/register"
+                  className="rounded-full bg-zinc-900 px-3 py-1.5 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
+                >
+                  Register
+                </Link>
+              </div>
             </>
           )}
         </nav>

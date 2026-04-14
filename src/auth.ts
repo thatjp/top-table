@@ -70,11 +70,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       if (token.id) {
         const row = await prisma.user.findUnique({
           where: { id: token.id as string },
-          select: { validated: true, isAdmin: true },
+          select: { validated: true, isAdmin: true, displayName: true, email: true },
         });
         if (row) {
           token.validated = row.validated;
           token.isAdmin = row.isAdmin;
+          token.name = row.displayName;
+          token.email = row.email;
         }
       }
       return token;
@@ -84,6 +86,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.id = String(token.id);
         session.user.validated = Boolean(token.validated);
         session.user.isAdmin = Boolean(token.isAdmin);
+        if (typeof token.name === "string") session.user.name = token.name;
+        if (typeof token.email === "string") session.user.email = token.email;
       }
       return session;
     },

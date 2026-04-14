@@ -66,7 +66,7 @@ export function SettingsPinForm({ hasExistingPin }: { hasExistingPin: boolean })
   if (done && !nextUrl) {
     return (
       <p className="text-emerald-700 dark:text-emerald-300">
-        PIN saved. You can open <strong>My QR</strong> from the nav.
+        PIN saved.
       </p>
     );
   }

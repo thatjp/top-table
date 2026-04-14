@@ -35,6 +35,12 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(u);
   }
 
+  if (pathname.startsWith("/profile") && !isAuthed) {
+    const u = new URL("/login", req.nextUrl.origin);
+    u.searchParams.set("callbackUrl", pathname + req.nextUrl.search);
+    return NextResponse.redirect(u);
+  }
+
   if (pathname.startsWith("/admin")) {
     if (!isAuthed) {
       const u = new URL("/login", req.nextUrl.origin);
@@ -50,5 +56,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/games/:path*", "/admin/:path*", "/me/:path*", "/settings/:path*"],
+  matcher: ["/games/:path*", "/admin/:path*", "/me/:path*", "/settings/:path*", "/profile/:path*"],
 };
