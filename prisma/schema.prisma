@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum PoolRules {
+  APA
+  BCA
+  Bar
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  pinHash      String?
+  displayName  String
+  validated    Boolean  @default(false)
+  isAdmin      Boolean  @default(false)
+  isDemo       Boolean  @default(false)
+  createdAt    DateTime @default(now())
+
+  gamesWon       Game[]         @relation("Winner")
+  gamesLost      Game[]         @relation("Loser")
+  gamesLogged    Game[]         @relation("LoggedBy")
+  sessionsAsHost GameSession[]  @relation("SessionHost")
+  sessionsAsGuest GameSession[] @relation("SessionGuest")
+
+  @@index([validated])
+  @@index([isDemo])
+}
+
+model GameSession {
+  id          String   @id @default(cuid())
+  playerOneId String
+  playerTwoId String
+  startedAt   DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  playerOne User @relation("SessionHost", fields: [playerOneId], references: [id], onDelete: Cascade)
+  playerTwo User @relation("SessionGuest", fields: [playerTwoId], references: [id], onDelete: Cascade)
+
+  @@index([playerOneId])
+  @@index([playerTwoId])
+  @@index([startedAt])
+}
+
+model Game {
+  id             String    @id @default(cuid())
+  winnerId       String
+  loserId        String
+  playedAt       DateTime
+  location       String
+  rules          PoolRules
+  loggedByUserId String
+  createdAt      DateTime  @default(now())
+
+  winner   User @relation("Winner", fields: [winnerId], references: [id], onDelete: Cascade)
+  loser    User @relation("Loser", fields: [loserId], references: [id], onDelete: Cascade)
+  loggedBy User @relation("LoggedBy", fields: [loggedByUserId], references: [id], onDelete: Cascade)
+
+  @@index([winnerId])
+  @@index([loserId])
+  @@index([playedAt])
+}
