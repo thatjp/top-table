@@ -4,11 +4,21 @@ import { AdminApprovedUsersDemo } from "@/components/AdminApprovedUsersDemo";
 import { HubRouteTabs } from "@/components/HubRouteTabs";
 import { LogoutButton } from "@/components/LogoutButton";
 import { countAdminActionableRequests } from "@/lib/admin-pending-queue";
+import {
+  findLiveActiveSessionForUser,
+  markStaleSessionsIncompleteNow,
+} from "@/lib/game-session-lifecycle";
 
 export async function Nav() {
   const session = await auth();
   const adminPendingCount =
     session?.user?.isAdmin ? await countAdminActionableRequests() : 0;
+  let activeSessionId: string | null = null;
+  if (session?.user?.id) {
+    await markStaleSessionsIncompleteNow();
+    const active = await findLiveActiveSessionForUser(session.user.id);
+    activeSessionId = active?.id ?? null;
+  }
 
   return (
     <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
@@ -36,6 +46,14 @@ export async function Nav() {
             </Link>
             {session?.user ? (
               <>
+                {activeSessionId ? (
+                  <Link
+                    href={`/games/session/${encodeURIComponent(activeSessionId)}`}
+                    className="inline-flex items-center rounded-full border border-emerald-300 bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-900 hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-100 dark:hover:bg-emerald-950/60"
+                  >
+                    Active game
+                  </Link>
+                ) : null}
                 {session.user.isAdmin ? (
                   <Link
                     href="/admin"
@@ -53,26 +71,6 @@ export async function Nav() {
                   </Link>
                 ) : null}
                 <div className="ml-auto flex items-center gap-3">
-                  <Link
-                    href="/games/scan"
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-zinc-300 text-zinc-600 hover:text-zinc-900 dark:border-zinc-700 dark:text-zinc-300 dark:hover:text-zinc-50"
-                    aria-label="Scan QR code"
-                    title="Scan QR code"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-4 w-4"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4 7.5a2.5 2.5 0 0 1 2.5-2.5h2l1-1h5l1 1h2A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"
-                        stroke="currentColor"
-                        strokeWidth="1.6"
-                      />
-                      <circle cx="12" cy="12" r="3.5" stroke="currentColor" strokeWidth="1.6" />
-                    </svg>
-                  </Link>
                   <Link
                     href="/profile"
                     className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"

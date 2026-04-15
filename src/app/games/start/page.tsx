@@ -9,7 +9,14 @@ export const metadata: Metadata = {
   description: "Start a match and invite your opponent with a QR code",
 };
 
-export default async function StartGamePage() {
+type PageProps = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+export default async function StartGamePage({ searchParams }: PageProps) {
+  const sp = await searchParams;
+  const errorRaw = sp.error;
+  const error = typeof errorRaw === "string" ? errorRaw : Array.isArray(errorRaw) ? errorRaw[0] : null;
   const session = await auth();
   const loggedIn = Boolean(session?.user?.id);
 
@@ -22,6 +29,11 @@ export default async function StartGamePage() {
         ← Leaderboard
       </Link>
       <h1 className="mb-2 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">New game</h1>
+      {error ? (
+        <p className="mb-4 max-w-lg rounded-md bg-red-50 px-3 py-2 text-sm text-red-800 dark:bg-red-950/50 dark:text-red-200">
+          {error}
+        </p>
+      ) : null}
       <p className="mb-8 max-w-lg text-zinc-600 dark:text-zinc-400">
         {loggedIn ? (
           <>

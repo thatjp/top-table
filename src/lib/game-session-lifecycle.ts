@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 
 /** Started matches with no result past this age become `incompleteAt` (host sees a warning; new games allowed). */
 export const ACTIVE_MATCH_WINDOW_MS = 60 * 60 * 1000;
+/** Open lobbies (not started) past this age auto-close so they stop blocking new lobbies. */
+export const OPEN_LOBBY_WINDOW_MS = 60 * 60 * 1000;
 
 /**
  * Marks started, unclosed sessions older than {@link ACTIVE_MATCH_WINDOW_MS} as incomplete.
@@ -16,6 +18,23 @@ export async function markStaleSessionsIncompleteNow(): Promise<void> {
       incompleteAt: null,
     },
     data: { incompleteAt: new Date() },
+  });
+}
+
+/**
+ * Auto-closes host lobbies that were never started and are older than {@link OPEN_LOBBY_WINDOW_MS}.
+ * This keeps abandoned lobbies from blocking "New game".
+ */
+export async function closeStaleOpenLobbiesNow(userId?: string): Promise<void> {
+  const cutoff = new Date(Date.now() - OPEN_LOBBY_WINDOW_MS);
+  await prisma.gameSession.updateMany({
+    where: {
+      ...(userId ? { playerOneId: userId } : {}),
+      startedAt: null,
+      closedAt: null,
+      createdAt: { lt: cutoff },
+    },
+    data: { closedAt: new Date() },
   });
 }
 

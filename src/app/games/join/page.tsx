@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { auth } from "@/auth";
+import { joinSessionAsUser } from "@/lib/game-session-join";
 import { JoinGameForm } from "./JoinGameForm";
 
 export const metadata: Metadata = {
@@ -17,6 +20,15 @@ export default async function JoinGamePage({ searchParams }: PageProps) {
   const inviteToken =
     typeof raw === "string" ? raw : Array.isArray(raw) ? raw[0] ?? "" : "";
   const validToken = inviteToken.length >= 32;
+
+  const session = await auth();
+  if (session?.user?.id && validToken) {
+    const joined = await joinSessionAsUser(inviteToken, session.user.id);
+    if (joined.ok) {
+      redirect(`/games/session/${joined.sessionId}`);
+    }
+    redirect(`/games/start?error=${encodeURIComponent(joined.error)}`);
+  }
 
   return (
     <div className="mx-auto flex max-w-4xl flex-1 flex-col px-4 py-12">

@@ -9,6 +9,7 @@ import { rateLimitGameSessionStartAllow } from "@/lib/rate-limit";
 import { originMatchesHost } from "@/lib/same-origin";
 import { resolveUserByLoginIdentifier } from "@/lib/resolve-login-identifier";
 import {
+  closeStaleOpenLobbiesNow,
   findLiveActiveSessionForUser,
   findOpenHostLobby,
   markStaleSessionsIncompleteNow,
@@ -104,6 +105,7 @@ export async function POST(req: Request) {
   }
 
   await markStaleSessionsIncompleteNow();
+  await closeStaleOpenLobbiesNow(user.id);
   if (await findLiveActiveSessionForUser(user.id)) {
     return NextResponse.json(
       {
@@ -113,14 +115,9 @@ export async function POST(req: Request) {
       { status: 409 },
     );
   }
-  if (await findOpenHostLobby(user.id)) {
-    return NextResponse.json(
-      {
-        error:
-          "You already have an open game lobby. Open that session or cancel it before starting a new one.",
-      },
-      { status: 409 },
-    );
+  const openLobby = await findOpenHostLobby(user.id);
+  if (openLobby) {
+    return NextResponse.json({ sessionId: openLobby.id, resumed: true }, { status: 200 });
   }
 
   let inviteToken = randomBytes(32).toString("hex");
