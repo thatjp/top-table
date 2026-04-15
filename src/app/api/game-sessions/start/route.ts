@@ -2,6 +2,7 @@ import { randomBytes } from "crypto";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import { z } from "zod";
+import { auth } from "@/auth";
 import { clientIpFromRequest } from "@/lib/client-ip";
 import { prisma } from "@/lib/prisma";
 import { rateLimitGameSessionStartAllow } from "@/lib/rate-limit";
@@ -28,48 +29,71 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid request origin" }, { status: 403 });
   }
 
-  let body: unknown;
-  try {
-    body = await req.json();
-  } catch {
-    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
-  }
+  const session = await auth();
+  let user:
+    | {
+        id: string;
+        validated: boolean;
+        isDemo: boolean;
+        pinHash: string | null;
+      }
+    | null = null;
 
-  const parsed = bodySchema.safeParse(body);
-  if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 },
-    );
-  }
+  if (session?.user?.id) {
+    user = await prisma.user.findUnique({
+      where: { id: session.user.id },
+      select: { id: true, validated: true, isDemo: true, pinHash: true },
+    });
+    if (!user) {
+      return NextResponse.json({ error: "User not found" }, { status: 404 });
+    }
+  } else {
+    let body: unknown;
+    try {
+      body = await req.json();
+    } catch {
+      return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+    }
 
-  const login = parsed.data.login;
-  const pin = parsed.data.pin;
-
-  const resolved = await resolveUserByLoginIdentifier(login);
-  if (!resolved.ok) {
-    if (resolved.error === "ambiguous_display_name") {
+    const parsed = bodySchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json(
-        {
-          error:
-            "Several players use that display name. Use the email address on your account instead.",
-        },
+        { error: parsed.error.flatten().fieldErrors },
         { status: 400 },
       );
     }
-    return NextResponse.json(
-      { error: "Unknown account, or no game PIN set. Use Settings after you sign in." },
-      { status: 403 },
-    );
-  }
 
-  const user = resolved.user;
+    const login = parsed.data.login;
+    const pin = parsed.data.pin;
+    const resolved = await resolveUserByLoginIdentifier(login);
+    if (!resolved.ok) {
+      if (resolved.error === "ambiguous_display_name") {
+        return NextResponse.json(
+          {
+            error:
+              "Several players use that display name. Use the email address on your account instead.",
+          },
+          { status: 400 },
+        );
+      }
+      return NextResponse.json(
+        { error: "Unknown account, or no game PIN set. Use Settings after you sign in." },
+        { status: 403 },
+      );
+    }
 
-  if (!user.pinHash) {
-    return NextResponse.json(
-      { error: "No game PIN set. Use Settings after you sign in." },
-      { status: 403 },
-    );
+    user = resolved.user;
+    if (!user.pinHash) {
+      return NextResponse.json(
+        { error: "No game PIN set. Use Settings after you sign in." },
+        { status: 403 },
+      );
+    }
+
+    const pinOk = await bcrypt.compare(pin, user.pinHash);
+    if (!pinOk) {
+      return NextResponse.json({ error: "Incorrect PIN" }, { status: 403 });
+    }
   }
 
   if (!user.validated || user.isDemo) {
@@ -77,11 +101,6 @@ export async function POST(req: Request) {
       { error: "Only approved, non-demo accounts can start a game this way." },
       { status: 403 },
     );
-  }
-
-  const pinOk = await bcrypt.compare(pin, user.pinHash);
-  if (!pinOk) {
-    return NextResponse.json({ error: "Incorrect PIN" }, { status: 403 });
   }
 
   await markStaleSessionsIncompleteNow();
