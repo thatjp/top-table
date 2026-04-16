@@ -47,7 +47,7 @@ export default async function HomePage({ searchParams }: PageProps) {
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 py-10">
+    <div className="mx-auto flex min-h-0 w-full max-w-4xl flex-1 flex-col px-4 py-6 md:py-10">
       {incompleteHosted.length > 0 ? (
         <IncompleteSessionsWarning sessions={incompleteHosted} />
       ) : null}
@@ -73,28 +73,30 @@ export default async function HomePage({ searchParams }: PageProps) {
 
       <LeaderboardPeriodNav current={period} />
 
-      {rows.length === 0 ? (
-        <p className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-6 text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-400">
-          {demoMode ? (
-            <>
-              No demo players meet the minimum with games in this period. Seed with{" "}
-              <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-800">npm run db:seed-demo</code> or try{" "}
-              <strong>All time</strong>.
-            </>
-          ) : period === "all" ? (
-            <>
-              No players qualify yet. Once validated players log enough games, they will show up here.
-            </>
-          ) : (
-            <>
-              No players have at least <strong>{minGames}</strong> games in this window. Try{" "}
-              <strong>All time</strong>, <strong>Year</strong>, or <strong>Month</strong>.
-            </>
-          )}
-        </p>
-      ) : (
-        <LeaderboardTable rows={rows} />
-      )}
+      <div className="mt-4 min-h-0 flex-1 overflow-auto md:mt-6 md:flex-none md:overflow-visible">
+        {rows.length === 0 ? (
+          <p className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-6 text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-400">
+            {demoMode ? (
+              <>
+                No demo players meet the minimum with games in this period. Seed with{" "}
+                <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-800">npm run db:seed-demo</code> or try{" "}
+                <strong>All time</strong>.
+              </>
+            ) : period === "all" ? (
+              <>
+                No players qualify yet. Once validated players log enough games, they will show up here.
+              </>
+            ) : (
+              <>
+                No players have at least <strong>{minGames}</strong> games in this window. Try{" "}
+                <strong>All time</strong>, <strong>Year</strong>, or <strong>Month</strong>.
+              </>
+            )}
+          </p>
+        ) : (
+          <LeaderboardTable rows={rows} />
+        )}
+      </div>
     </div>
   );
 }

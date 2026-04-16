@@ -83,7 +83,7 @@ export async function listVenuesWithStats(options: {
     }
   }
 
-  return [...byPlace.values()].map((v) => ({
+  const rows: VenueMapRow[] = [...byPlace.values()].map((v) => ({
     placeId: v.placeId,
     label: v.label,
     latitude: v.lat,
@@ -92,6 +92,34 @@ export async function listVenuesWithStats(options: {
     uniquePlayers: v.playerIds.size,
     lastPlayedAtIso: v.lastPlayedAt.toISOString(),
   }));
+
+  if (!options.demo) {
+    const seededVenues = await prisma.venue.findMany({
+      where: { placeId: { not: null } },
+      orderBy: { name: "asc" },
+      select: {
+        placeId: true,
+        name: true,
+        latitude: true,
+        longitude: true,
+      },
+    });
+
+    for (const venue of seededVenues) {
+      if (!venue.placeId || byPlace.has(venue.placeId)) continue;
+      rows.push({
+        placeId: venue.placeId,
+        label: venue.name,
+        latitude: venue.latitude,
+        longitude: venue.longitude,
+        gamesPlayed: 0,
+        uniquePlayers: 0,
+        lastPlayedAtIso: new Date(0).toISOString(),
+      });
+    }
+  }
+
+  return rows;
 }
 
 export async function getLeaderboardForPlace(
@@ -193,7 +221,19 @@ export async function getVenueMetrics(
     orderBy: { playedAt: "desc" },
   });
 
-  if (games.length === 0) return null;
+  if (games.length === 0) {
+    const seeded = await prisma.venue.findFirst({
+      where: { placeId },
+      select: { name: true },
+    });
+    if (!seeded) return null;
+    return {
+      label: seeded.name,
+      gamesPlayed: 0,
+      uniquePlayers: 0,
+      lastPlayedAtIso: null,
+    };
+  }
 
   const players = new Set<string>();
   let last: Date | null = null;

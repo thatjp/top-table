@@ -32,7 +32,7 @@ export async function fetchPlacesAutocomplete(
       "Content-Type": "application/json",
       "X-Goog-Api-Key": key,
       "X-Goog-FieldMask":
-        "suggestions.placePrediction.placeId,suggestions.placePrediction.text",
+        "suggestions.placePrediction.placeId,suggestions.placePrediction.text,suggestions.placePrediction.structuredFormat.mainText",
     },
     body: JSON.stringify({
       input: trimmed,
@@ -55,6 +55,9 @@ export async function fetchPlacesAutocomplete(
       placePrediction?: {
         placeId?: string;
         text?: { text?: string };
+        structuredFormat?: {
+          mainText?: { text?: string };
+        };
       };
     }>;
   };
@@ -63,12 +66,24 @@ export async function fetchPlacesAutocomplete(
   for (const s of data.suggestions ?? []) {
     const p = s.placePrediction;
     if (!p?.placeId || !p.text?.text) continue;
-    out.push({ placeId: p.placeId, description: p.text.text });
+    const main =
+      p.structuredFormat?.mainText?.text?.trim() ||
+      p.text.text.split(",")[0]?.trim() ||
+      p.text.text;
+    out.push({ placeId: p.placeId, description: main });
   }
   return out;
 }
 
 export type PlaceDetailsResult = {
+  placeId: string;
+  displayName: string;
+  formattedAddress: string;
+  latitude: number;
+  longitude: number;
+};
+
+export type SearchTextCandidate = {
   placeId: string;
   displayName: string;
   formattedAddress: string;
@@ -119,4 +134,140 @@ export async function fetchPlaceDetails(placeId: string): Promise<PlaceDetailsRe
     latitude: lat,
     longitude: lng,
   };
+}
+
+/** Text search restricted to a geographic rectangle (e.g. NYC), no coordinate seed required. */
+export async function searchPlacesByTextInRectangle(args: {
+  textQuery: string;
+  rectangle: {
+    low: { latitude: number; longitude: number };
+    high: { latitude: number; longitude: number };
+  };
+  maxResultCount?: number;
+}): Promise<SearchTextCandidate[]> {
+  const key = getGoogleMapsServerApiKey();
+  if (!key) {
+    throw new Error("GOOGLE_MAPS_API_KEY is not configured");
+  }
+
+  const { textQuery, rectangle, maxResultCount = 5 } = args;
+
+  const res = await fetch(`${PLACES_BASE}/places:searchText`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Goog-Api-Key": key,
+      "X-Goog-FieldMask":
+        "places.id,places.displayName,places.formattedAddress,places.location",
+    },
+    body: JSON.stringify({
+      textQuery: textQuery.trim(),
+      maxResultCount,
+      locationRestriction: {
+        rectangle: {
+          low: rectangle.low,
+          high: rectangle.high,
+        },
+      },
+    }),
+  });
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`Places text search failed: ${res.status} ${text.slice(0, 200)}`);
+  }
+
+  const data = (await res.json()) as {
+    places?: Array<{
+      id?: string;
+      displayName?: { text?: string };
+      formattedAddress?: string;
+      location?: { latitude?: number; longitude?: number };
+    }>;
+  };
+
+  const out: SearchTextCandidate[] = [];
+  for (const place of data.places ?? []) {
+    const plat = place.location?.latitude;
+    const plng = place.location?.longitude;
+    if (!place.id || typeof plat !== "number" || typeof plng !== "number") continue;
+    out.push({
+      placeId: place.id,
+      displayName: place.displayName?.text?.trim() || "Unknown place",
+      formattedAddress: place.formattedAddress?.trim() || "",
+      latitude: plat,
+      longitude: plng,
+    });
+  }
+  return out;
+}
+
+export async function searchPlacesByTextNearCoordinate(args: {
+  textQuery: string;
+  latitude: number;
+  longitude: number;
+  radiusMeters?: number;
+  maxResultCount?: number;
+}): Promise<SearchTextCandidate[]> {
+  const key = getGoogleMapsServerApiKey();
+  if (!key) {
+    throw new Error("GOOGLE_MAPS_API_KEY is not configured");
+  }
+
+  const {
+    textQuery,
+    latitude,
+    longitude,
+    radiusMeters = 600,
+    maxResultCount = 5,
+  } = args;
+
+  const res = await fetch(`${PLACES_BASE}/places:searchText`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Goog-Api-Key": key,
+      "X-Goog-FieldMask":
+        "places.id,places.displayName,places.formattedAddress,places.location",
+    },
+    body: JSON.stringify({
+      textQuery,
+      maxResultCount,
+      locationBias: {
+        circle: {
+          center: { latitude, longitude },
+          radius: radiusMeters,
+        },
+      },
+    }),
+  });
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`Places text search failed: ${res.status} ${text.slice(0, 200)}`);
+  }
+
+  const data = (await res.json()) as {
+    places?: Array<{
+      id?: string;
+      displayName?: { text?: string };
+      formattedAddress?: string;
+      location?: { latitude?: number; longitude?: number };
+    }>;
+  };
+
+  const out: SearchTextCandidate[] = [];
+  for (const place of data.places ?? []) {
+    const lat = place.location?.latitude;
+    const lng = place.location?.longitude;
+    if (!place.id || typeof lat !== "number" || typeof lng !== "number") continue;
+    out.push({
+      placeId: place.id,
+      displayName: place.displayName?.text?.trim() || "Unknown place",
+      formattedAddress: place.formattedAddress?.trim() || "",
+      latitude: lat,
+      longitude: lng,
+    });
+  }
+  return out;
 }

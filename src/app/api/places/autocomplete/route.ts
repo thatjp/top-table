@@ -2,14 +2,17 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/auth";
 import { clientIpFromRequest } from "@/lib/client-ip";
-import { fetchPlacesAutocomplete, getGoogleMapsServerApiKey } from "@/lib/google-places-server";
 import { rateLimitPlacesAutocompleteAllow } from "@/lib/rate-limit";
 import { originMatchesHost } from "@/lib/same-origin";
+import { searchLocalVenueSuggestions } from "@/lib/venues";
 
 const bodySchema = z.object({
   input: z.string().max(200),
   sessionToken: z.string().min(8).max(200),
 });
+
+/** Autocomplete rows returned (database venues only). */
+const MAX_SUGGESTIONS = 8;
 
 export async function POST(req: Request) {
   const session = await auth();
@@ -30,10 +33,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Too many requests" }, { status: 429 });
   }
 
-  if (!getGoogleMapsServerApiKey()) {
-    return NextResponse.json({ error: "Places search is not configured" }, { status: 503 });
-  }
-
   let body: unknown;
   try {
     body = await req.json();
@@ -50,10 +49,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    const suggestions = await fetchPlacesAutocomplete(
-      parsed.data.input,
-      parsed.data.sessionToken,
-    );
+    const suggestions = await searchLocalVenueSuggestions(parsed.data.input, MAX_SUGGESTIONS);
     return NextResponse.json({ suggestions });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Places error";

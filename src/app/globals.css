@@ -42,3 +42,33 @@ body {
 .new-game-nav-btn {
   animation: new-game-pulse-border 2s ease-in-out infinite;
 }
+
+@keyframes venue-autocomplete-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes venue-autocomplete-item-in {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.venue-autocomplete-panel {
+  animation: venue-autocomplete-panel-in 0.14s ease-out both;
+}
+
+.venue-autocomplete-item {
+  animation: venue-autocomplete-item-in 0.16s ease-out both;
+}

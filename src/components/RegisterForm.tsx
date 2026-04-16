@@ -118,7 +118,8 @@ export function RegisterForm() {
           className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
         />
         <span className="text-xs text-zinc-500">
-          Used when you scan a QR code to start a verified game (separate from password).
+          Used when joining a game session (e.g. from an invite link or table QR), separate from your
+          password.
         </span>
       </div>
       <div className="flex flex-col gap-1">

@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default async function MyQrPage() {
-  redirect("/profile?tab=qr");
+  redirect("/profile");
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
+import { MobileBottomNav } from "@/components/MobileBottomNav";
 import { Nav } from "@/components/Nav";
 import "./globals.css";
 
@@ -32,13 +33,16 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50">
+      <body className="flex min-h-dvh flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50">
         <Suspense
           fallback={<div className="h-[57px] border-b border-zinc-200 dark:border-zinc-800" />}
         >
           <Nav />
         </Suspense>
-        <main className="flex flex-1 flex-col">{children}</main>
+        <main className="flex min-h-0 flex-1 flex-col pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] md:pb-0">
+          {children}
+        </main>
+        <MobileBottomNav />
       </body>
     </html>
   );

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { auth } from "@/auth";
 import { AdminApprovedUsersDemo } from "@/components/AdminApprovedUsersDemo";
-import { HubRouteTabs } from "@/components/HubRouteTabs";
-import { LogoutButton } from "@/components/LogoutButton";
 import { countAdminActionableRequests } from "@/lib/admin-pending-queue";
 import {
   findLiveActiveSessionForUser,
@@ -34,7 +32,7 @@ export async function Nav() {
           <nav className="flex flex-1 flex-wrap items-center justify-end gap-3 text-sm font-medium md:justify-start">
             <Link
               href="/games/start"
-              className="new-game-nav-btn rounded-full bg-green-600 px-3 py-1.5 text-sm font-semibold text-white hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-500"
+              className="new-game-nav-btn hidden rounded-full bg-green-600 px-3 py-1.5 text-sm font-semibold text-white hover:bg-green-700 md:inline-flex dark:bg-green-600 dark:hover:bg-green-500"
             >
               New game
             </Link>
@@ -77,7 +75,6 @@ export async function Nav() {
                   >
                     {session.user.name}
                   </Link>
-                  <LogoutButton />
                   {session.user.isAdmin ? <AdminApprovedUsersDemo /> : null}
                 </div>
               </>
@@ -101,7 +98,6 @@ export async function Nav() {
             )}
           </nav>
         </div>
-        <HubRouteTabs />
       </div>
     </header>
   );

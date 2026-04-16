@@ -13,9 +13,22 @@ type Props = {
   /** Controlled display string (address / name). */
   value: string;
   onChange: (value: string, resolved: ResolvedVenue | null) => void;
+  /** Accessible label for the field. */
+  label?: string;
+  /** When false, omit browser required validation (e.g. standalone test fields). @default true */
+  required?: boolean;
+  /** Show NYC scope hint under the field. @default true */
+  showScopeHint?: boolean;
 };
 
-export function LocationAutocomplete({ value, onChange }: Props) {
+export function LocationAutocomplete({
+  value,
+  onChange,
+  label = "Where you played",
+  required = true,
+  showScopeHint = true,
+}: Props) {
+  const fieldId = useId();
   const listId = useId();
   const sessionTokenRef = useRef(crypto.randomUUID());
   const [input, setInput] = useState(value);
@@ -106,7 +119,7 @@ export function LocationAutocomplete({ value, onChange }: Props) {
           lastResolvedLabel.current = null;
           return;
         }
-        const label = (data.formattedAddress || data.displayName || description).slice(0, 500);
+        const label = (data.displayName || data.formattedAddress || description).slice(0, 500);
         setInput(label);
         lastResolvedLabel.current = label;
         onChange(label, {
@@ -127,78 +140,92 @@ export function LocationAutocomplete({ value, onChange }: Props) {
   );
 
   return (
-    <div className="relative flex flex-col gap-1">
-      <label htmlFor="venue-search" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-        Where you played
+    <div className="flex flex-col gap-1">
+      <label htmlFor={fieldId} className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+        {label}
       </label>
-      <input
-        id="venue-search"
-        type="text"
-        autoComplete="off"
-        aria-expanded={open}
-        aria-controls={listId}
-        aria-autocomplete="list"
-        role="combobox"
-        required
-        maxLength={500}
-        placeholder="Search for a bar or venue…"
-        value={input}
-        onChange={(e) => handleInputChange(e.target.value)}
-        onFocus={() => suggestions.length > 0 && setOpen(true)}
-        onBlur={() => setTimeout(() => setOpen(false), 180)}
-        onKeyDown={(e) => {
-          if (!open || suggestions.length === 0) return;
-          if (e.key === "ArrowDown") {
-            e.preventDefault();
-            setHighlight((h) => (h + 1) % suggestions.length);
-          } else if (e.key === "ArrowUp") {
-            e.preventDefault();
-            setHighlight((h) => (h <= 0 ? suggestions.length - 1 : h - 1));
-          } else if (e.key === "Enter" && highlight >= 0) {
-            e.preventDefault();
-            const s = suggestions[highlight];
-            if (s) void pick(s.placeId, s.description);
-          } else if (e.key === "Escape") {
-            setOpen(false);
-          }
-        }}
-        className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
-      />
-      {busy ? (
-        <p className="text-xs text-zinc-500 dark:text-zinc-400" aria-live="polite">
-          Searching…
+      <div className="relative">
+        <input
+          id={fieldId}
+          type="text"
+          autoComplete="off"
+          aria-expanded={open}
+          aria-controls={listId}
+          aria-autocomplete="list"
+          role="combobox"
+          required={required}
+          maxLength={500}
+          placeholder="Search for a bar or venue…"
+          value={input}
+          onChange={(e) => handleInputChange(e.target.value)}
+          onFocus={() => suggestions.length > 0 && setOpen(true)}
+          onBlur={() => setTimeout(() => setOpen(false), 180)}
+          onKeyDown={(e) => {
+            if (!open || suggestions.length === 0) return;
+            if (e.key === "ArrowDown") {
+              e.preventDefault();
+              setHighlight((h) => (h + 1) % suggestions.length);
+            } else if (e.key === "ArrowUp") {
+              e.preventDefault();
+              setHighlight((h) => (h <= 0 ? suggestions.length - 1 : h - 1));
+            } else if (e.key === "Enter" && highlight >= 0) {
+              e.preventDefault();
+              const s = suggestions[highlight];
+              if (s) void pick(s.placeId, s.description);
+            } else if (e.key === "Escape") {
+              setOpen(false);
+            }
+          }}
+          className={`relative z-10 w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 ${
+            busy ? "pr-24" : "pr-3"
+          }`}
+        />
+        {busy ? (
+          <span
+            className="pointer-events-none absolute inset-y-0 right-2 z-20 flex items-center text-xs text-zinc-500 dark:text-zinc-400"
+            aria-live="polite"
+          >
+            Searching…
+          </span>
+        ) : null}
+        {open && suggestions.length > 0 ? (
+          <ul
+            id={listId}
+            key={suggestions.map((s) => s.placeId).join("|")}
+            role="listbox"
+            className="venue-autocomplete-panel absolute left-0 right-0 top-full z-20 mt-0 max-h-60 w-full overflow-auto rounded-lg border border-zinc-200 bg-white py-1 shadow-lg dark:border-zinc-700 dark:bg-zinc-900"
+          >
+            {suggestions.map((s, i) => (
+              <li
+                key={s.placeId}
+                role="presentation"
+                className="venue-autocomplete-item"
+                style={{ animationDelay: `${i * 28}ms` }}
+              >
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={i === highlight}
+                  className={`w-full px-3 py-2 text-left text-sm ${
+                    i === highlight
+                      ? "bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-50"
+                      : "text-zinc-800 hover:bg-zinc-50 dark:text-zinc-200 dark:hover:bg-zinc-800"
+                  }`}
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => void pick(s.placeId, s.description)}
+                >
+                  {s.description}
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+      {showScopeHint ? (
+        <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          Search matches venues in our directory (NYC area).
         </p>
       ) : null}
-      {open ? (
-        <ul
-          id={listId}
-          role="listbox"
-          className="absolute top-full z-20 mt-1 max-h-60 w-full overflow-auto rounded-lg border border-zinc-200 bg-white py-1 shadow-lg dark:border-zinc-700 dark:bg-zinc-900"
-        >
-          {suggestions.map((s, i) => (
-            <li key={s.placeId} role="presentation">
-              <button
-                type="button"
-                role="option"
-                aria-selected={i === highlight}
-                className={`w-full px-3 py-2 text-left text-sm ${
-                  i === highlight
-                    ? "bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-50"
-                    : "text-zinc-800 hover:bg-zinc-50 dark:text-zinc-200 dark:hover:bg-zinc-800"
-                }`}
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => void pick(s.placeId, s.description)}
-              >
-                {s.description}
-              </button>
-            </li>
-          ))}
-        </ul>
-      ) : null}
-      <p className="text-xs text-zinc-500 dark:text-zinc-400">
-        Search is limited to New York City. Pick a Google Places result when possible; you can still
-        type a custom location if search is unavailable.
-      </p>
     </div>
   );
 }

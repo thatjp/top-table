@@ -79,3 +79,22 @@ model Game {
   @@index([playedAt])
   @@index([placeId])
 }
+
+model Venue {
+  id                       String    @id @default(cuid())
+  name                     String
+  normalizedName           String
+  neighborhood             String?
+  placeId                  String?   @unique
+  latitude                 Float
+  longitude                Float
+  formattedAddress         String?
+  verificationSource       String    @default("google_places")
+  verificationScore        Float?
+  verificationDistanceMeters Float?
+  verifiedAt               DateTime?
+  createdAt                DateTime  @default(now())
+  updatedAt                DateTime  @updatedAt
+
+  @@index([normalizedName])
+}
