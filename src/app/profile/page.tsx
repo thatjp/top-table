@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 type Tab = "account" | "stats";
 
 type PageProps = {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
+  searchParams: Record<string, string | string[] | undefined>;
 };
 
 function parseTab(raw: string | string[] | undefined): Tab {
@@ -32,8 +32,7 @@ function pieGradient(wins: number, losses: number): string {
 }
 
 export default async function ProfilePage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const tab = parseTab(sp.tab);
+  const tab = parseTab(searchParams.tab);
 
   const session = await auth();
   if (!session?.user?.id) {

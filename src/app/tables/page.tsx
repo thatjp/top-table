@@ -10,12 +10,11 @@ export const metadata: Metadata = {
 };
 
 type PageProps = {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
+  searchParams: Record<string, string | string[] | undefined>;
 };
 
 export default async function TablesPage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const initialSelectedPlaceIdParam = sp.v;
+  const initialSelectedPlaceIdParam = searchParams.v;
   const initialSelectedPlaceId = Array.isArray(initialSelectedPlaceIdParam)
     ? initialSelectedPlaceIdParam[0]
     : initialSelectedPlaceIdParam ?? null;

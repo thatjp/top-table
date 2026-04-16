@@ -10,12 +10,11 @@ export const metadata: Metadata = {
 };
 
 type PageProps = {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
+  searchParams: Record<string, string | string[] | undefined>;
 };
 
 export default async function StartGamePage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const errorRaw = sp.error;
+  const errorRaw = searchParams.error;
   const error = typeof errorRaw === "string" ? errorRaw : Array.isArray(errorRaw) ? errorRaw[0] : null;
   const session = await auth();
   const loggedIn = Boolean(session?.user?.id);

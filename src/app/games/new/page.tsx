@@ -21,20 +21,24 @@ function formatGameLength(start: Date, end: Date): string {
   return `${s}s`;
 }
 
-type SearchParams = { session?: string };
+type PageProps = {
+  searchParams: Record<string, string | string[] | undefined>;
+};
 
-export default async function NewGamePage({
-  searchParams,
-}: {
-  searchParams: Promise<SearchParams>;
-}) {
+export default async function NewGamePage({ searchParams }: PageProps) {
   const session = await auth();
   if (!session?.user?.id) {
     redirect("/login?callbackUrl=/games/new");
   }
 
-  const sp = await searchParams;
-  const sessionId = sp.session?.trim();
+  const rawSession = searchParams.session;
+  const sessionId = (
+    typeof rawSession === "string"
+      ? rawSession
+      : Array.isArray(rawSession)
+        ? rawSession[0] ?? ""
+        : ""
+  ).trim();
   if (!sessionId) {
     redirect("/");
   }

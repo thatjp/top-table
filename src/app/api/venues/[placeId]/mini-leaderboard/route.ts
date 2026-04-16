@@ -4,11 +4,11 @@ import { DEMO_LEADERBOARD_COOKIE } from "@/lib/demo";
 import { getLeaderboardForPlace } from "@/lib/venue-leaderboard";
 
 type RouteContext = {
-  params: { placeId: string };
+  params: Promise<{ placeId: string }>;
 };
 
 export async function GET(_req: Request, context: RouteContext) {
-  const raw = context.params.placeId;
+  const { placeId: raw } = await context.params;
   const placeId = decodeURIComponent(raw);
 
   const demoMode = (await cookies()).get(DEMO_LEADERBOARD_COOKIE)?.value === "1";

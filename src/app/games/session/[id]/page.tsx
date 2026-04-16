@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 };
 
 type PageProps = {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 };
 
 export default async function GameSessionPage({ params }: PageProps) {
-  const { id } = await params;
+  const { id } = params;
   const session = await auth();
   if (!session?.user?.id) {
     redirect(`/login?callbackUrl=/games/session/${id}`);

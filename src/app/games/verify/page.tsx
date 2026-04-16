@@ -10,12 +10,11 @@ export const metadata: Metadata = {
 };
 
 type PageProps = {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
+  searchParams: Record<string, string | string[] | undefined>;
 };
 
 export default async function VerifyGamePage({ searchParams }: PageProps) {
-  const sp = await searchParams;
-  const raw = sp.token;
+  const raw = searchParams.token;
   const token = typeof raw === "string" ? raw : Array.isArray(raw) ? raw[0] ?? "" : "";
 
   let hostDisplayName: string | null = null;

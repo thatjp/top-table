@@ -11,12 +11,12 @@ import { getLeaderboardForPlace, getVenueMetrics } from "@/lib/venue-leaderboard
 export const dynamic = "force-dynamic";
 
 type PageProps = {
-  params: Promise<{ placeId: string }>;
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
+  params: { placeId: string };
+  searchParams: Record<string, string | string[] | undefined>;
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { placeId: raw } = await params;
+  const { placeId: raw } = params;
   const placeId = decodeURIComponent(raw);
   const demoMode = (await cookies()).get(DEMO_LEADERBOARD_COOKIE)?.value === "1";
   const metrics = await getVenueMetrics(placeId, { demo: demoMode });
@@ -31,10 +31,9 @@ function minGamesLabel(): number {
 }
 
 export default async function TableDetailPage({ params, searchParams }: PageProps) {
-  const { placeId: raw } = await params;
+  const { placeId: raw } = params;
   const placeId = decodeURIComponent(raw);
-  const sp = await searchParams;
-  const period = parseLeaderboardPeriod(sp.period);
+  const period = parseLeaderboardPeriod(searchParams.period);
 
   const demoMode = (await cookies()).get(DEMO_LEADERBOARD_COOKIE)?.value === "1";
   const metrics = await getVenueMetrics(placeId, { demo: demoMode });
