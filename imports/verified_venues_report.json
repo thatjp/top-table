@@ -1,0 +1,2501 @@
+[
+  {
+    "name": "The Mallard Drake",
+    "address": "43 Franklin St, Brooklyn, NY 11222, USA",
+    "lat": 40.7267567,
+    "lng": -73.95750269999999,
+    "placeId": "ChIJGZlZJGFZwokRdRSS4bR9eCk"
+  },
+  {
+    "name": "Banks Tavern",
+    "address": "19 Greenpoint Ave, Brooklyn, NY 11222, USA",
+    "lat": 40.7298597,
+    "lng": -73.9600052,
+    "placeId": "ChIJ0bQDeKdZwokRnxiudZnxl_g"
+  },
+  {
+    "name": "Brooklyn Safehouse",
+    "address": "120 Franklin St, Brooklyn, NY 11222, USA",
+    "lat": 40.7288735,
+    "lng": -73.95720709999999,
+    "placeId": "ChIJcTP9sUFZwokRDMgFnqWAqgI"
+  },
+  {
+    "name": "Brooklyn Billiards Williamsburg",
+    "address": "90 N 11th St, Brooklyn, NY 11249, USA",
+    "lat": 40.721339500000006,
+    "lng": -73.9575862,
+    "placeId": "ChIJD2mVAONZwokRfKs3qmPzKcM"
+  },
+  {
+    "name": "X-Golf Brooklyn",
+    "address": "105 N 13th St, Brooklyn, NY 11249, USA",
+    "lat": 40.722676799999995,
+    "lng": -73.95614189999999,
+    "placeId": "ChIJeYgCuyJZwokR1g2Im-QCgtk"
+  },
+  {
+    "name": "The Gutter",
+    "address": "200 N 14th St, Brooklyn, NY 11249, USA",
+    "lat": 40.7226667,
+    "lng": -73.955375,
+    "placeId": "ChIJhZwYPkNZwokR5br0SgJqx2o"
+  },
+  {
+    "name": "George & Jack's Tap Room",
+    "address": "103 Berry St, Brooklyn, NY 11211, USA",
+    "lat": 40.719063899999995,
+    "lng": -73.9584028,
+    "placeId": "ChIJEWnOm11ZwokR8kapptzopz8"
+  },
+  {
+    "name": "Gran Torino",
+    "address": "131 Berry St, Brooklyn, NY 11249, USA",
+    "lat": 40.7183756,
+    "lng": -73.9589491,
+    "placeId": "ChIJkXRIF7xZwokRWHXyMhvSNO8"
+  },
+  {
+    "name": "Turkey's Nest",
+    "address": "94 Bedford Ave, Brooklyn, NY 11249, USA",
+    "lat": 40.7205997,
+    "lng": -73.95498719999999,
+    "placeId": "ChIJC4LOuFxZwokR0aI7tb5Jyw8"
+  },
+  {
+    "name": "Twins Lounge",
+    "address": "732 Manhattan Ave, Brooklyn, NY 11222, USA",
+    "lat": 40.726317699999996,
+    "lng": -73.9519866,
+    "placeId": "ChIJofE6JSBZwokRkOG-yB0pXns"
+  },
+  {
+    "name": "Ray's Hometown Bar",
+    "address": "905 Lorimer St, Brooklyn, NY 11222, USA",
+    "lat": 40.7235241,
+    "lng": -73.951948,
+    "placeId": "ChIJY5xKpl1ZwokR-CYLp7KTZOg"
+  },
+  {
+    "name": "The Levee",
+    "address": "212 Berry St, Brooklyn, NY 11249, USA",
+    "lat": 40.7163685,
+    "lng": -73.96163299999999,
+    "placeId": "ChIJN-vEwmBZwokR571lPuCCpC8"
+  },
+  {
+    "name": "Polonia Democratic Club & Ladies Auxiliary",
+    "address": "140 Grand St, Brooklyn, NY 11249, USA",
+    "lat": 40.7148213,
+    "lng": -73.96237339999999,
+    "placeId": "ChIJZfW7VGBZwokRDj-p57FnZlI"
+  },
+  {
+    "name": "Sharks Pool Club",
+    "address": "150 Grand St, Brooklyn, NY 11249, USA",
+    "lat": 40.714690600000004,
+    "lng": -73.96224339999999,
+    "placeId": "ChIJVYugU2BZwokRrtJlBt5-ZsU"
+  },
+  {
+    "name": "PFC John P Czachor Post",
+    "address": "181 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.714548,
+    "lng": -73.96073799999999,
+    "placeId": "ChIJjbB1Z2BZwokROeSbrTYdPMo"
+  },
+  {
+    "name": "B-Side",
+    "address": "131 Ave. C, New York, NY 10009, USA",
+    "lat": 40.7249955,
+    "lng": -73.97852999999999,
+    "placeId": "ChIJ0Yt563ZZwokRRZ61G7o7CaM"
+  },
+  {
+    "name": "Horses and Divorces",
+    "address": "285 Bedford Ave, Brooklyn, NY 11211, USA",
+    "lat": 40.7140536,
+    "lng": -73.9613537,
+    "placeId": "ChIJ__8DRGBZwokR6dfUGzBAfAc"
+  },
+  {
+    "name": "Connie O's",
+    "address": "158 Norman Ave, Brooklyn, NY 11222, USA",
+    "lat": 40.7265458,
+    "lng": -73.9480706,
+    "placeId": "ChIJ14HCHkZZwokRkPIGjV78aIE"
+  },
+  {
+    "name": "Lucy's Bar & Grill",
+    "address": "138 Nassau Ave, Brooklyn, NY 11222, USA",
+    "lat": 40.7245443,
+    "lng": -73.9477742,
+    "placeId": "ChIJ3e1vVsxZwokR82d7q_bsGTo"
+  },
+  {
+    "name": "5s",
+    "address": "179 Avenue B, New York, NY 10009, USA",
+    "lat": 40.7275567,
+    "lng": -73.9790227,
+    "placeId": "ChIJDVdOSapZwokREuWH9VU-sOI"
+  },
+  {
+    "name": "Mona's",
+    "address": "224 Avenue B Unit 14, New York, NY 10009, USA",
+    "lat": 40.729179599999995,
+    "lng": -73.978372,
+    "placeId": "ChIJjZDVonZZwokRoZPvylQfyFY"
+  },
+  {
+    "name": "Cafe Bureau",
+    "address": "251 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.713526,
+    "lng": -73.9586503,
+    "placeId": "ChIJXVVoSUxZwokRKWDRBvP1YfE"
+  },
+  {
+    "name": "Caribbean Social Club",
+    "address": "244 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.7134686,
+    "lng": -73.9590647,
+    "placeId": "ChIJf1mV3V9ZwokRmvDtUmyIMGk"
+  },
+  {
+    "name": "The Woods",
+    "address": "48 S 4th St, Brooklyn, NY 11211, USA",
+    "lat": 40.7128556,
+    "lng": -73.9663528,
+    "placeId": "ChIJNaaqo9hbwokRhf0e1A8UyYQ"
+  },
+  {
+    "name": "Maracuja",
+    "address": "279 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.7132401,
+    "lng": -73.9577771,
+    "placeId": "ChIJibBvvl9ZwokRDDmhWjCVuS0"
+  },
+  {
+    "name": "Midway",
+    "address": "272 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.7130951,
+    "lng": -73.95811800000001,
+    "placeId": "ChIJdZDC6l9ZwokRz2s94zcMlUw"
+  },
+  {
+    "name": "Propaganda",
+    "address": "360 Bedford Ave, Brooklyn, NY 11249, USA",
+    "lat": 40.7121193,
+    "lng": -73.96302279999999,
+    "placeId": "ChIJXbm2Bg1bwokR2H1am3e1E5M"
+  },
+  {
+    "name": "The Spotted Owl Tavern",
+    "address": "211 Avenue A, New York, NY 10009, USA",
+    "lat": 40.729892,
+    "lng": -73.9809747,
+    "placeId": "ChIJfdFXdnZZwokRw8KBMsqlO5U"
+  },
+  {
+    "name": "Phoenix Bar",
+    "address": "447 E 13th St, New York, NY 10009, USA",
+    "lat": 40.7300051,
+    "lng": -73.9811342,
+    "placeId": "ChIJjcdLdHZZwokRAUBQoPz63oY"
+  },
+  {
+    "name": "The Palace",
+    "address": "206 Nassau Ave, Brooklyn, NY 11222, USA",
+    "lat": 40.725445,
+    "lng": -73.9446475,
+    "placeId": "ChIJjbkLpBhZwokRBROS15xVRlM"
+  },
+  {
+    "name": "Asser Levy Recreation Center",
+    "address": "392 Asser Levy Pl, New York, NY 10010, USA",
+    "lat": 40.7361601,
+    "lng": -73.9756582,
+    "placeId": "ChIJTUlY7QxZwokR4_QF5mlorBs"
+  },
+  {
+    "name": "Nightshade",
+    "address": "451 Meeker Ave, Brooklyn, NY 11222, USA",
+    "lat": 40.7196081,
+    "lng": -73.9458326,
+    "placeId": "ChIJZafTzqNZwokRaCyLqc8wuL0"
+  },
+  {
+    "name": "East River Bar",
+    "address": "97 S 6th St, Brooklyn, NY 11211, USA",
+    "lat": 40.710953599999996,
+    "lng": -73.9646381,
+    "placeId": "ChIJTyNDL99bwokR6dFejXiNnsA"
+  },
+  {
+    "name": "Hamilton Fish Recreation Center",
+    "address": "128 Pitt St, New York, NY 10002, USA",
+    "lat": 40.7199522,
+    "lng": -73.9814913,
+    "placeId": "ChIJhZ8ASn9ZwokR4OPfJ0Gswhs"
+  },
+  {
+    "name": "Ace Bar",
+    "address": "531 E 5th St, New York, NY 10009, USA",
+    "lat": 40.7243881,
+    "lng": -73.98286519999999,
+    "placeId": "ChIJuddLo4JZwokRdm_oW8FoWN4"
+  },
+  {
+    "name": "Josie's",
+    "address": "520 E 6th St, New York, NY 10009, USA",
+    "lat": 40.724871,
+    "lng": -73.9829505,
+    "placeId": "ChIJG2-7B3hZwokRqdktPZZZbFw"
+  },
+  {
+    "name": "OTB",
+    "address": "141 Broadway, Brooklyn, NY 11211, USA",
+    "lat": 40.710454299999995,
+    "lng": -73.9634523,
+    "placeId": "ChIJ51pNHN9bwokROF0EWcMTsoU"
+  },
+  {
+    "name": "Doc Holliday's",
+    "address": "141 Avenue A, New York, NY 10009, USA",
+    "lat": 40.72726,
+    "lng": -73.98299,
+    "placeId": "ChIJwRcz2HdZwokR_I0BuB3PkFc"
+  },
+  {
+    "name": "Lucy's",
+    "address": "135 Avenue A, New York, NY 10009, USA",
+    "lat": 40.7270179,
+    "lng": -73.9830509,
+    "placeId": "ChIJ3WRZYp1ZwokRI0GzAf4kCIQ"
+  },
+  {
+    "name": "The Richardson",
+    "address": "451 Graham Ave, Brooklyn, NY 11222, USA",
+    "lat": 40.7188722,
+    "lng": -73.9453556,
+    "placeId": "ChIJN9ElSFBZwokRkdxPGpip6X8"
+  },
+  {
+    "name": "The Hairy Lemon",
+    "address": "28 Avenue B, New York, NY 10009, USA",
+    "lat": 40.722486800000006,
+    "lng": -73.98336189999999,
+    "placeId": "ChIJz-geeoJZwokR7IawjoknIfs"
+  },
+  {
+    "name": "Sophie's",
+    "address": "507 E 5th St, New York, NY 10009, USA",
+    "lat": 40.724798199999995,
+    "lng": -73.9838372,
+    "placeId": "ChIJZ1obu4JZwokRIif6X60iJXM"
+  },
+  {
+    "name": "Parkside Lounge",
+    "address": "317 E Houston St, New York, NY 10002, USA",
+    "lat": 40.721024,
+    "lng": -73.983235,
+    "placeId": "ChIJv2vIB4JZwokRQbbrk0W6I88"
+  },
+  {
+    "name": "Metropolitan",
+    "address": "559 Lorimer St, Brooklyn, NY 11211, USA",
+    "lat": 40.7136235,
+    "lng": -73.9495546,
+    "placeId": "ChIJ4T3ytllZwokR25u7NCunH-g"
+  },
+  {
+    "name": "Alligator Lounge",
+    "address": "600 Metropolitan Ave, Brooklyn, NY 11211, USA",
+    "lat": 40.713980299999996,
+    "lng": -73.9489598,
+    "placeId": "ChIJi72NxllZwokROkAxMMbU_nw"
+  },
+  {
+    "name": "Cherry Tavern",
+    "address": "441 E 6th St, New York, NY 10009, USA",
+    "lat": 40.7258174,
+    "lng": -73.98431219999999,
+    "placeId": "ChIJc2yQSp1ZwokRjcWYA96Gmzg"
+  },
+  {
+    "name": "O'Hanlon's",
+    "address": "349 E 14th St, New York, NY 10003, USA",
+    "lat": 40.7316636,
+    "lng": -73.9829316,
+    "placeId": "ChIJbYO6inVZwokRdJFKZFGP_l8"
+  },
+  {
+    "name": "Nowhere",
+    "address": "322 E 14th St, New York, NY 10003, USA",
+    "lat": 40.7317696,
+    "lng": -73.9841161,
+    "placeId": "ChIJZ1fMFZ5ZwokRkYrV85CZorY"
+  },
+  {
+    "name": "Redd’s Tavern",
+    "address": "511 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.711120199999996,
+    "lng": -73.9506856,
+    "placeId": "ChIJ1WbVf1hZwokRv7FQ6t4Tl_0"
+  },
+  {
+    "name": "Double Down Saloon",
+    "address": "14 Avenue A, New York, NY 10009, USA",
+    "lat": 40.722516,
+    "lng": -73.98574099999999,
+    "placeId": "ChIJRZhgTIJZwokR5ZRVoHE3tlw"
+  },
+  {
+    "name": "LORA SPORTS BAR",
+    "address": "163 Marcy Ave, Brooklyn, NY 11211, USA",
+    "lat": 40.7086709,
+    "lng": -73.9575955,
+    "placeId": "ChIJ675IlbVbwokRf1-w0eWkCw8"
+  },
+  {
+    "name": "Kelly's Sports Bar",
+    "address": "12 Avenue A, New York, NY 10009, USA",
+    "lat": 40.7225274,
+    "lng": -73.98591449999999,
+    "placeId": "ChIJMbCzTIJZwokREbymvR7Ex8g"
+  },
+  {
+    "name": "Blue & Gold Tavern",
+    "address": "79 E 7th St, New York, NY 10003, USA",
+    "lat": 40.727325,
+    "lng": -73.9862831,
+    "placeId": "ChIJdY_U5pxZwokR0A9LyTQzOz8"
+  },
+  {
+    "name": "The Whiskey on Grand",
+    "address": "524 Grand St #3503, Brooklyn, NY 11211, USA",
+    "lat": 40.710913399999995,
+    "lng": -73.95037649999999,
+    "placeId": "ChIJ9Xd4geJbwokR6VPdAKJXzyE"
+  },
+  {
+    "name": "Ontario Bar",
+    "address": "559 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.711353200000005,
+    "lng": -73.949236,
+    "placeId": "ChIJkxkuDVhZwokRJcoxmoEmy_w"
+  },
+  {
+    "name": "Clara’s Gramercy",
+    "address": "393 2nd Ave, New York, NY 10010, USA",
+    "lat": 40.7377514,
+    "lng": -73.9813144,
+    "placeId": "ChIJE6d1GjVZwokRq1uOw3mybkU"
+  },
+  {
+    "name": "Kingston Hall",
+    "address": "149 2nd Ave, New York, NY 10003, USA",
+    "lat": 40.729503699999995,
+    "lng": -73.9872627,
+    "placeId": "ChIJN1zwQJxZwokRNFh2jY9GrVM"
+  },
+  {
+    "name": "Lydia’s",
+    "address": "16 1st Ave, New York, NY 10009, USA",
+    "lat": 40.7234079,
+    "lng": -73.9880268,
+    "placeId": "ChIJ_4w-t45ZwokRBrwDO9Ei2bQ"
+  },
+  {
+    "name": "Welcome To The Johnsons",
+    "address": "123 Rivington St, New York, NY 10002, USA",
+    "lat": 40.7197028,
+    "lng": -73.9873361,
+    "placeId": "ChIJD5T-FIFZwokRKLQDKrQ68-0"
+  },
+  {
+    "name": "Bull McCabes",
+    "address": "29 St Marks Pl, New York, NY 10003, USA",
+    "lat": 40.729045,
+    "lng": -73.988308,
+    "placeId": "ChIJpVqBe5xZwokRMIOr6FtZg9Y"
+  },
+  {
+    "name": "Studio6 Gallery",
+    "address": "106 Rivington St, New York, NY 10002, USA",
+    "lat": 40.7201205,
+    "lng": -73.9879433,
+    "placeId": "ChIJGejniapZwokRWx9bDMFm40U"
+  },
+  {
+    "name": "Haven",
+    "address": "683 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.7117295,
+    "lng": -73.9452299,
+    "placeId": "ChIJ555lhNNZwokRNrVt_YsFDl0"
+  },
+  {
+    "name": "Sadie’s Ward",
+    "address": "121 Essex St, New York, NY 10002, USA",
+    "lat": 40.719660399999995,
+    "lng": -73.9878877,
+    "placeId": "ChIJkYrFXQBZwokRZDqR-gXdgSg"
+  },
+  {
+    "name": "Ludlow House",
+    "address": "139 Ludlow St, New York, NY 10002, USA",
+    "lat": 40.720540899999996,
+    "lng": -73.9883859,
+    "placeId": "ChIJeTVZToFZwokROgEcdxSW_nc"
+  },
+  {
+    "name": "Paddy Maguire's Ale House",
+    "address": "237 3rd Ave Apt 4, New York, NY 10003, USA",
+    "lat": 40.73664,
+    "lng": -73.98446539999999,
+    "placeId": "ChIJS-udFaBZwokRQ8Bg5mBTGpY"
+  },
+  {
+    "name": "Paddy Reilly's Music Bar",
+    "address": "519 2nd Ave, New York, NY 10016, USA",
+    "lat": 40.741658,
+    "lng": -73.978516,
+    "placeId": "ChIJfThpJAlZwokRiJwnvCW94SM"
+  },
+  {
+    "name": "Sugar Mouse NYC",
+    "address": "47 3rd Ave, New York, NY 10003, USA",
+    "lat": 40.7308173,
+    "lng": -73.988621,
+    "placeId": "ChIJgTquPdBZwokROLWpEDTUTh0"
+  },
+  {
+    "name": "Barfly",
+    "address": "244 3rd Ave, New York, NY 10010, USA",
+    "lat": 40.737117999999995,
+    "lng": -73.9846214,
+    "placeId": "ChIJLVH0QaBZwokRGivIPQcDKU4"
+  },
+  {
+    "name": "Sour Mouse",
+    "address": "110 Delancey St, New York, NY 10002, USA",
+    "lat": 40.7189604,
+    "lng": -73.9883548,
+    "placeId": "ChIJeel1edNZwokRj6nwmwLrrTg"
+  },
+  {
+    "name": "Fáilte",
+    "address": "531 2nd Ave, New York, NY 10016, USA",
+    "lat": 40.7420497,
+    "lng": -73.9780921,
+    "placeId": "ChIJJ_mEJwlZwokRqKtNhhxuh1Y"
+  },
+  {
+    "name": "The Boiler Room",
+    "address": "45 2nd Ave, New York, NY 10003, USA",
+    "lat": 40.7254237,
+    "lng": -73.9903561,
+    "placeId": "ChIJAydFqYRZwokRo1s2sj0i4Rc"
+  },
+  {
+    "name": "Cowboy Tom's",
+    "address": "120 Orchard St, New York, NY 10002, USA",
+    "lat": 40.7193931,
+    "lng": -73.9893716,
+    "placeId": "ChIJT1wBAgBZwokR161boyb4nPY"
+  },
+  {
+    "name": "Amsterdam Billiards",
+    "address": "110 E 11th St, New York, NY 10003, USA",
+    "lat": 40.7317088,
+    "lng": -73.98994239999999,
+    "placeId": "ChIJ7de9UJlZwokR8QKhYlcrLMA"
+  },
+  {
+    "name": "The Players",
+    "address": "16 Gramercy Pk S, New York, NY 10003, USA",
+    "lat": 40.7376818,
+    "lng": -73.98661299999999,
+    "placeId": "ChIJi1GAuqFZwokRQfMhSEhcA8I"
+  },
+  {
+    "name": "PUBLIC Hotel",
+    "address": "215 Chrystie St, New York, NY 10002, USA",
+    "lat": 40.723110399999996,
+    "lng": -73.9920935,
+    "placeId": "ChIJYY-OM4RZwokRvA7ECx3HRZw"
+  },
+  {
+    "name": "Mr B bar",
+    "address": "231 E 33rd St, New York, NY 10016, USA",
+    "lat": 40.7446195,
+    "lng": -73.9772973,
+    "placeId": "ChIJp14YXQBZwokR_IDE0EC5Dww"
+  },
+  {
+    "name": "Ray’s",
+    "address": "177 Chrystie St, New York, NY 10002, USA",
+    "lat": 40.721182,
+    "lng": -73.992504,
+    "placeId": "ChIJKavF4jxZwokRph6HhofCKJY"
+  },
+  {
+    "name": "Jac's on Bond",
+    "address": "26 Bond St, New York, NY 10012, USA",
+    "lat": 40.726585,
+    "lng": -73.9935856,
+    "placeId": "ChIJRVNhqddZwokRtdYJh-uBlCY"
+  },
+  {
+    "name": "The Flower Shop",
+    "address": "107 Eldridge St, New York, NY 10002, USA",
+    "lat": 40.718147599999995,
+    "lng": -73.9922533,
+    "placeId": "ChIJxQsOoodZwokRKDADB6KPBaU"
+  },
+  {
+    "name": "169 Bar",
+    "address": "169 E Broadway, New York, NY 10002, USA",
+    "lat": 40.7138889,
+    "lng": -73.9897222,
+    "placeId": "ChIJVeXRdylawokRJYXkLU8yMpE"
+  },
+  {
+    "name": "one4one Sports Club & Lounge",
+    "address": "141 Chrystie St, New York, NY 10002, USA",
+    "lat": 40.719810599999995,
+    "lng": -73.9933549,
+    "placeId": "ChIJHRb02qhZwokRo93vok4Bx5I"
+  },
+  {
+    "name": "The Ripple Room",
+    "address": "183 Bowery, New York, NY 10002, USA",
+    "lat": 40.7204451,
+    "lng": -73.9935856,
+    "placeId": "ChIJqz6xTwBZwokRNvAKvJE8RV4"
+  },
+  {
+    "name": "The Less Dead",
+    "address": "949 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.7131587,
+    "lng": -73.9366021,
+    "placeId": "ChIJl0GTBwBZwokRYfGeyEN4Vm8"
+  },
+  {
+    "name": "Josie Woods Pub",
+    "address": "11 Waverly Pl, New York, NY 10003, USA",
+    "lat": 40.730156400000006,
+    "lng": -73.9941241,
+    "placeId": "ChIJmbJve5pZwokRsEYWvzyfA4Q"
+  },
+  {
+    "name": "The Clocktower",
+    "address": "5 Madison Ave, New York, NY 10010, USA",
+    "lat": 40.741295,
+    "lng": -73.987368,
+    "placeId": "ChIJe_H4tKZZwokRIKL-M0_luB0"
+  },
+  {
+    "name": "Bleecker Street Bar",
+    "address": "648 Broadway, New York, NY 10012, USA",
+    "lat": 40.7265693,
+    "lng": -73.99533629999999,
+    "placeId": "ChIJs_vt9I9ZwokRxV5EBoQcB5E"
+  },
+  {
+    "name": "Society Billiards + Bar",
+    "address": "10 E 21st St, New York, NY 10010, USA",
+    "lat": 40.739964799999996,
+    "lng": -73.9900677,
+    "placeId": "ChIJzU-IwaNZwokRfXHTck7RuxY"
+  },
+  {
+    "name": "Social Cues B.S.A.",
+    "address": "35 Meadow St, Brooklyn, NY 11206, USA",
+    "lat": 40.7110687,
+    "lng": -73.9358445,
+    "placeId": "ChIJRSbQtFVfwokRtUMS7gYNq8c"
+  },
+  {
+    "name": "The Anchored Inn",
+    "address": "57 Waterbury St, Brooklyn, NY 11206, USA",
+    "lat": 40.7091381,
+    "lng": -73.93731009999999,
+    "placeId": "ChIJp5C1XlVZwokR-4vkeemYjXI"
+  },
+  {
+    "name": "Artie's Backroom & Rooftop",
+    "address": "145 E 39th St, New York, NY 10016, USA",
+    "lat": 40.7493602,
+    "lng": -73.9765358,
+    "placeId": "ChIJaSDr-ANZwokR_Ae8YjX2UwA"
+  },
+  {
+    "name": "Peter Dillon's Pub",
+    "address": "130 E 40th St, New York, NY 10016, USA",
+    "lat": 40.7499687,
+    "lng": -73.97681229999999,
+    "placeId": "ChIJP_ND4gNZwokRZiGVVvBeg8o"
+  },
+  {
+    "name": "Mr. Fong's",
+    "address": "40 Market St, New York, NY 10002, USA",
+    "lat": 40.712432299999996,
+    "lng": -73.994253,
+    "placeId": "ChIJ3XjqrShawokRZcRgQ4F6als"
+  },
+  {
+    "name": "The Monroe",
+    "address": "49 Monroe St, New York, NY 10002, USA",
+    "lat": 40.711788899999995,
+    "lng": -73.9937248,
+    "placeId": "ChIJyyNqVCZbwokRvo4SAXzZTYI"
+  },
+  {
+    "name": "Sharks Pool Club",
+    "address": "124 Madison St, New York, NY 10002, USA",
+    "lat": 40.71221980000001,
+    "lng": -73.99413659999999,
+    "placeId": "ChIJuUzA69ZbwokRAxtATUqykvQ"
+  },
+  {
+    "name": "Social Cues The Garden",
+    "address": "310 Meserole St, Brooklyn, NY 11206, USA",
+    "lat": 40.7086452,
+    "lng": -73.9358214,
+    "placeId": "ChIJeQOXB75dwokRPNWgzrcRops"
+  },
+  {
+    "name": "Boxers NYC",
+    "address": "37 W 20th St, New York, NY 10011, USA",
+    "lat": 40.7407635,
+    "lng": -73.9932413,
+    "placeId": "ChIJ33p4aaNZwokRaqz6qL-Z_Rc"
+  },
+  {
+    "name": "Slate",
+    "address": "54 W 21st St, New York, NY 10010, USA",
+    "lat": 40.741215499999996,
+    "lng": -73.9931854,
+    "placeId": "ChIJSZr2ZqNZwokRN89ggdSWGiQ"
+  },
+  {
+    "name": "Social Cues The Gallery",
+    "address": "236 Water St, Brooklyn, NY 11201, USA",
+    "lat": 40.702873499999995,
+    "lng": -73.9843492,
+    "placeId": "ChIJrWD-O_FbwokRfBbFTVSr8NI"
+  },
+  {
+    "name": "Triona's on Sullivan",
+    "address": "237 Sullivan St, New York, NY 10012, USA",
+    "lat": 40.729830199999995,
+    "lng": -73.9993702,
+    "placeId": "ChIJOa01mZFZwokRWGEE-s5NAFk"
+  },
+  {
+    "name": "MacDougal Street Ale House",
+    "address": "122 MacDougal St, New York, NY 10012, USA",
+    "lat": 40.7299115,
+    "lng": -74.00043289999999,
+    "placeId": "ChIJjbSuh5FZwokRBr-0uqQ4RLE"
+  },
+  {
+    "name": "Social Cues Wynwood",
+    "address": "100 White St, Brooklyn, NY 11206, USA",
+    "lat": 40.7065512,
+    "lng": -73.93532359999999,
+    "placeId": "ChIJy8xMA9RdwokRNfpC3clJ5UA"
+  },
+  {
+    "name": "Space Billiard Pool Hall & Sports Bar | Koreatown NYC",
+    "address": "34 W 32nd St Floor 12, New York, NY 10001, USA",
+    "lat": 40.7476643,
+    "lng": -73.98735700000002,
+    "placeId": "ChIJz_3Q3qhZwokRAX09MCwhWTc"
+  },
+  {
+    "name": "W XYZ Bar - Aloft Long Island City Hotel",
+    "address": "27-45 Jackson Ave, Long Island City, NY 11101, USA",
+    "lat": 40.748286199999995,
+    "lng": -73.9398205,
+    "placeId": "ChIJrZSyaG1ZwokRcU--fazZ8vc"
+  },
+  {
+    "name": "New York Cue Club",
+    "address": "20 W 37th St, New York, NY 10018, USA",
+    "lat": 40.750652699999996,
+    "lng": -73.984512,
+    "placeId": "ChIJv1vxZxxZwokRnBaBt3wlWtE"
+  },
+  {
+    "name": "Superfine",
+    "address": "126 Front St, Brooklyn, NY 11201, USA",
+    "lat": 40.7023726,
+    "lng": -73.9875072,
+    "placeId": "ChIJYSFd6zNawokRpLteYhPEu_A"
+  },
+  {
+    "name": "Bushwick Ice House",
+    "address": "35 Ingraham St, Brooklyn, NY 11206, USA",
+    "lat": 40.7071095,
+    "lng": -73.9325107,
+    "placeId": "ChIJg-Ps6xtdwokR1rw0-i3lRcc"
+  },
+  {
+    "name": "Blaggards Pub",
+    "address": "8 W 38th St, New York, NY 10018, USA",
+    "lat": 40.751111099999996,
+    "lng": -73.98361109999999,
+    "placeId": "ChIJrynYIqxZwokREqIhxUvixhc"
+  },
+  {
+    "name": "Anytime Bar & Billiards",
+    "address": "112 W 30th St, New York, NY 10001, USA",
+    "lat": 40.7473743,
+    "lng": -73.9904221,
+    "placeId": "ChIJ2YSC9nBZwokRfgwN11zc7ww"
+  },
+  {
+    "name": "Barrow Street Ale House",
+    "address": "15 Barrow St, New York, NY 10014, USA",
+    "lat": 40.7326444,
+    "lng": -74.0025296,
+    "placeId": "ChIJuSb7kZNZwokRyFL7gpKQbfA"
+  },
+  {
+    "name": "The Yale Club",
+    "address": "50 Vanderbilt Ave, New York, NY 10017, USA",
+    "lat": 40.7540226,
+    "lng": -73.9774703,
+    "placeId": "ChIJwWEH_AFZwokRhh1zaQklMQw"
+  },
+  {
+    "name": "The Stonewall Inn",
+    "address": "53 Christopher St, New York, NY 10014, USA",
+    "lat": 40.7338326,
+    "lng": -74.00216259999999,
+    "placeId": "ChIJTQoVbZRZwokRx0ocj9EU2sA"
+  },
+  {
+    "name": "Telephone Room",
+    "address": "inside Ange Noir Cafe, 247 Varet St, Brooklyn, NY 11206, USA",
+    "lat": 40.7042389,
+    "lng": -73.9341681,
+    "placeId": "ChIJURxz919dwokRKS2GVDVfHdE"
+  },
+  {
+    "name": "Pioneers Bar NYC",
+    "address": "138 W 29th St, New York, NY 10001, USA",
+    "lat": 40.747234299999995,
+    "lng": -73.99185179999999,
+    "placeId": "ChIJkTptdq9ZwokR9CCc1A4ZcNw"
+  },
+  {
+    "name": "Toad Hall",
+    "address": "57 Grand St, New York, NY 10013, USA",
+    "lat": 40.7221943,
+    "lng": -74.0035563,
+    "placeId": "ChIJKUZYdYtZwokRUFeMJp0FKsM"
+  },
+  {
+    "name": "Cellar Dog",
+    "address": "75 Christopher St, New York, NY 10014, USA",
+    "lat": 40.7336448,
+    "lng": -74.0032027,
+    "placeId": "ChIJhWENSQ1ZwokRuuh2eZNUUSc"
+  },
+  {
+    "name": "The Emerson",
+    "address": "561 Myrtle Ave, Brooklyn, NY 11205, USA",
+    "lat": 40.6941303,
+    "lng": -73.9618175,
+    "placeId": "ChIJQV4YXcBbwokR5613tRGi1eU"
+  },
+  {
+    "name": "The One Trick Pony",
+    "address": "234 W 14th St, New York, NY 10011, USA",
+    "lat": 40.739163399999995,
+    "lng": -74.00150599999999,
+    "placeId": "ChIJVdQpe65ZwokRGj7Wq8u55eY"
+  },
+  {
+    "name": "Roxy Bar",
+    "address": "2 6th Ave, New York, NY 10013, USA",
+    "lat": 40.7193788,
+    "lng": -74.0048544,
+    "placeId": "ChIJGZt5BgFZwokRBdDmvypiwY0"
+  },
+  {
+    "name": "Gym Sportsbar",
+    "address": "167 8th Ave, New York, NY 10011, USA",
+    "lat": 40.742661999999996,
+    "lng": -74.00082379999999,
+    "placeId": "ChIJX-P_qr5ZwokR7pssvk2V9b0"
+  },
+  {
+    "name": "Atomic Wings",
+    "address": "311 Broadway, New York, NY 10007, USA",
+    "lat": 40.715638399999996,
+    "lng": -74.0054591,
+    "placeId": "ChIJk0B7xiFawokRqSwW1TZodg8"
+  },
+  {
+    "name": "Barrow's Pub",
+    "address": "463 Hudson St, New York, NY 10014, USA",
+    "lat": 40.731578,
+    "lng": -74.00689899999999,
+    "placeId": "ChIJMQim1uxZwokRIyU5nBAMHuU"
+  },
+  {
+    "name": "Peck Slip Social",
+    "address": "36 Peck Slip, New York, NY 10038, USA",
+    "lat": 40.707551699999996,
+    "lng": -74.0018035,
+    "placeId": "ChIJLX5S9ZpbwokRuhbbCZkqI2Y"
+  },
+  {
+    "name": "Gold Sounds Bar",
+    "address": "44 Wilson Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.7026664,
+    "lng": -73.92954449999999,
+    "placeId": "ChIJRypEBARcwokRkwCRJdTeK40"
+  },
+  {
+    "name": "Love's Club",
+    "address": "106 Melrose St, Brooklyn, NY 11206, USA",
+    "lat": 40.699129899999996,
+    "lng": -73.93338100000001,
+    "placeId": "ChIJ0a0LB7ZdwokRzooG9HOap0g"
+  },
+  {
+    "name": "Clara's",
+    "address": "53 Wilson Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.7026112,
+    "lng": -73.92871629999999,
+    "placeId": "ChIJ473KdARcwokRGJ5yGmozDkE"
+  },
+  {
+    "name": "Social Cues Surreal",
+    "address": "525 Dekalb Ave, Brooklyn, NY 11205, USA",
+    "lat": 40.6910045,
+    "lng": -73.9559063,
+    "placeId": "ChIJ07pOqP5bwokRi07h5Dm_M28"
+  },
+  {
+    "name": "Westside Tavern",
+    "address": "360 W 23rd St, New York, NY 10011, USA",
+    "lat": 40.746125899999996,
+    "lng": -74.0009341,
+    "placeId": "ChIJz0ZiiblZwokR0N8DMCLuor0"
+  },
+  {
+    "name": "Fine Time",
+    "address": "84 Central Ave, Brooklyn, NY 11206, USA",
+    "lat": 40.7007275,
+    "lng": -73.9300816,
+    "placeId": "ChIJl39DKgRcwokRbHceT3Du7ls"
+  },
+  {
+    "name": "The Cobra Club",
+    "address": "6 Wyckoff Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.706685,
+    "lng": -73.92349399999999,
+    "placeId": "ChIJb38eWh1cwokRS2OX0SzcFrU"
+  },
+  {
+    "name": "The Jar Bar",
+    "address": "45-06 48th Ave, Woodside, NY 11377, USA",
+    "lat": 40.7392797,
+    "lng": -73.9201156,
+    "placeId": "ChIJGTPFHttewokR0ZdjQPLGJjU"
+  },
+  {
+    "name": "Soho House New York",
+    "address": "29-35 9th Ave, New York, NY 10014, USA",
+    "lat": 40.7406374,
+    "lng": -74.00592309999999,
+    "placeId": "ChIJQy-Jj79ZwokRBqj3oqd0q7c"
+  },
+  {
+    "name": "The Johnson's",
+    "address": "369 Troutman St, Brooklyn, NY 11237, USA",
+    "lat": 40.705830299999995,
+    "lng": -73.9237693,
+    "placeId": "ChIJqwhqNh1cwokRcUqJU2zS5M8"
+  },
+  {
+    "name": "Brooklyn Billiards Bushwick",
+    "address": "339 Troutman St, Brooklyn, NY 11237, USA",
+    "lat": 40.705097599999995,
+    "lng": -73.9244746,
+    "placeId": "ChIJb8QL-vxdwokREEb4UNW_hg0"
+  },
+  {
+    "name": "W XYZ Bar and Lounge at Aloft Manhattan Downtown",
+    "address": "49-53 Ann St, New York, NY 10038, USA",
+    "lat": 40.7103839,
+    "lng": -74.0068333,
+    "placeId": "ChIJL_oFdRhawokR84uzMn714cs"
+  },
+  {
+    "name": "Wall Street Bath & Spa 88",
+    "address": "88 Fulton St, New York, NY 10038, USA",
+    "lat": 40.7091089,
+    "lng": -74.0058052,
+    "placeId": "ChIJw0iarSJawokRYslMIjGxy1o"
+  },
+  {
+    "name": "Kelly's Sports Bar",
+    "address": "1154 2nd Ave, New York, NY 10065, USA",
+    "lat": 40.7615777,
+    "lng": -73.9633396,
+    "placeId": "ChIJNdr6Wc9ZwokRVqdyWsiXtgc"
+  },
+  {
+    "name": "The Celly",
+    "address": "332 9th Ave, New York, NY 10001, USA",
+    "lat": 40.7502716,
+    "lng": -73.9983182,
+    "placeId": "ChIJN2i7RhVZwokRKJaXdfjjNSk"
+  },
+  {
+    "name": "Alibi",
+    "address": "242 Dekalb Ave, Brooklyn, NY 11205, USA",
+    "lat": 40.6893319,
+    "lng": -73.9694882,
+    "placeId": "ChIJ92wJjLlbwokR_fBkYGaPfcA"
+  },
+  {
+    "name": "Hudson Yards Tavern",
+    "address": "360 9th Ave, New York, NY 10001, USA",
+    "lat": 40.7510311,
+    "lng": -73.9976192,
+    "placeId": "ChIJxSrafptZwokR5xeQJ3Y5MtA"
+  },
+  {
+    "name": "Old Mates Pub",
+    "address": "170 John St, New York, NY 10038, USA",
+    "lat": 40.7060643,
+    "lng": -74.0043451,
+    "placeId": "ChIJ18arQwBbwokRzYO8n-65f_s"
+  },
+  {
+    "name": "Starr Bar",
+    "address": "214 Starr St, Brooklyn, NY 11237, USA",
+    "lat": 40.704985,
+    "lng": -73.9229048,
+    "placeId": "ChIJKx5RIh1cwokRi2jyqtjqG68"
+  },
+  {
+    "name": "Carousel",
+    "address": "36 Wyckoff Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.7058463,
+    "lng": -73.9221354,
+    "placeId": "ChIJS3GApRNdwokRQ5wdnB5qpDA"
+  },
+  {
+    "name": "The Spotted Dog",
+    "address": "1154 1st Ave, New York, NY 10065, USA",
+    "lat": 40.7622222,
+    "lng": -73.9597222,
+    "placeId": "ChIJyfIUA-hYwokRCvgf6LQGDUg"
+  },
+  {
+    "name": "Lucky Strike Times Square",
+    "address": "222 W 44th St, New York, NY 10036, USA",
+    "lat": 40.7577077,
+    "lng": -73.9871228,
+    "placeId": "ChIJUf2r9FRYwokRKrasyV7rvwQ"
+  },
+  {
+    "name": "The University Club of New York",
+    "address": "1 W 54th St, New York, NY 10019, USA",
+    "lat": 40.7613615,
+    "lng": -73.9756206,
+    "placeId": "ChIJzyGQtvtYwokRf9qLjSWZpqI"
+  },
+  {
+    "name": "Chelsea Recreation Center",
+    "address": "430 W 25th St, New York, NY 10001, USA",
+    "lat": 40.748268499999995,
+    "lng": -74.00206469999999,
+    "placeId": "ChIJk_1kXbdZwokRTCNXO2NxYt8"
+  },
+  {
+    "name": "Coexist GameHouse",
+    "address": "325 W 38th St Ground Floor, New York, NY 10018, USA",
+    "lat": 40.7554377,
+    "lng": -73.9926932,
+    "placeId": "ChIJBYp338VZwokRVhqH2FSaPLw"
+  },
+  {
+    "name": "Heavy Woods",
+    "address": "50 Wyckoff Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.705605999999996,
+    "lng": -73.92164799999999,
+    "placeId": "ChIJpwu_dB1cwokRB_7Vq9WZDh0"
+  },
+  {
+    "name": "WXYZ Bar Aloft Brooklyn",
+    "address": "216 Duffield St, Brooklyn, NY 11201, USA",
+    "lat": 40.69168380000001,
+    "lng": -73.98455349999999,
+    "placeId": "ChIJE4fxSABbwokRVSs6yfeWYNo"
+  },
+  {
+    "name": "McAnn's",
+    "address": "625 8th Ave, New York, NY 10018, USA",
+    "lat": 40.756891599999996,
+    "lng": -73.99177139999999,
+    "placeId": "ChIJJ34aKFNYwokRmFSEkY6j1hA"
+  },
+  {
+    "name": "Blatt Billiards",
+    "address": "330 W 38th St, New York, NY 10018, USA",
+    "lat": 40.7553188,
+    "lng": -73.99331769999999,
+    "placeId": "ChIJOUxCC5lZwokRQesYhKknjUA"
+  },
+  {
+    "name": "Carragher's",
+    "address": "Basement Bar, 17 John St, New York, NY 10038, USA",
+    "lat": 40.7099702,
+    "lng": -74.0087412,
+    "placeId": "ChIJCw6SmaxZwokRIzJBmyt6E4k"
+  },
+  {
+    "name": "Cassidys Pub",
+    "address": "65 W 55th St, New York, NY 10019, USA",
+    "lat": 40.7627908,
+    "lng": -73.9771957,
+    "placeId": "ChIJuQeWi_lYwokRB0tWx-ZYzHI"
+  },
+  {
+    "name": "Blue Ruin Bar",
+    "address": "538 9th Ave, New York, NY 10018, USA",
+    "lat": 40.7568773,
+    "lng": -73.9934364,
+    "placeId": "ChIJJ1ZxtlJYwokRU2Ysk8JPqgM"
+  },
+  {
+    "name": "Frames Bowling Lounge",
+    "address": "550 9th Ave, New York, NY 10018, USA",
+    "lat": 40.757115999999996,
+    "lng": -73.99315,
+    "placeId": "ChIJYa50uFJYwokRC7PY8Ir6uYY"
+  },
+  {
+    "name": "Fulton Hall",
+    "address": "250 Ashland Pl, Brooklyn, NY 11217, USA",
+    "lat": 40.6877011,
+    "lng": -73.9787588,
+    "placeId": "ChIJhfCnIC9bwokRHWScDWwdeCQ"
+  },
+  {
+    "name": "Turbo Pizza",
+    "address": "1540 Dekalb Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.702538100000005,
+    "lng": -73.9208373,
+    "placeId": "ChIJ__cHXQBdwokRLRSCRFYpY1s"
+  },
+  {
+    "name": "Carmelo’s",
+    "address": "1544 Dekalb Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.702760399999995,
+    "lng": -73.92052149999999,
+    "placeId": "ChIJfb2NaBxcwokRPwioF7FI_ds"
+  },
+  {
+    "name": "Lone Wolf",
+    "address": "1089 Broadway, Brooklyn, NY 11221, USA",
+    "lat": 40.6945382,
+    "lng": -73.9304463,
+    "placeId": "ChIJA6n6NQlcwokRVhzgWu1ycCI"
+  },
+  {
+    "name": "Abe's Pagoda Bar",
+    "address": "108 Wyckoff Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.7039262,
+    "lng": -73.9188272,
+    "placeId": "ChIJiQHGLBxcwokRSGPEB7RkbLA"
+  },
+  {
+    "name": "Quijote Tapas Bar",
+    "address": "31-06 36th Ave, Long Island City, NY 11106, USA",
+    "lat": 40.756328599999996,
+    "lng": -73.9295574,
+    "placeId": "ChIJT8T7DC5fwokRyLowKi_stIw"
+  },
+  {
+    "name": "Veronica's Bar",
+    "address": "34-04 36th Ave, Astoria, NY 11106, USA",
+    "lat": 40.7552738,
+    "lng": -73.9272384,
+    "placeId": "ChIJGzNiTS5fwokRU3cXQEHE4Ug"
+  },
+  {
+    "name": "Secret Pour",
+    "address": "1114 Dekalb Ave, Brooklyn, NY 11221, USA",
+    "lat": 40.6937298,
+    "lng": -73.92980519999999,
+    "placeId": "ChIJJ3abKu5dwokRT92YpzeVhwI"
+  },
+  {
+    "name": "Lou’s Athletic Club",
+    "address": "384 Knickerbocker Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.7002117,
+    "lng": -73.9210791,
+    "placeId": "ChIJY1jYosFdwokR4l7zAYIp-LY"
+  },
+  {
+    "name": "Rockefeller Park",
+    "address": "75 Battery Place, New York, NY 10280, USA",
+    "lat": 40.716257999999996,
+    "lng": -74.0167609,
+    "placeId": "ChIJD8YUwhFawokRFu9nJOnNJbU"
+  },
+  {
+    "name": "Beckett's Sports Bar",
+    "address": "81 Pearl Street, 48 Stone St, New York, NY 10004, USA",
+    "lat": 40.7041262,
+    "lng": -74.01034229999999,
+    "placeId": "ChIJ3blcJRRawokRex4mbeb9Ix4"
+  },
+  {
+    "name": "Olly Olly Market",
+    "address": "Starrett-Lehigh Building, 601 W 26th St, New York, NY 10001, USA",
+    "lat": 40.7513273,
+    "lng": -74.0059052,
+    "placeId": "ChIJCTrgZ3lZwokRgocSC4yDcOw"
+  },
+  {
+    "name": "Di’s Corner Bar",
+    "address": "3-92 Woodward Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.70873110000001,
+    "lng": -73.9125511,
+    "placeId": "ChIJoceawmpfwokR8HuZ6NL8uhQ"
+  },
+  {
+    "name": "The Globe Tavern",
+    "address": "49-10 Skillman Ave, Woodside, NY 11377, USA",
+    "lat": 40.7460578,
+    "lng": -73.9147416,
+    "placeId": "ChIJu0cjZSBfwokR_AY7C5ySnk4"
+  },
+  {
+    "name": "THE COMMON DITCH SOCIAL",
+    "address": "74 Broad St 2nd Floor, New York, NY 10004, USA",
+    "lat": 40.7046359,
+    "lng": -74.01159690000001,
+    "placeId": "ChIJL31OSRdawokRHolFdQYxYBE"
+  },
+  {
+    "name": "The Tiger Room",
+    "address": "1186 Bedford Ave, Brooklyn, NY 11216, USA",
+    "lat": 40.6834754,
+    "lng": -73.9539947,
+    "placeId": "ChIJ4Q-cXK9bwokRgmjqZgWseP0"
+  },
+  {
+    "name": "New York Athletic Club",
+    "address": "180 Central Park S, New York, NY 10019, USA",
+    "lat": 40.766414399999995,
+    "lng": -73.9788573,
+    "placeId": "ChIJkTUkH_dYwokR4WJX186l4Os"
+  },
+  {
+    "name": "El Monumento",
+    "address": "1185 Broadway, Brooklyn, NY 11221, USA",
+    "lat": 40.6925816,
+    "lng": -73.9272486,
+    "placeId": "ChIJSQbfaG9dwokRbLyErf7s2xY"
+  },
+  {
+    "name": "Bani Grocery",
+    "address": "1121 Greene Ave, Brooklyn, NY 11221, USA",
+    "lat": 40.693974,
+    "lng": -73.9237225,
+    "placeId": "ChIJRWjI2xFcwokRPyjgNnsM25E"
+  },
+  {
+    "name": "Montero Bar & Grill",
+    "address": "73 Atlantic Ave, Brooklyn, NY 11201, USA",
+    "lat": 40.6913741,
+    "lng": -73.9978995,
+    "placeId": "ChIJe6d6TERawokRw5jEzIqswwg"
+  },
+  {
+    "name": "Industry Bar",
+    "address": "355 W 52nd St, New York, NY 10019, USA",
+    "lat": 40.7644059,
+    "lng": -73.9869612,
+    "placeId": "ChIJs5moEldYwokRUeku57R4FfA"
+  },
+  {
+    "name": "Brooklyn Inn",
+    "address": "148 Hoyt St, Brooklyn, NY 11217, USA",
+    "lat": 40.6858466,
+    "lng": -73.9885413,
+    "placeId": "ChIJ7-cwHFJawokRYc2hTrsF-gs"
+  },
+  {
+    "name": "Bootleg Bar",
+    "address": "1438 Myrtle Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.6987447,
+    "lng": -73.91721989999999,
+    "placeId": "ChIJ2YXonRlcwokR_z5cvjB7JMI"
+  },
+  {
+    "name": "The Weekender",
+    "address": "41-46 54th St, Woodside, NY 11377, USA",
+    "lat": 40.7444146,
+    "lng": -73.9107327,
+    "placeId": "ChIJBQZ1LhdfwokRu1c3RL3WYAc"
+  },
+  {
+    "name": "Rosie's Roadside Tavern",
+    "address": "60-65 Flushing Ave, Maspeth, NY 11378, USA",
+    "lat": 40.7203769,
+    "lng": -73.9054974,
+    "placeId": "ChIJCUyC7YBfwokRabbRQr2GGL8"
+  },
+  {
+    "name": "Merv’s Bar",
+    "address": "266 Irving Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.699640099999996,
+    "lng": -73.9158253,
+    "placeId": "ChIJ561dGRlcwokRtRw8jZpJh5M"
+  },
+  {
+    "name": "Talon Bar",
+    "address": "220 Wyckoff Ave, Brooklyn, NY 11237, USA",
+    "lat": 40.7011464,
+    "lng": -73.9144142,
+    "placeId": "ChIJofiaMx9cwokRj1ATioLrre0"
+  },
+  {
+    "name": "La Adelita De Woodside",
+    "address": "53-21 Roosevelt Ave, Woodside, NY 11377, USA",
+    "lat": 40.7448015,
+    "lng": -73.91076389999999,
+    "placeId": "ChIJb8BFIjBfwokRs6zfyo0M1Uc"
+  },
+  {
+    "name": "Sharks Pool Club",
+    "address": "34-05 Steinway St, Long Island City, NY 11101, USA",
+    "lat": 40.7563974,
+    "lng": -73.9208587,
+    "placeId": "ChIJI7iKBcFfwokRF8fnd5AxkDk"
+  },
+  {
+    "name": "Frog",
+    "address": "358 Marcus Garvey Blvd, Brooklyn, NY 11221, USA",
+    "lat": 40.6848704,
+    "lng": -73.9385509,
+    "placeId": "ChIJz89WhqRbwokRFdTyd50jkIg"
+  },
+  {
+    "name": "The Wild Goose",
+    "address": "54-20 Roosevelt Ave, Woodside, NY 11377, USA",
+    "lat": 40.744772999999995,
+    "lng": -73.9098573,
+    "placeId": "ChIJDbAPmQhfwokRRE2oxg5foEo"
+  },
+  {
+    "name": "The Broadway",
+    "address": "1272 Broadway, Brooklyn, NY 11221, USA",
+    "lat": 40.6910465,
+    "lng": -73.9248535,
+    "placeId": "ChIJPyZGhz1dwokRlSIds1zjzGQ"
+  },
+  {
+    "name": "The Seneca",
+    "address": "5-82 Seneca Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.704276199999995,
+    "lng": -73.9103842,
+    "placeId": "ChIJESqltthdwokRpRsWDfkJMGU"
+  },
+  {
+    "name": "Windjammer Bar",
+    "address": "5-52 Grandview Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.709147099999996,
+    "lng": -73.90694069999999,
+    "placeId": "ChIJp2KNpZ5ewokRrJfJH0zrc6g"
+  },
+  {
+    "name": "Banatul Folklore & Soccer Club",
+    "address": "18-80 Menahan St, Ridgewood, NY 11385, USA",
+    "lat": 40.7062,
+    "lng": -73.9088,
+    "placeId": "ChIJu53jN55ewokRbKuRXpQPztM"
+  },
+  {
+    "name": "Seneca Fiesta Corporation",
+    "address": "6-03 Seneca Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.7041143,
+    "lng": -73.9095151,
+    "placeId": "ChIJ98gvYSBcwokRWO0ClenCp_8"
+  },
+  {
+    "name": "Marian's Brooklyn",
+    "address": "108 Patchen Ave, Brooklyn, NY 11221, USA",
+    "lat": 40.688032,
+    "lng": -73.927219,
+    "placeId": "ChIJV5KPFWpdwokRE4Q0MZt_cSU"
+  },
+  {
+    "name": "Break Bar And Billiards",
+    "address": "32-04 Broadway, Astoria, NY 11106, USA",
+    "lat": 40.761295,
+    "lng": -73.924525,
+    "placeId": "ChIJzS1uqTBfwokRxgpnsic0XwE"
+  },
+  {
+    "name": "McLoughlin's",
+    "address": "31-06 Broadway, Long Island City, NY 11106, USA",
+    "lat": 40.761692,
+    "lng": -73.9252395,
+    "placeId": "ChIJj-fdTDdfwokRUl86TRztONA"
+  },
+  {
+    "name": "Aunt Ginny's",
+    "address": "6-52 Woodward Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.705498399999996,
+    "lng": -73.907142,
+    "placeId": "ChIJGcruDp5ewokRJvxMEhBZw-k"
+  },
+  {
+    "name": "Finn’s Corner",
+    "address": "660 Washington Ave, Brooklyn, NY 11238, USA",
+    "lat": 40.6784293,
+    "lng": -73.96407479999999,
+    "placeId": "ChIJSUC34aNbwokROHN-xjdRzxk"
+  },
+  {
+    "name": "Tequila Time Bar Cafe",
+    "address": "6-75 Seneca Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.7033163,
+    "lng": -73.9082111,
+    "placeId": "ChIJ-2yZ6SBcwokRB0NkPZ9G7vg"
+  },
+  {
+    "name": "Charlies Sports Bar",
+    "address": "44-08 60th St, Woodside, NY 11377, USA",
+    "lat": 40.7419444,
+    "lng": -73.9047222,
+    "placeId": "ChIJQbScbBtfwokRQv6ITr1Wt-c"
+  },
+  {
+    "name": "First Stop Bar & Grill",
+    "address": "40-17 Broadway, Long Island City, NY 11103, USA",
+    "lat": 40.7589064,
+    "lng": -73.9182544,
+    "placeId": "ChIJR6Nc1VZfwokRCor3dHP9hz0"
+  },
+  {
+    "name": "Bearded Lady",
+    "address": "686A Washington Ave, Brooklyn, NY 11238, USA",
+    "lat": 40.6774528,
+    "lng": -73.9639894,
+    "placeId": "ChIJCS_aaaFbwokRWcrz1dPr2Bc"
+  },
+  {
+    "name": "GlenPatrick's Pub Queens Bills Backers",
+    "address": "53-73 65th Pl, Maspeth, NY 11378, USA",
+    "lat": 40.7292132,
+    "lng": -73.8999395,
+    "placeId": "ChIJ9-OA7_FewokRoizaqCdAnVg"
+  },
+  {
+    "name": "Ocean's 8 Billiards",
+    "address": "308 Flatbush Ave, Brooklyn, NY 11238, USA",
+    "lat": 40.6773994,
+    "lng": -73.9728592,
+    "placeId": "ChIJ_4LFjKhbwokRm2CxcoPwJ4Y"
+  },
+  {
+    "name": "LA PLAZITA ORGANIC",
+    "address": "7-52 Seneca Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.7022219,
+    "lng": -73.9069195,
+    "placeId": "ChIJKdYcKiFcwokRPoNvmYId_18"
+  },
+  {
+    "name": "Kelly's Bar",
+    "address": "31-04 Crescent St, Long Island City, NY 11106, USA",
+    "lat": 40.765685999999995,
+    "lng": -73.9267067,
+    "placeId": "ChIJZSTbtzdfwokRGgiDVXw38Ls"
+  },
+  {
+    "name": "B61 Bar",
+    "address": "187 Columbia St, Brooklyn, NY 11231, USA",
+    "lat": 40.685576600000005,
+    "lng": -74.0021682,
+    "placeId": "ChIJyWzg5dVbwokR0XUTQZ1yfXg"
+  },
+  {
+    "name": "Station Bar",
+    "address": "39-50 61st St, Woodside, NY 11377, USA",
+    "lat": 40.745903399999996,
+    "lng": -73.90354169999999,
+    "placeId": "ChIJeQ1oBx1fwokRGKy3tf-UQJ0"
+  },
+  {
+    "name": "I O Cafe",
+    "address": "7-93 Fairview Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.704822799999995,
+    "lng": -73.9022975,
+    "placeId": "ChIJe6whZp1ewokRgr-LxBLL74E"
+  },
+  {
+    "name": "Brooklyn Social",
+    "address": "335 Smith St, Brooklyn, NY 11231, USA",
+    "lat": 40.6804656,
+    "lng": -73.99448459999999,
+    "placeId": "ChIJPe-pfldawokRZnO3SMACHYk"
+  },
+  {
+    "name": "Montauk Club",
+    "address": "25 8th Ave, Brooklyn, NY 11217, USA",
+    "lat": 40.6747722,
+    "lng": -73.9718111,
+    "placeId": "ChIJj3thBKhbwokRReEBfyFA0g8"
+  },
+  {
+    "name": "Body Shop Bar",
+    "address": "698 Nostrand Ave, Brooklyn, NY 11216, USA",
+    "lat": 40.6748018,
+    "lng": -73.9503069,
+    "placeId": "ChIJsaeIsFVbwokRFhbTcl3VvBY"
+  },
+  {
+    "name": "Uncle Roger's",
+    "address": "704 Nostrand Ave, Brooklyn, NY 11216, USA",
+    "lat": 40.6746638,
+    "lng": -73.9503186,
+    "placeId": "ChIJ4TxTpMtbwokRPVvthGWupJo"
+  },
+  {
+    "name": "Ryan's Daughter",
+    "address": "350 E 85th St, New York, NY 10028, USA",
+    "lat": 40.7762908,
+    "lng": -73.9504784,
+    "placeId": "ChIJszD3NLpYwokRctlOODWpBu8"
+  },
+  {
+    "name": "McCaffrey & Burke Bar",
+    "address": "28-54 31st St, Long Island City, NY 11102, USA",
+    "lat": 40.7672983,
+    "lng": -73.9214111,
+    "placeId": "ChIJ611gdUdfwokRoUj2TO3FB0I"
+  },
+  {
+    "name": "Bonus Room",
+    "address": "9-91 Wyckoff Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.6961096,
+    "lng": -73.9046386,
+    "placeId": "ChIJ76jI7iRcwokRQ_AAAhWgvQ8"
+  },
+  {
+    "name": "Carlow East",
+    "address": "1254 Lexington Ave, New York, NY 10028, USA",
+    "lat": 40.778633,
+    "lng": -73.956412,
+    "placeId": "ChIJeen__rxYwokRsvHolLTy530"
+  },
+  {
+    "name": "Phil Hughes Bar",
+    "address": "1682 1st Ave, New York, NY 10128, USA",
+    "lat": 40.7779981,
+    "lng": -73.9483241,
+    "placeId": "ChIJtUc2m7pYwokRiPjOs_nhKWw"
+  },
+  {
+    "name": "Dark Bullet Sake & Oyster Bar",
+    "address": "154 W 72nd St, New York, NY 10023, USA",
+    "lat": 40.7780463,
+    "lng": -73.9808312,
+    "placeId": "ChIJ5VIkRopYwokR36ON_KEWFc8"
+  },
+  {
+    "name": "Cozy Corner",
+    "address": "60-01 70th Ave, Ridgewood, NY 11385, USA",
+    "lat": 40.7017226,
+    "lng": -73.8988121,
+    "placeId": "ChIJY2G7iYpYwokRRQiY4xFcdwQ"
+  },
+  {
+    "name": "Meller’s Sports Hub and Grill",
+    "address": "1702 2nd Ave, New York, NY 10128, USA",
+    "lat": 40.779267499999996,
+    "lng": -73.95047559999999,
+    "placeId": "ChIJdYXJnUVZwokRoryREm-iZZ0"
+  },
+  {
+    "name": "Ridgewood Moose Lodge #1642",
+    "address": "72-15 Grand Ave, Flushing, NY 11378, USA",
+    "lat": 40.7286643,
+    "lng": -73.89121999999999,
+    "placeId": "ChIJLxTVXPZewokRQsSADtNpDQg"
+  },
+  {
+    "name": "St. John's Recreation Center",
+    "address": "1251 Prospect Pl, Brooklyn, NY 11213, USA",
+    "lat": 40.6738486,
+    "lng": -73.9349335,
+    "placeId": "ChIJuT2fSH9cwokRviRwqdXo_JM"
+  },
+  {
+    "name": "Halyards",
+    "address": "406 3rd Ave, Brooklyn, NY 11215, USA",
+    "lat": 40.6732891,
+    "lng": -73.9897861,
+    "placeId": "ChIJ_x8TOPlawokRFX5a6kmIYZM"
+  },
+  {
+    "name": "Walsh's Pub",
+    "address": "68-67 Fresh Pond Rd, Ridgewood, NY 11385, USA",
+    "lat": 40.703491199999995,
+    "lng": -73.8953399,
+    "placeId": "ChIJYToOmwJfwokRivJmKvkAr6Y"
+  },
+  {
+    "name": "Ginger's Bar",
+    "address": "363 5th Ave, Brooklyn, NY 11215, USA",
+    "lat": 40.671290899999995,
+    "lng": -73.9842132,
+    "placeId": "ChIJUTo_Cv5awokRBf8P9mpTTmM"
+  },
+  {
+    "name": "Reif's Bar",
+    "address": "302 E 92nd St, New York, NY 10128, USA",
+    "lat": 40.781372399999995,
+    "lng": -73.9486257,
+    "placeId": "ChIJAW4Ub6VYwokRsUbtg17_8P8"
+  },
+  {
+    "name": "BQE Billiards & Bar",
+    "address": "70-02 34th Ave, Flushing, NY 11372, USA",
+    "lat": 40.752434799999996,
+    "lng": -73.8960065,
+    "placeId": "ChIJq5QT8QVfwokR6bMQ3Rp1xsk"
+  },
+  {
+    "name": "Third Avenue Ale House",
+    "address": "1644 3rd Ave, New York, NY 10128, USA",
+    "lat": 40.782812,
+    "lng": -73.951331,
+    "placeId": "ChIJZYGXV6RYwokRuno8NcDKlxc"
+  },
+  {
+    "name": "Ready Penny Inn",
+    "address": "37-07 73rd St, Jackson Heights, NY 11372, USA",
+    "lat": 40.7485922,
+    "lng": -73.8925687,
+    "placeId": "ChIJ84M9QgZfwokRkW1p9dHvNdg"
+  },
+  {
+    "name": "The Dram Shop Bar",
+    "address": "339 9th St, Brooklyn, NY 11215, USA",
+    "lat": 40.6688796,
+    "lng": -73.9850597,
+    "placeId": "ChIJ8wlrCP1awokRNK8tujudQr8"
+  },
+  {
+    "name": "Merrion Square Pub",
+    "address": "1840 2nd Ave, New York, NY 10128, USA",
+    "lat": 40.783605,
+    "lng": -73.947349,
+    "placeId": "ChIJjVdbXK9YwokRtaK2GfOV0wg"
+  },
+  {
+    "name": "City Snooker Pool House",
+    "address": "75-32 Broadway, Elmhurst, NY 11373, USA",
+    "lat": 40.745779899999995,
+    "lng": -73.8895959,
+    "placeId": "ChIJG15nowBfwokRAI7YW-9hm2I"
+  },
+  {
+    "name": "Alfonso's Bar",
+    "address": "75-15 Broadway, Elmhurst, NY 11373, USA",
+    "lat": 40.746139,
+    "lng": -73.88977799999999,
+    "placeId": "ChIJUYmfugBfwokRZoUtFnK9fdk"
+  },
+  {
+    "name": "Jake's Dilemma",
+    "address": "430 Amsterdam Ave, New York, NY 10024, USA",
+    "lat": 40.7843586,
+    "lng": -73.9777082,
+    "placeId": "ChIJc6GIBIZYwokRd_xjvFrHhbU"
+  },
+  {
+    "name": "Social Cues Vogue",
+    "address": "522 3rd Ave, Brooklyn, NY 11215, USA",
+    "lat": 40.6696185,
+    "lng": -73.9928166,
+    "placeId": "ChIJEcjK5xxbwokRAyRzONlAnDg"
+  },
+  {
+    "name": "SOUTH BEACH ASTORIA",
+    "address": "23-44 Steinway St, Astoria, NY 11105, USA",
+    "lat": 40.7702979,
+    "lng": -73.909634,
+    "placeId": "ChIJU4VznmlfwokRk88NwePPDqk"
+  },
+  {
+    "name": "Olympia Billiards",
+    "address": "40-11 77th St #2ndfloor, Elmhurst, NY 11373, USA",
+    "lat": 40.7468219,
+    "lng": -73.8890299,
+    "placeId": "ChIJsTlu1nlfwokR3mksAz2qg-M"
+  },
+  {
+    "name": "Red Hook Recreation Center",
+    "address": "155 Bay St, Brooklyn, NY 11231, USA",
+    "lat": 40.6723955,
+    "lng": -74.004087,
+    "placeId": "ChIJlWggH_NawokRkXIEHLE0Jyo"
+  },
+  {
+    "name": "Tee Dee's Tavern",
+    "address": "64-31 Cooper Ave, Glendale, NY 11385, USA",
+    "lat": 40.6983576,
+    "lng": -73.89104619999999,
+    "placeId": "ChIJjUxrbytcwokRx7XH2vPjFjQ"
+  },
+  {
+    "name": "Ooh La La Lounge and Bar",
+    "address": "391 Howard Ave, Brooklyn, NY 11233, USA",
+    "lat": 40.674110299999995,
+    "lng": -73.91930789999999,
+    "placeId": "ChIJ96qHNGRcwokR53mDj95tW3I"
+  },
+  {
+    "name": "Uno Cafe & Billiard Inc",
+    "address": "78-01 Roosevelt Ave #2, Jackson Heights, NY 11372, USA",
+    "lat": 40.7474765,
+    "lng": -73.8873376,
+    "placeId": "ChIJdyQglalfwokR0UkGB5l9t8M"
+  },
+  {
+    "name": "Lexington Publick",
+    "address": "1504 Lexington Ave, New York, NY 10029, USA",
+    "lat": 40.786764,
+    "lng": -73.95064599999999,
+    "placeId": "ChIJI76Gb4ZZwokRdGic_joZwCE"
+  },
+  {
+    "name": "Buttermilk Bar",
+    "address": "577 5th Ave, Brooklyn, NY 11215, USA",
+    "lat": 40.6647655,
+    "lng": -73.9896802,
+    "placeId": "ChIJLySHiORawokRV3y9FMIG9qU"
+  },
+  {
+    "name": "California Sports Bar",
+    "address": "82-18 Roosevelt Ave, Jackson Heights, NY 11372, USA",
+    "lat": 40.747592,
+    "lng": -73.883158,
+    "placeId": "ChIJnZD0dalfwokRkC6jfaoprec"
+  },
+  {
+    "name": "Winners Bar Inc",
+    "address": "82-67 Broadway, Flushing, NY 11373, USA",
+    "lat": 40.741903099999995,
+    "lng": -73.880735,
+    "placeId": "ChIJh8dK56xfwokR3gFgYFh-5BI"
+  },
+  {
+    "name": "Nitehawk Cinema",
+    "address": "188 Prospect Park W, Brooklyn, NY 11215, USA",
+    "lat": 40.6616346,
+    "lng": -73.9798179,
+    "placeId": "ChIJR9uzk3pbwokRYObwHuNGtA8"
+  },
+  {
+    "name": "CourtSide Lounge",
+    "address": "69-08 Myrtle Ave, Glendale, NY 11385, USA",
+    "lat": 40.7017005,
+    "lng": -73.8824341,
+    "placeId": "ChIJFSFQr3hewokR25tf8DjzC7Y"
+  },
+  {
+    "name": "Connect Astoria",
+    "address": "32-16 Steinway St, Astoria, NY 11103, USA",
+    "lat": 40.7586511,
+    "lng": -73.9196209,
+    "placeId": "ChIJX4AUwXNfwokRRgDbav0hnjI"
+  },
+  {
+    "name": "Sandy Jack's",
+    "address": "683 5th Ave, Brooklyn, NY 11215, USA",
+    "lat": 40.6615433,
+    "lng": -73.9930225,
+    "placeId": "ChIJOa_kW4JbwokRA1erdTxlNdQ"
+  },
+  {
+    "name": "El Tucan Bar",
+    "address": "43-24 91st Pl, Elmhurst, NY 11373, USA",
+    "lat": 40.742733,
+    "lng": -73.87394859999999,
+    "placeId": "ChIJDfHgUYxfwokRfgc5uyGsX8c"
+  },
+  {
+    "name": "Bear Burgers Backyard",
+    "address": "740 5th Ave rear, Brooklyn, NY 11232, USA",
+    "lat": 40.6596858,
+    "lng": -73.9957119,
+    "placeId": "ChIJ88iM6TtbwokRem83DSvXaNQ"
+  },
+  {
+    "name": "Thomas Jefferson Recreation Center",
+    "address": "2180 1st Ave, New York, NY 10029, USA",
+    "lat": 40.793647799999995,
+    "lng": -73.93677950000001,
+    "placeId": "ChIJZRBGRQf2wokRdRytpUxcsk8"
+  },
+  {
+    "name": "SUNY Downstate Student Center",
+    "address": "394 Lenox Rd, Brooklyn, NY 11203, USA",
+    "lat": 40.653957299999995,
+    "lng": -73.9462585,
+    "placeId": "ChIJubaLOGZbwokRXvlT4KGDoQc"
+  },
+  {
+    "name": "Tap a Keg",
+    "address": "2731 Broadway, New York, NY 10025, USA",
+    "lat": 40.800335499999996,
+    "lng": -73.9684499,
+    "placeId": "ChIJRX17_ST2wokReG4f7Y_fzpc"
+  },
+  {
+    "name": "Fort Hamilton Distillery & Tasting Room",
+    "address": "68 34th St Building 6, 2nd Floor, Brooklyn, NY 11232, USA",
+    "lat": 40.656936699999996,
+    "lng": -74.006272,
+    "placeId": "ChIJfzcqujRbwokRhvyLvFGPTms"
+  },
+  {
+    "name": "Ten Twenty Bar",
+    "address": "1020 Amsterdam Ave, New York, NY 10025, USA",
+    "lat": 40.8033333,
+    "lng": -73.9638889,
+    "placeId": "ChIJ7SZK6zz2wokRpjhEZIwDNLg"
+  },
+  {
+    "name": "Billares Sol Y Luna",
+    "address": "102-02 43rd Ave, Corona, NY 11368, USA",
+    "lat": 40.746994,
+    "lng": -73.86257599999999,
+    "placeId": "ChIJcVpr9V1fwokRsis8SCCyWLg"
+  },
+  {
+    "name": "Pelham Fritz Recreation Center",
+    "address": "18 Mt Morris Park W, New York, NY 10027, USA",
+    "lat": 40.805009299999995,
+    "lng": -73.9448633,
+    "placeId": "ChIJCwqt6g32wokRrp988cqzGV0"
+  },
+  {
+    "name": "8 on Eighth Bar and Billiards",
+    "address": "4008-4010 8th Ave, Brooklyn, NY 11232, USA",
+    "lat": 40.6465898,
+    "lng": -73.9982351,
+    "placeId": "ChIJFXH1D89awokRMxDk24uLBcs"
+  },
+  {
+    "name": "Geordie's Joint",
+    "address": "79-19 Jamaica Ave, Woodhaven, NY 11421, USA",
+    "lat": 40.6922181,
+    "lng": -73.8625665,
+    "placeId": "ChIJ30QiIOddwokRX9kYZkMoxYw"
+  },
+  {
+    "name": "Ha-Weeda",
+    "address": "4575 2nd Ave, Brooklyn, NY 11232, USA",
+    "lat": 40.651459100000004,
+    "lng": -74.0142805,
+    "placeId": "ChIJhdLt-JZbwokRfN_jfL87I4c"
+  },
+  {
+    "name": "Denny's Pub",
+    "address": "106 Beverley Rd, Brooklyn, NY 11218, USA",
+    "lat": 40.6427427,
+    "lng": -73.9791857,
+    "placeId": "ChIJCetWGSlbwokR3PEEmWQ_lNs"
+  },
+  {
+    "name": "Aloft New York LaGuardia Airport",
+    "address": "100-15 Ditmars Blvd, East Elmhurst, NY 11369, USA",
+    "lat": 40.7704121,
+    "lng": -73.8701432,
+    "placeId": "ChIJWbmfuI1fwokR67YVylhCUA4"
+  },
+  {
+    "name": "Aloft Harlem Hotel WXYZ Bar",
+    "address": "2296 Frederick Douglass Blvd, New York, NY 10027, USA",
+    "lat": 40.8090329,
+    "lng": -73.951596,
+    "placeId": "ChIJs8QwOhP2wokRQlzp16aq9rM"
+  },
+  {
+    "name": "Puerto Plata Seafood & billiards",
+    "address": "75-16 Rockaway Blvd, Woodhaven, NY 11421, USA",
+    "lat": 40.6855735,
+    "lng": -73.86441649999999,
+    "placeId": "ChIJ5VAh6eJdwokRqNkBXNgx8iU"
+  },
+  {
+    "name": "Walnut Bar and Grill",
+    "address": "883 E 134th St, Bronx, NY 10454, USA",
+    "lat": 40.8004566,
+    "lng": -73.9105774,
+    "placeId": "ChIJmass85T1wokRTLy_VbpAOB0"
+  },
+  {
+    "name": "Bar 47",
+    "address": "47 Bruckner Blvd, Bronx, NY 10454, USA",
+    "lat": 40.8068364,
+    "lng": -73.92687699999999,
+    "placeId": "ChIJdbIIBtr1wokR0GFANyNisTU"
+  },
+  {
+    "name": "Maple Billiard 枫叶林网红台球娱乐",
+    "address": "4711 8th Ave Bsmt, Brooklyn, NY 11220, USA",
+    "lat": 40.6423834,
+    "lng": -74.002033,
+    "placeId": "ChIJmzmptg1bwokRJzp8zQsbLB0"
+  },
+  {
+    "name": "Linda Restaurant corp",
+    "address": "830 Coney Island Ave, Brooklyn, NY 11218, USA",
+    "lat": 40.637178999999996,
+    "lng": -73.96855900000001,
+    "placeId": "ChIJVyRg-tdbwokR40AZmYDp59w"
+  },
+  {
+    "name": "The Billiard Company",
+    "address": "70-49 Austin St 2nd floor, Forest Hills, NY 11375, USA",
+    "lat": 40.720524499999996,
+    "lng": -73.845264,
+    "placeId": "ChIJb-tJLCFewokRcOzS32tpHuw"
+  },
+  {
+    "name": "Bronx Roadhouse",
+    "address": "221 E 138th St, Bronx, NY 10451, USA",
+    "lat": 40.8120325,
+    "lng": -73.92813509999999,
+    "placeId": "ChIJ3e6UZgD1wokR-Z4-w6TUjZ4"
+  },
+  {
+    "name": "Irish Haven",
+    "address": "5721 4th Ave, Brooklyn, NY 11220, USA",
+    "lat": 40.6419444,
+    "lng": -74.0169444,
+    "placeId": "ChIJb4gUuLJawokRlKM7Ujnzcwo"
+  },
+  {
+    "name": "Q102 Pool Hall & Lounge",
+    "address": "102-14 Jamaica Ave, Jamaica, NY 11418, USA",
+    "lat": 40.6950569,
+    "lng": -73.8447189,
+    "placeId": "ChIJJ15Vl_RdwokRDcb1I5bqRlA"
+  },
+  {
+    "name": "MVP Union Billiards 星光台球",
+    "address": "6019 4th Ave, Brooklyn, NY 11220, USA",
+    "lat": 40.6402743,
+    "lng": -74.01861629999999,
+    "placeId": "ChIJUxZly_FFwokRvnBodu7eC2o"
+  },
+  {
+    "name": "Feeney's Pub",
+    "address": "6201 5th Ave, Brooklyn, NY 11220, USA",
+    "lat": 40.638143,
+    "lng": -74.0173204,
+    "placeId": "ChIJ_6K1kE1FwokRx6temsFNcX8"
+  },
+  {
+    "name": "BILLIARD 728",
+    "address": "728 61st St, Brooklyn, NY 11220, USA",
+    "lat": 40.635701399999995,
+    "lng": -74.0116853,
+    "placeId": "ChIJ64j4V0lFwokRbNNlDi2ERso"
+  },
+  {
+    "name": "Mike's Tavern",
+    "address": "88-14 Liberty Ave, Ozone Park, NY 11417, USA",
+    "lat": 40.6798042,
+    "lng": -73.850039,
+    "placeId": "ChIJYRfupfNdwokR9Ug2ZWvLdgI"
+  },
+  {
+    "name": "Hydra Lounge & Bar",
+    "address": "88-18 Liberty Ave, Ozone Park, NY 11417, USA",
+    "lat": 40.679832399999995,
+    "lng": -73.8498535,
+    "placeId": "ChIJ6bPJuvNdwokRLfPl8CWcXYk"
+  },
+  {
+    "name": "La Maravilla Billiards & Bar",
+    "address": "3428 Broadway, New York, NY 10031, USA",
+    "lat": 40.822747899999996,
+    "lng": -73.9527062,
+    "placeId": "ChIJgRGzR0D3wokRmSIzYkJJW-U"
+  },
+  {
+    "name": "Swedish Football Club Inc",
+    "address": "725 65th St, Brooklyn, NY 11220, USA",
+    "lat": 40.6336766,
+    "lng": -74.01382389999999,
+    "placeId": "ChIJZ5ru3U5FwokRmST5u83CdVM"
+  },
+  {
+    "name": "Vanessa Bar lounge",
+    "address": "110-12 Jamaica Ave, Jamaica, NY 11418, USA",
+    "lat": 40.696357899999995,
+    "lng": -73.837491,
+    "placeId": "ChIJMe8BfoZhwokRHASRCHLjFqM"
+  },
+  {
+    "name": "Golden 9 Billiards & Bar",
+    "address": "131-27 Fowler Ave, Flushing, NY 11355, USA",
+    "lat": 40.7519497,
+    "lng": -73.8341885,
+    "placeId": "ChIJr9lQem9hwokRQ-HBFw4WpCo"
+  },
+  {
+    "name": "Last Call Bar",
+    "address": "81-72 Lefferts Blvd, Kew Gardens, NY 11415, USA",
+    "lat": 40.707826,
+    "lng": -73.8311599,
+    "placeId": "ChIJ9W_7HANhwokRVY6KWYJ94zw"
+  },
+  {
+    "name": "The Recovery Room Sports Bar",
+    "address": "135-24 Booth Memorial Ave, Flushing, NY 11355, USA",
+    "lat": 40.7472667,
+    "lng": -73.82927040000001,
+    "placeId": "ChIJl81QEG5gwokRz6rVCHj5ADw"
+  },
+  {
+    "name": "Bowl 360 Ozone Park",
+    "address": "98-18 Rockaway Blvd, Ozone Park, NY 11417, USA",
+    "lat": 40.6798699,
+    "lng": -73.8404752,
+    "placeId": "ChIJP42nOV9nwokRlV_t8rRB2Zo"
+  },
+  {
+    "name": "PC's Bar & Grill",
+    "address": "7215 5th Ave, Brooklyn, NY 11209, USA",
+    "lat": 40.631227599999995,
+    "lng": -74.0217182,
+    "placeId": "ChIJM_sBZVpFwokR_KMGswelMEc"
+  },
+  {
+    "name": "ON CUE 雷猴台球俱乐部",
+    "address": "133-30 32nd Ave, Flushing, NY 11354, USA",
+    "lat": 40.766931799999995,
+    "lng": -73.8350162,
+    "placeId": "ChIJUVjutV9hwokRSRezD25OSo4"
+  },
+  {
+    "name": "Hunts Point Recreation Center",
+    "address": "765 Manida St, Bronx, NY 10474, USA",
+    "lat": 40.8149605,
+    "lng": -73.88909149999999,
+    "placeId": "ChIJkbGK_qn1wokRalvpzoC7nx8"
+  },
+  {
+    "name": "Prince Billiards",
+    "address": "35-11 Prince St, Flushing, NY 11354, USA",
+    "lat": 40.763411999999995,
+    "lng": -73.8331694,
+    "placeId": "ChIJq_xUfgVgwokRE0jMrxfBhAI"
+  },
+  {
+    "name": "Blue Storm Billiard Lounge 蓝色风暴台球清吧",
+    "address": "135-41 37th Ave, Flushing, NY 11354, USA",
+    "lat": 40.761579999999995,
+    "lng": -73.8317369,
+    "placeId": "ChIJNYZ2uA9gwokRt9c1Wb7Y3ZA"
+  },
+  {
+    "name": "B66 Club",
+    "address": "6612 New Utrecht Ave, Brooklyn, NY 11219, USA",
+    "lat": 40.6225865,
+    "lng": -73.998205,
+    "placeId": "ChIJD77nYzxFwokRD0rJf1SIPbA"
+  },
+  {
+    "name": "Johnny Pumps Cafe",
+    "address": "7518 5th Ave, Brooklyn, NY 11209, USA",
+    "lat": 40.6290737,
+    "lng": -74.0229809,
+    "placeId": "ChIJL08YxltFwokRmfJlyCgWQyM"
+  },
+  {
+    "name": "Carom Cafe Billiards",
+    "address": "34-02 Linden Pl, Flushing, NY 11354, USA",
+    "lat": 40.7661454,
+    "lng": -73.83143609999999,
+    "placeId": "ChIJ1e3fwgRgwokRhimMW_rJJlQ"
+  },
+  {
+    "name": "Mack Daddy's Bar",
+    "address": "5511 Avenue N, Brooklyn, NY 11234, USA",
+    "lat": 40.6194063,
+    "lng": -73.92164389999999,
+    "placeId": "ChIJcX8dpE9DwokRtG97dwMa5mo"
+  },
+  {
+    "name": "Status Q Billiards",
+    "address": "8218 3rd Ave, Brooklyn, NY 11209, USA",
+    "lat": 40.625965099999995,
+    "lng": -74.0303212,
+    "placeId": "ChIJxVcDgfVPwokRMDMQM0nlrIM"
+  },
+  {
+    "name": "Barcade",
+    "address": "388 Union Ave, Brooklyn, NY 11211, USA",
+    "lat": 40.712072,
+    "lng": -73.95106299999999,
+    "placeId": "ChIJCRZAjFhZwokRv6cEvR8K8Ik"
+  },
+  {
+    "name": "Black Horses Tavern AKA Caballos Negros (Formerly El Toro Bar) AKA Black Horse Tavern",
+    "address": "7507 New Utrecht Ave, Brooklyn, NY 11214, USA",
+    "lat": 40.615297,
+    "lng": -73.9998409,
+    "placeId": "ChIJsY8jzRFFwokRIO9mRqYm9rw"
+  },
+  {
+    "name": "Star Lounge bar",
+    "address": "1674 McDonald Ave, Brooklyn, NY 11230, USA",
+    "lat": 40.6119331,
+    "lng": -73.97400999999999,
+    "placeId": "ChIJp7SKx2dFwokRKJj-zXEol5g"
+  },
+  {
+    "name": "Cheap Shots Sports Bar & Lounge",
+    "address": "149-05 Union Tpke, Kew Gardens Hills, NY 11367, USA",
+    "lat": 40.7188545,
+    "lng": -73.8136576,
+    "placeId": "ChIJWVAJ0e1gwokRPr_aoOa_uBQ"
+  },
+  {
+    "name": "Tony’s Billiard Cafe",
+    "address": "185 E 167th St, Bronx, NY 10456, USA",
+    "lat": 40.8344764,
+    "lng": -73.9170603,
+    "placeId": "ChIJb2nNWzf0wokRUxp97234V8M"
+  },
+  {
+    "name": "Costello's Claddagh Inn",
+    "address": "3042 Nostrand Ave, Brooklyn, NY 11229, USA",
+    "lat": 40.610174,
+    "lng": -73.94399800000001,
+    "placeId": "ChIJ0e39jZhEwokRuz9bm0jjIks"
+  },
+  {
+    "name": "Trackside Bar",
+    "address": "114-48 Rockaway Blvd, South Ozone Park, NY 11420, USA",
+    "lat": 40.6765794,
+    "lng": -73.8230252,
+    "placeId": "ChIJ5wpnakFnwokRqskUqws40tU"
+  },
+  {
+    "name": "Nunez Billiards",
+    "address": "111-17 Lefferts Blvd, South Ozone Park, NY 11420, USA",
+    "lat": 40.6800893,
+    "lng": -73.8209534,
+    "placeId": "ChIJwfm0M4pnwokRGXH6kv20D6g"
+  },
+  {
+    "name": "SET Lounge & Bar",
+    "address": "3200 Coney Island Ave, Brooklyn, NY 11235, USA",
+    "lat": 40.577597399999995,
+    "lng": -73.9598913,
+    "placeId": "ChIJTz8ju0NFwokROzcN75jkFzk"
+  },
+  {
+    "name": "Caribbean Fest",
+    "address": "116-14 Rockaway Blvd, South Ozone Park, NY 11420, USA",
+    "lat": 40.67634760000001,
+    "lng": -73.8215153,
+    "placeId": "ChIJd5vzWTtnwokRXGoPJH_9Ob4"
+  },
+  {
+    "name": "Paradise Alley",
+    "address": "41-09 150th St, Flushing, NY 11355, USA",
+    "lat": 40.7625552,
+    "lng": -73.81375489999999,
+    "placeId": "ChIJK0BUciNgwokRMMgube3cRaY"
+  },
+  {
+    "name": "The Rail Bar & Grill",
+    "address": "2 Coleman Square, Howard Beach, NY 11414, USA",
+    "lat": 40.660340999999995,
+    "lng": -73.83064329999999,
+    "placeId": "ChIJO_5Kc3pnwokRaSsL02YDxu4"
+  },
+  {
+    "name": "Kelly's Tavern",
+    "address": "9259 4th Ave, Brooklyn, NY 11209, USA",
+    "lat": 40.616838099999995,
+    "lng": -74.03046800000001,
+    "placeId": "ChIJQ07x24lPwokRjr-m44pKX7A"
+  },
+  {
+    "name": "DiamondAutoSpa NYC",
+    "address": "1932 McDonald Ave 1st floor, Brooklyn, NY 11223, USA",
+    "lat": 40.60561810000001,
+    "lng": -73.972856,
+    "placeId": "ChIJd96qlQ5FwokRNSfCh0XAJqI"
+  },
+  {
+    "name": "Ajimi",
+    "address": "8500 18th Ave, Brooklyn, NY 11214, USA",
+    "lat": 40.607862499999996,
+    "lng": -74.0022336,
+    "placeId": "ChIJczF55XBFwokREBe1W3QHGFI"
+  },
+  {
+    "name": "Parkside Pub",
+    "address": "24-14 149th St, Flushing, NY 11357, USA",
+    "lat": 40.7770144,
+    "lng": -73.8178267,
+    "placeId": "ChIJbbQgo5iKwokRzAqff55BifM"
+  },
+  {
+    "name": "154 Seven Billiards 세븐 당구장 - Billiards and drinks",
+    "address": "154-08 Northern Blvd, Flushing, NY 11354, USA",
+    "lat": 40.7641983,
+    "lng": -73.8108596,
+    "placeId": "ChIJy2hkPCRgwokRrGxab592E9w"
+  },
+  {
+    "name": "J. Hood Wright Recreation Center",
+    "address": "351 Fort Washington Ave, New York, NY 10033, USA",
+    "lat": 40.846588499999996,
+    "lng": -73.94085009999999,
+    "placeId": "ChIJPeKZnZv2wokRRlL4Fd0ttbQ"
+  },
+  {
+    "name": "Star Billiards",
+    "address": "1590 Westchester Ave, Bronx, NY 10472, USA",
+    "lat": 40.828857899999996,
+    "lng": -73.875766,
+    "placeId": "ChIJG5A2i-_0wokRazBhNZM1VvQ"
+  },
+  {
+    "name": "Kwame Ture Recreation Center",
+    "address": "1527 Jesup Ave, Bronx, NY 10452, USA",
+    "lat": 40.8440028,
+    "lng": -73.918975,
+    "placeId": "ChIJMTW__D30wokRRrKpCUpegh4"
+  },
+  {
+    "name": "King Billiards",
+    "address": "45-42 162nd St, Flushing, NY 11358, USA",
+    "lat": 40.7552008,
+    "lng": -73.80482239999999,
+    "placeId": "ChIJEbaixjBgwokRQEwy0ZTEzm0"
+  },
+  {
+    "name": "Abc Billiards & Cafe",
+    "address": "162-17 46th Ave, Flushing, NY 11358, USA",
+    "lat": 40.753845899999995,
+    "lng": -73.80416770000001,
+    "placeId": "ChIJk1H8LjdgwokRw-t8BBVzs8I"
+  },
+  {
+    "name": "Paddy's Tavern",
+    "address": "42-07 162nd St, Flushing, NY 11358, USA",
+    "lat": 40.7599266,
+    "lng": -73.803849,
+    "placeId": "ChIJO8L9zC9gwokRUrIzplYkdYs"
+  },
+  {
+    "name": "Adiccion Pool Bar",
+    "address": "308 Front St, Staten Island, NY 10304, USA",
+    "lat": 40.6294136,
+    "lng": -74.07501979999999,
+    "placeId": "ChIJI2olcBpPwokRyarci4ScM2M"
+  },
+  {
+    "name": "Joe’s Bar & Grill G & P's",
+    "address": "257 Avenue U, Brooklyn, NY 11223, USA",
+    "lat": 40.597046,
+    "lng": -73.974643,
+    "placeId": "ChIJgRGY8_hEwokRMHIB-W2sVqA"
+  },
+  {
+    "name": "Gotham City Billiards Club",
+    "address": "93 Avenue U, Brooklyn, NY 11223, USA",
+    "lat": 40.5962641,
+    "lng": -73.98090239999999,
+    "placeId": "ChIJbcRBY1VEwokRh4C71iExm8A"
+  },
+  {
+    "name": "B.B.'S Pub and Grill",
+    "address": "171-57 46th Ave, Flushing, NY 11358, USA",
+    "lat": 40.7536913,
+    "lng": -73.7942146,
+    "placeId": "ChIJx4WOsMxhwokRz1bsExDrQcE"
+  },
+  {
+    "name": "Breifne Pub",
+    "address": "169-04 Crocheron Ave, Flushing, NY 11358, USA",
+    "lat": 40.7626733,
+    "lng": -73.7968217,
+    "placeId": "ChIJL5VWmixgwokRTLYBHMB2hs8"
+  },
+  {
+    "name": "Tamaqua Bar & Marina",
+    "address": "84 Ebony Ct, Brooklyn, NY 11229, USA",
+    "lat": 40.594344,
+    "lng": -73.929953,
+    "placeId": "ChIJiZATVXlDwokRjg4laJy4bfA"
+  },
+  {
+    "name": "Patron De Grecia",
+    "address": "171-02 Jamaica Ave, Jamaica, NY 11432, USA",
+    "lat": 40.7072851,
+    "lng": -73.7883816,
+    "placeId": "ChIJgYWqyYthwokRyJYvOuUkagY"
+  },
+  {
+    "name": "Skyline Billiards & Bar",
+    "address": "2515 McDonald Ave, Brooklyn, NY 11223, USA",
+    "lat": 40.5907927,
+    "lng": -73.9738141,
+    "placeId": "ChIJn0VRLFdEwokRmcNR1xv2RgA"
+  },
+  {
+    "name": "Marlboro Memorial Post 1437",
+    "address": "300 Avenue X, Brooklyn, NY 11223, USA",
+    "lat": 40.590138499999995,
+    "lng": -73.9716322,
+    "placeId": "ChIJA98FulBEwokRjmnZK2BXm1A"
+  },
+  {
+    "name": "Archer's Lounge & Sports Bar",
+    "address": "1511 White Plains Rd, Bronx, NY 10462, USA",
+    "lat": 40.8381563,
+    "lng": -73.8638045,
+    "placeId": "ChIJXYTEzmb1wokR8zsnE4ongLs"
+  },
+  {
+    "name": "Mccabe's Bar Car",
+    "address": "39-15 192nd St, Flushing, NY 11358, USA",
+    "lat": 40.7612867,
+    "lng": -73.7897795,
+    "placeId": "ChIJ2-Lh7tNhwokRa3Rp5GK0gU4"
+  },
+  {
+    "name": "Q-Ball Billiards",
+    "address": "2570 E 17th St, Brooklyn, NY 11235, USA",
+    "lat": 40.5883914,
+    "lng": -73.9527687,
+    "placeId": "ChIJ76vE015FwokRz6PY_BfUoyQ"
+  },
+  {
+    "name": "PJ's",
+    "address": "189-25 Union Tpke, Fresh Meadows, NY 11366, USA",
+    "lat": 40.729864,
+    "lng": -73.77964349999999,
+    "placeId": "ChIJS-k786ZhwokRwbTzqzv4OzA"
+  },
+  {
+    "name": "Dyckman Billiards Cafe",
+    "address": "100 Dyckman St, New York, NY 10040, USA",
+    "lat": 40.861640799999996,
+    "lng": -73.9251673,
+    "placeId": "ChIJobzVvTX1wokR5CEzHv3x98g"
+  },
+  {
+    "name": "West Cork Union Hall",
+    "address": "502-504 Henderson Ave, Staten Island, NY 10310, USA",
+    "lat": 40.6379501,
+    "lng": -74.1092453,
+    "placeId": "ChIJv_istBNOwokR2vOpuFvF9po"
+  },
+  {
+    "name": "La Bestia Billiard 2",
+    "address": "2301 Jerome Ave 2 floor, Bronx, NY 10468, USA",
+    "lat": 40.8593267,
+    "lng": -73.90370949999999,
+    "placeId": "ChIJcyhE73v1wokRpnnnq915FEA"
+  },
+  {
+    "name": "Post Billiards Cafe",
+    "address": "154 Post Ave 2nd fl, New York, NY 10034, USA",
+    "lat": 40.8652328,
+    "lng": -73.9188206,
+    "placeId": "ChIJNfQ5D_bzwokRC3modApp6fU"
+  },
+  {
+    "name": "WISE GAME CLUB",
+    "address": "56 Brighton 11th St, Brooklyn, NY 11235, USA",
+    "lat": 40.581367799999995,
+    "lng": -73.9570473,
+    "placeId": "ChIJUdsUghFFwokRY0USu9CTD_8"
+  },
+  {
+    "name": "Roy's roti shop and lounge",
+    "address": "189-09 Jamaica Ave, Hollis, NY 11423, USA",
+    "lat": 40.711836999999996,
+    "lng": -73.7699296,
+    "placeId": "ChIJ8ynnT85hwokR5vYzFIcy70Y"
+  },
+  {
+    "name": "St. James Recreation Center",
+    "address": "2530 Jerome Ave, Bronx, NY 10468, USA",
+    "lat": 40.8644444,
+    "lng": -73.8988889,
+    "placeId": "ChIJWRnpSIbzwokRRt4W08kLlX8"
+  },
+  {
+    "name": "CUE BAR",
+    "address": "45-18 Bell Blvd, Bayside, NY 11361, USA",
+    "lat": 40.759827699999995,
+    "lng": -73.769294,
+    "placeId": "ChIJmXdcz-BhwokRh1m-mX1ZQzo"
+  },
+  {
+    "name": "Deja Vu Bar and Lounge 2.0",
+    "address": "180-25 Linden Blvd, Jamaica, NY 11434, USA",
+    "lat": 40.692237,
+    "lng": -73.76568759999999,
+    "placeId": "ChIJ6cR21EhhwokRJMfu2PbIalY"
+  },
+  {
+    "name": "Jolly Tinker",
+    "address": "2875 Webster Ave, Bronx, NY 10458, USA",
+    "lat": 40.867549,
+    "lng": -73.883549,
+    "placeId": "ChIJBSrzjnnzwokRBMQwebXno0g"
+  },
+  {
+    "name": "Bases Loaded Sports Bar",
+    "address": "2997 Westchester Ave, Bronx, NY 10461, USA",
+    "lat": 40.847305899999995,
+    "lng": -73.8322649,
+    "placeId": "ChIJDzwXMleLwokRY9j_8KJc00k"
+  },
+  {
+    "name": "Buddy's Wonder Bar",
+    "address": "17 Harrison Ave, Staten Island, NY 10302, USA",
+    "lat": 40.6368903,
+    "lng": -74.13502489999999,
+    "placeId": "ChIJyUbUR91NwokRD7dOVDks_58"
+  },
+  {
+    "name": "Keenan's Bar",
+    "address": "5588 Broadway, Bronx, NY 10463, USA",
+    "lat": 40.8791341,
+    "lng": -73.90434189999999,
+    "placeId": "ChIJQ9Bz-JbzwokRyNDnRmotWzQ"
+  },
+  {
+    "name": "Williamsbridge Oval Recreation Center",
+    "address": "3225 Reservoir Oval E, Bronx, NY 10467, USA",
+    "lat": 40.8766525,
+    "lng": -73.8786095,
+    "placeId": "ChIJc2vaknLzwokRA_FkyHrZmKI"
+  },
+  {
+    "name": "Rab's Country Lanes",
+    "address": "1600 Hylan Blvd, Staten Island, NY 10305, USA",
+    "lat": 40.5890637,
+    "lng": -74.08907169999999,
+    "placeId": "ChIJfQHAKMNOwokRlFAuJ6LKxr8"
+  },
+  {
+    "name": "The Punch Bowl",
+    "address": "5820 Broadway, Bronx, NY 10463, USA",
+    "lat": 40.8851227,
+    "lng": -73.90024389999999,
+    "placeId": "ChIJQegVNqPzwokRJBfBwvZqrY8"
+  },
+  {
+    "name": "Pour House",
+    "address": "223-01 Hempstead Ave, Queens Village, NY 11429, USA",
+    "lat": 40.712238,
+    "lng": -73.7309377,
+    "placeId": "ChIJzfLb3c5jwokRgoJMTl7dL1w"
+  },
+  {
+    "name": "Joe Broadway's Billiards & Sports Pub",
+    "address": "2178 Forest Ave, Staten Island, NY 10303, USA",
+    "lat": 40.6263577,
+    "lng": -74.1621176,
+    "placeId": "ChIJRW-Xza1NwokRyaEA90tvryo"
+  },
+  {
+    "name": "The Rocks Billiards",
+    "address": "3-48 B 72 St, Arverne, NY 11692, USA",
+    "lat": 40.5921303,
+    "lng": -73.8003681,
+    "placeId": "ChIJUSoQyWBowokRrUNWYtM2cXI"
+  },
+  {
+    "name": "Behan's Public House",
+    "address": "4299 Katonah Ave, Bronx, NY 10470, USA",
+    "lat": 40.8985936,
+    "lng": -73.8675851,
+    "placeId": "ChIJQ131WODywokRkqw3l_91cLs"
+  },
+  {
+    "name": "The Burren",
+    "address": "4342 Katonah Ave, Bronx, NY 10470, USA",
+    "lat": 40.9000706,
+    "lng": -73.8674298,
+    "placeId": "ChIJ2V9_6ODywokRHBWAEWcvkwU"
+  },
+  {
+    "name": "Billiards Hideaway",
+    "address": "319 Clawson St, Staten Island, NY 10306, USA",
+    "lat": 40.5717068,
+    "lng": -74.11163119999999,
+    "placeId": "ChIJ35MvjU1JwokRKixDmPtdm6Q"
+  },
+  {
+    "name": "Griff's Place",
+    "address": "702 New Dorp Ln, Staten Island, NY 10306, USA",
+    "lat": 40.5657181,
+    "lng": -74.1006337,
+    "placeId": "ChIJsxDGJ0hJwokRkd8lwFeA7VY"
+  },
+  {
+    "name": "Bowlerland",
+    "address": "2417 Hollers Ave, Bronx, NY 10475, USA",
+    "lat": 40.8860495,
+    "lng": -73.82336070000001,
+    "placeId": "ChIJzY-Ovd6MwokRvmsrUJBimQ0"
+  },
+  {
+    "name": "Moonlight Pub",
+    "address": "247-77 Jericho Tpke, Queens, NY 11001, USA",
+    "lat": 40.726255699999996,
+    "lng": -73.7185792,
+    "placeId": "ChIJO__A-IliwokRt10YyKBQ-h8"
+  },
+  {
+    "name": "Unique Lounge & Billiards",
+    "address": "1757 Arthur Kill Rd # E, Staten Island, NY 10312, USA",
+    "lat": 40.559695,
+    "lng": -74.197323,
+    "placeId": "ChIJSZYYAj1LwokR9GGT1EBa4NM"
+  },
+  {
+    "name": "Aloysia's Lounge",
+    "address": "7097 Amboy Rd #1403, Staten Island, NY 10307, USA",
+    "lat": 40.514431599999995,
+    "lng": -74.2358442,
+    "placeId": "ChIJE__vSV-1w4kR3Uf8wGuyTA4"
+  }
+]

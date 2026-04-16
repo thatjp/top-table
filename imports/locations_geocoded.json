@@ -1,0 +1,2180 @@
+[
+  {
+    "name": "The Mallard Drake",
+    "neighborhood": "Greenpoint",
+    "lat": 40.7267439,
+    "lng": -73.9575377
+  },
+  {
+    "name": "Banks Tavern",
+    "neighborhood": "Greenpoint",
+    "lat": 40.7297911,
+    "lng": -73.9599975
+  },
+  {
+    "name": "Brooklyn Safehouse",
+    "neighborhood": "Greenpoint",
+    "lat": 40.7288633,
+    "lng": -73.9572833
+  },
+  {
+    "name": "Brooklyn Billiards Williamsburg",
+    "neighborhood": "Williamsburg",
+    "lat": 40.714622,
+    "lng": -73.95345
+  },
+  {
+    "name": "X-Golf Brooklyn",
+    "neighborhood": "Williamsburg",
+    "lat": 40.714622,
+    "lng": -73.95345
+  },
+  {
+    "name": "The Gutter",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7227408,
+    "lng": -73.9554759
+  },
+  {
+    "name": "George & Jack's Tap Room",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7190488,
+    "lng": -73.9584127
+  },
+  {
+    "name": "Gran Torino",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7183923,
+    "lng": -73.9588733
+  },
+  {
+    "name": "Turkey's Nest",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7205705,
+    "lng": -73.9549076
+  },
+  {
+    "name": "Twins Lounge",
+    "neighborhood": "Greenpoint",
+    "lat": 40.7262762,
+    "lng": -73.9520758
+  },
+  {
+    "name": "Ray's Hometown Bar",
+    "neighborhood": "Greenpoint",
+    "lat": 40.7335842,
+    "lng": -73.9395265
+  },
+  {
+    "name": "The Levee",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7163751,
+    "lng": -73.9615756
+  },
+  {
+    "name": "Polonia Democratic Club & Ladies Auxiliary",
+    "neighborhood": "Williamsburg",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "Sharks Pool Club (Grand Street)",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7111521,
+    "lng": -73.947767
+  },
+  {
+    "name": "PFC John P Czachor VFW Post 5806",
+    "neighborhood": "Williamsburg",
+    "lat": 40.6472254,
+    "lng": -73.9978337
+  },
+  {
+    "name": "B-Side",
+    "neighborhood": "East Village",
+    "lat": 40.7199619,
+    "lng": -73.9838482
+  },
+  {
+    "name": "Horses and Divorces",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7140953,
+    "lng": -73.961424
+  },
+  {
+    "name": "Connie O's",
+    "neighborhood": "Greenpoint",
+    "lat": 40.7265415,
+    "lng": -73.9480403
+  },
+  {
+    "name": "Lucy's Bar & Grill",
+    "neighborhood": "Greenpoint",
+    "lat": 40.7270608,
+    "lng": -73.9830229
+  },
+  {
+    "name": "5s",
+    "neighborhood": "East Village",
+    "lat": 40.7292688,
+    "lng": -73.9873613
+  },
+  {
+    "name": "Mona's",
+    "neighborhood": "East Village",
+    "lat": 40.7292688,
+    "lng": -73.9873613
+  },
+  {
+    "name": "Cafe Bureau",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7199461,
+    "lng": -73.9628164
+  },
+  {
+    "name": "Caribbean Social Club",
+    "neighborhood": "Williamsburg",
+    "lat": 40.6143027,
+    "lng": -73.99527
+  },
+  {
+    "name": "The Woods",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7075765,
+    "lng": -73.9558747
+  },
+  {
+    "name": "Maracuja",
+    "neighborhood": "Williamsburg",
+    "lat": 40.714622,
+    "lng": -73.95345
+  },
+  {
+    "name": "Midway",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7130957,
+    "lng": -73.9581236
+  },
+  {
+    "name": "Propaganda",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7120937,
+    "lng": -73.9629898
+  },
+  {
+    "name": "The Spotted Owl Tavern",
+    "neighborhood": "East Village",
+    "lat": 40.7298793,
+    "lng": -73.9809353
+  },
+  {
+    "name": "Phoenix Bar",
+    "neighborhood": "East Village",
+    "lat": 40.7299744,
+    "lng": -73.9811697
+  },
+  {
+    "name": "The Palace",
+    "neighborhood": "Greenpoint",
+    "lat": 40.7254611,
+    "lng": -73.944628
+  },
+  {
+    "name": "Asser Levy Recreation Center",
+    "neighborhood": "Kips Bay",
+    "lat": 40.7361432,
+    "lng": -73.9756916
+  },
+  {
+    "name": "Nightshade",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7195446,
+    "lng": -73.9457523
+  },
+  {
+    "name": "East River Bar",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7108861,
+    "lng": -73.9646654
+  },
+  {
+    "name": "Hamilton Fish Recreation Center",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7199798,
+    "lng": -73.9814581
+  },
+  {
+    "name": "Ace Bar",
+    "neighborhood": "East Village",
+    "lat": 40.7243649,
+    "lng": -73.9829025
+  },
+  {
+    "name": "Josie's",
+    "neighborhood": "East Village",
+    "lat": 40.7249188,
+    "lng": -73.9828997
+  },
+  {
+    "name": "OTB",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7104506,
+    "lng": -73.9634473
+  },
+  {
+    "name": "Doc Holliday's",
+    "neighborhood": "East Village",
+    "lat": 40.7292688,
+    "lng": -73.9873613
+  },
+  {
+    "name": "Lucy's",
+    "neighborhood": "East Village",
+    "lat": 40.7884567,
+    "lng": -73.9419527
+  },
+  {
+    "name": "The Richardson",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7189211,
+    "lng": -73.9452678
+  },
+  {
+    "name": "The Hairy Lemon",
+    "neighborhood": "East Village",
+    "lat": 40.7224407,
+    "lng": -73.9832641
+  },
+  {
+    "name": "Sophie's",
+    "neighborhood": "East Village",
+    "lat": 40.7339291,
+    "lng": -73.9930929
+  },
+  {
+    "name": "Parkside Lounge",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7210809,
+    "lng": -73.9832025
+  },
+  {
+    "name": "Metropolitan",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7130242,
+    "lng": -73.9514225
+  },
+  {
+    "name": "Alligator Lounge",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7139741,
+    "lng": -73.9489283
+  },
+  {
+    "name": "Cherry Tavern",
+    "neighborhood": "East Village",
+    "lat": 40.7257543,
+    "lng": -73.9843812
+  },
+  {
+    "name": "O'hanlon's",
+    "neighborhood": "Gramercy",
+    "lat": 40.7379502,
+    "lng": -73.9859154
+  },
+  {
+    "name": "Nowhere",
+    "neighborhood": "East Village",
+    "lat": 40.7318045,
+    "lng": -73.9840953
+  },
+  {
+    "name": "Redd's Tavern",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7111208,
+    "lng": -73.9506787
+  },
+  {
+    "name": "Double Down Saloon",
+    "neighborhood": "East Village",
+    "lat": 40.7225821,
+    "lng": -73.985875
+  },
+  {
+    "name": "Lora Sports Bar",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7149179,
+    "lng": -73.9442822
+  },
+  {
+    "name": "Kelly's Sports Bar",
+    "neighborhood": "East Village",
+    "lat": 40.7615931,
+    "lng": -73.9634044
+  },
+  {
+    "name": "Blue & Gold Tavern",
+    "neighborhood": "East Village",
+    "lat": 40.7273351,
+    "lng": -73.9862728
+  },
+  {
+    "name": "The Whiskey on Grand",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7108928,
+    "lng": -73.9503704
+  },
+  {
+    "name": "Ontario Bar",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7112593,
+    "lng": -73.9492151
+  },
+  {
+    "name": "Clara’s Gramercy",
+    "neighborhood": "Gramercy",
+    "lat": 40.7377165,
+    "lng": -73.9812475
+  },
+  {
+    "name": "Kingston Hall",
+    "neighborhood": "East Village",
+    "lat": 40.7295009,
+    "lng": -73.9872677
+  },
+  {
+    "name": "Lydia's",
+    "neighborhood": "East Village",
+    "lat": 40.7292688,
+    "lng": -73.9873613
+  },
+  {
+    "name": "Welcome To The Johnsons",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7196706,
+    "lng": -73.9873004
+  },
+  {
+    "name": "Bull McCabes",
+    "neighborhood": "East Village",
+    "lat": 40.7292688,
+    "lng": -73.9873613
+  },
+  {
+    "name": "Studio6",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7200689,
+    "lng": -73.9879624
+  },
+  {
+    "name": "Haven",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7116684,
+    "lng": -73.9452005
+  },
+  {
+    "name": "Sadie's Ward",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7159357,
+    "lng": -73.9868057
+  },
+  {
+    "name": "Ludlow House",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7159357,
+    "lng": -73.9868057
+  },
+  {
+    "name": "Paddy Maguire's Ale House",
+    "neighborhood": "Gramercy",
+    "lat": 40.7366487,
+    "lng": -73.9844977
+  },
+  {
+    "name": "Paddy Reilly's Music Bar",
+    "neighborhood": "Kips Bay",
+    "lat": 40.7416176,
+    "lng": -73.9784219
+  },
+  {
+    "name": "Sugar Mouse",
+    "neighborhood": "East Village",
+    "lat": 40.7308162,
+    "lng": -73.9887471
+  },
+  {
+    "name": "Barfly",
+    "neighborhood": "Gramercy",
+    "lat": 40.7371351,
+    "lng": -73.9846154
+  },
+  {
+    "name": "Sour Mouse",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7188557,
+    "lng": -73.9883675
+  },
+  {
+    "name": "Fáilte",
+    "neighborhood": "Kips Bay",
+    "lat": 40.742076,
+    "lng": -73.9781989
+  },
+  {
+    "name": "The Boiler Room",
+    "neighborhood": "East Village",
+    "lat": 40.7259518,
+    "lng": -73.9891412
+  },
+  {
+    "name": "Cowboy Tom's",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7159357,
+    "lng": -73.9868057
+  },
+  {
+    "name": "Amsterdam Billiards Club",
+    "neighborhood": "Union Square",
+    "lat": 40.7355377,
+    "lng": -73.9918887
+  },
+  {
+    "name": "The Players",
+    "neighborhood": "Gramercy Park",
+    "lat": 40.7379502,
+    "lng": -73.9859154
+  },
+  {
+    "name": "PUBLIC Hotel",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7159357,
+    "lng": -73.9868057
+  },
+  {
+    "name": "Mr. B Bar",
+    "neighborhood": "Murray Hill",
+    "lat": 40.7446129,
+    "lng": -73.9773007
+  },
+  {
+    "name": "Ray's",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7159357,
+    "lng": -73.9868057
+  },
+  {
+    "name": "Jac's on Bond",
+    "neighborhood": "NoHo",
+    "lat": 40.7265452,
+    "lng": -73.9936365
+  },
+  {
+    "name": "The Flower Shop",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7180663,
+    "lng": -73.992134
+  },
+  {
+    "name": "169 Bar",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7139326,
+    "lng": -73.9897603
+  },
+  {
+    "name": "one4one",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7159357,
+    "lng": -73.9868057
+  },
+  {
+    "name": "The Ripple Room",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7187356,
+    "lng": -73.9869338
+  },
+  {
+    "name": "The Less Dead Bar",
+    "neighborhood": "East Williamsburg",
+    "lat": 40.7131206,
+    "lng": -73.9365744
+  },
+  {
+    "name": "Josie Woods Pub",
+    "neighborhood": "Greenwich Village",
+    "lat": 40.732185,
+    "lng": -74.0000205
+  },
+  {
+    "name": "The Clocktower",
+    "neighborhood": "Flatiron",
+    "lat": 40.7445195,
+    "lng": -73.9904827
+  },
+  {
+    "name": "Bleecker Street Bar",
+    "neighborhood": "NoHo",
+    "lat": 40.7259782,
+    "lng": -73.9950281
+  },
+  {
+    "name": "Society Billiards",
+    "neighborhood": "Flatiron",
+    "lat": 40.7399067,
+    "lng": -73.9899635
+  },
+  {
+    "name": "Social Cues (B.S.A.)",
+    "neighborhood": "East Williamsburg",
+    "lat": 40.7135807,
+    "lng": -73.9721363
+  },
+  {
+    "name": "Anchored Inn",
+    "neighborhood": "Williamsburg",
+    "lat": 40.7092274,
+    "lng": -73.9372024
+  },
+  {
+    "name": "Artie's Backroom & Rooftop",
+    "neighborhood": "Murray Hill",
+    "lat": 40.7493147,
+    "lng": -73.9765665
+  },
+  {
+    "name": "Peter Dillon's Pub",
+    "neighborhood": "Murray Hill",
+    "lat": 40.7499156,
+    "lng": -73.9767115
+  },
+  {
+    "name": "Mr. Fong's",
+    "neighborhood": "Chinatown",
+    "lat": 40.7124273,
+    "lng": -73.9942509
+  },
+  {
+    "name": "The Monroe",
+    "neighborhood": "Lower East Side",
+    "lat": 40.7159357,
+    "lng": -73.9868057
+  },
+  {
+    "name": "Sharks Pool Club (Two Bridges)",
+    "neighborhood": "Two Bridges",
+    "lat": 40.7153993,
+    "lng": -73.9915154
+  },
+  {
+    "name": "Social Cues (The Garden)",
+    "neighborhood": "East Williamsburg",
+    "lat": 40.69097,
+    "lng": -73.9558672
+  },
+  {
+    "name": "Boxers NYC",
+    "neighborhood": "Chelsea",
+    "lat": 40.7407461,
+    "lng": -73.9931415
+  },
+  {
+    "name": "Slate NY",
+    "neighborhood": "Flatiron",
+    "lat": 40.7412384,
+    "lng": -73.9932261
+  },
+  {
+    "name": "Social Cues (The Gallery)",
+    "neighborhood": "Dumbo",
+    "lat": 40.69097,
+    "lng": -73.9558672
+  },
+  {
+    "name": "Triona's on Sullivan",
+    "neighborhood": "Greenwich Village",
+    "lat": 40.7298527,
+    "lng": -73.9994054
+  },
+  {
+    "name": "MacDougal Street Ale House",
+    "neighborhood": "Greenwich Village",
+    "lat": 40.7299133,
+    "lng": -74.0004358
+  },
+  {
+    "name": "Social Cues (Wynwood)",
+    "neighborhood": "East Williamsburg",
+    "lat": 40.69097,
+    "lng": -73.9558672
+  },
+  {
+    "name": "Space Billiard Pool Hall & Sports Bar",
+    "neighborhood": "Koreatown",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "W XYZ Bar - Aloft Long Island City Hotel",
+    "neighborhood": "Long Island City",
+    "lat": 40.7484457,
+    "lng": -73.9398062
+  },
+  {
+    "name": "New York Cue Club",
+    "neighborhood": "Midtown",
+    "lat": 40.75402,
+    "lng": -73.9775215
+  },
+  {
+    "name": "Superfine",
+    "neighborhood": "Dumbo",
+    "lat": 40.7023397,
+    "lng": -73.9874667
+  },
+  {
+    "name": "Bushwick Ice House",
+    "neighborhood": "Bushwick",
+    "lat": 40.7070838,
+    "lng": -73.9324951
+  },
+  {
+    "name": "Blaggards Pub",
+    "neighborhood": "Midtown",
+    "lat": 40.7511973,
+    "lng": -73.9836072
+  },
+  {
+    "name": "Anytime Bar & Billiards",
+    "neighborhood": "Chelsea",
+    "lat": 40.6080471,
+    "lng": -73.9732125
+  },
+  {
+    "name": "Barrow Street Ale House",
+    "neighborhood": "West Village",
+    "lat": 40.7287612,
+    "lng": -73.9897021
+  },
+  {
+    "name": "The Yale Club",
+    "neighborhood": "Midtown East",
+    "lat": 40.75402,
+    "lng": -73.9775215
+  },
+  {
+    "name": "The Stonewall Inn",
+    "neighborhood": "West Village",
+    "lat": 40.7338163,
+    "lng": -74.0021613
+  },
+  {
+    "name": "Telephone",
+    "neighborhood": "Bushwick",
+    "lat": 40.6942696,
+    "lng": -73.9187482
+  },
+  {
+    "name": "Pioneers Bar",
+    "neighborhood": "Chelsea",
+    "lat": 40.7472543,
+    "lng": -73.9918207
+  },
+  {
+    "name": "Toad Hall",
+    "neighborhood": "SoHo",
+    "lat": 40.7221836,
+    "lng": -74.0035553
+  },
+  {
+    "name": "Cellar Dog",
+    "neighborhood": "West Village",
+    "lat": 40.7336334,
+    "lng": -74.0032842
+  },
+  {
+    "name": "The Emerson",
+    "neighborhood": "Clinton Hill",
+    "lat": 40.6940535,
+    "lng": -73.9618019
+  },
+  {
+    "name": "The One Trick Pony",
+    "neighborhood": "West Village",
+    "lat": 40.7093553,
+    "lng": -74.0127012
+  },
+  {
+    "name": "The Roxy Bar",
+    "neighborhood": "Tribeca",
+    "lat": 40.7192924,
+    "lng": -74.0048228
+  },
+  {
+    "name": "Gym Sportsbar",
+    "neighborhood": "Chelsea",
+    "lat": 40.7445345,
+    "lng": -73.9961958
+  },
+  {
+    "name": "Atomic Wings",
+    "neighborhood": "Tribeca",
+    "lat": 40.7155885,
+    "lng": -74.0053623
+  },
+  {
+    "name": "Barrow's Pub",
+    "neighborhood": "West Village",
+    "lat": 40.7315711,
+    "lng": -74.0068211
+  },
+  {
+    "name": "Peck Slip Social",
+    "neighborhood": "Financial District",
+    "lat": 40.7034936,
+    "lng": -74.0081349
+  },
+  {
+    "name": "Gold Sounds Bar",
+    "neighborhood": "Bushwick",
+    "lat": 40.7027061,
+    "lng": -73.9295401
+  },
+  {
+    "name": "Love's Club",
+    "neighborhood": "Bushwick",
+    "lat": 40.6942696,
+    "lng": -73.9187482
+  },
+  {
+    "name": "Clara's",
+    "neighborhood": "Bushwick",
+    "lat": 40.7025745,
+    "lng": -73.9287202
+  },
+  {
+    "name": "Social Cues (Surreal)",
+    "neighborhood": "Bed-Stuy",
+    "lat": 40.6797037,
+    "lng": -73.9392445
+  },
+  {
+    "name": "Westside Tavern",
+    "neighborhood": "Chelsea",
+    "lat": 40.7436689,
+    "lng": -73.995123
+  },
+  {
+    "name": "Fine Time",
+    "neighborhood": "Bushwick",
+    "lat": 40.700717,
+    "lng": -73.9300935
+  },
+  {
+    "name": "The Cobra Club",
+    "neighborhood": "Bushwick",
+    "lat": 40.7066852,
+    "lng": -73.9235217
+  },
+  {
+    "name": "The Jar Bar",
+    "neighborhood": "Sunnyside",
+    "lat": 40.7430233,
+    "lng": -73.9198609
+  },
+  {
+    "name": "Soho House New York",
+    "neighborhood": "West Village",
+    "lat": 40.7405861,
+    "lng": -74.0060312
+  },
+  {
+    "name": "The Johnson's",
+    "neighborhood": "Bushwick",
+    "lat": 40.7058302,
+    "lng": -73.9237933
+  },
+  {
+    "name": "Brooklyn Billiards Bushwick",
+    "neighborhood": "Bushwick",
+    "lat": 40.6987286,
+    "lng": -73.9179097
+  },
+  {
+    "name": "W XYZ Bar and Lounge at Aloft Manhattan Downtown",
+    "neighborhood": "Financial District",
+    "lat": 40.7104148,
+    "lng": -74.0066526
+  },
+  {
+    "name": "Wall Street Bath & Spa 88",
+    "neighborhood": "Financial District",
+    "lat": 40.7056848,
+    "lng": -74.0060818
+  },
+  {
+    "name": "Kelly's Sports Bar (UES)",
+    "neighborhood": "Upper East Side",
+    "lat": 40.7832747,
+    "lng": -73.9791292
+  },
+  {
+    "name": "The Celly",
+    "neighborhood": "Chelsea",
+    "lat": 40.7446533,
+    "lng": -73.9993815
+  },
+  {
+    "name": "Alibi",
+    "neighborhood": "Fort Greene",
+    "lat": 40.6893642,
+    "lng": -73.9694855
+  },
+  {
+    "name": "Hudson Yards Tavern",
+    "neighborhood": "Chelsea",
+    "lat": 40.753983,
+    "lng": -74.0006028
+  },
+  {
+    "name": "Old Mates Pub",
+    "neighborhood": "Financial District",
+    "lat": 40.7034936,
+    "lng": -74.0081349
+  },
+  {
+    "name": "Starr Bar",
+    "neighborhood": "Bushwick",
+    "lat": 40.7050054,
+    "lng": -73.9230385
+  },
+  {
+    "name": "Carousel",
+    "neighborhood": "Bushwick",
+    "lat": 40.7059005,
+    "lng": -73.9220539
+  },
+  {
+    "name": "The Spotted Dog",
+    "neighborhood": "Upper East Side",
+    "lat": 40.7763303,
+    "lng": -73.9614771
+  },
+  {
+    "name": "Bowlero Times Square",
+    "neighborhood": "Hell's Kitchen",
+    "lat": 40.7602133,
+    "lng": -73.9881913
+  },
+  {
+    "name": "University Club of New York",
+    "neighborhood": "Midtown",
+    "lat": 40.7547605,
+    "lng": -73.9812851
+  },
+  {
+    "name": "Chelsea Recreation Center",
+    "neighborhood": "Chelsea",
+    "lat": 40.7482962,
+    "lng": -74.0022197
+  },
+  {
+    "name": "Coexist GameHouse",
+    "neighborhood": "Hell's Kitchen",
+    "lat": 40.7644228,
+    "lng": -73.9923918
+  },
+  {
+    "name": "Heavy Woods",
+    "neighborhood": "Bushwick",
+    "lat": 40.7056487,
+    "lng": -73.9216186
+  },
+  {
+    "name": "WXYZ Bar Aloft Brooklyn",
+    "neighborhood": "Downtown Brooklyn",
+    "lat": 40.6917256,
+    "lng": -73.9846707
+  },
+  {
+    "name": "McAnn's",
+    "neighborhood": "Hell's Kitchen",
+    "lat": 40.7644228,
+    "lng": -73.9923918
+  },
+  {
+    "name": "Blatt Billiards",
+    "neighborhood": "Hell's Kitchen",
+    "lat": 40.7644228,
+    "lng": -73.9923918
+  },
+  {
+    "name": "The Irish American Pub / Carragher's",
+    "neighborhood": "Financial District",
+    "lat": 40.7098633,
+    "lng": -74.0086893
+  },
+  {
+    "name": "Cassidys Pub",
+    "neighborhood": "Midtown",
+    "lat": 40.7493073,
+    "lng": -73.9829506
+  },
+  {
+    "name": "Blue Ruin Bar",
+    "neighborhood": "Hell's Kitchen",
+    "lat": 40.7624142,
+    "lng": -73.9899588
+  },
+  {
+    "name": "Snooker NYC",
+    "neighborhood": "Hell's Kitchen",
+    "lat": 40.759647,
+    "lng": -73.9862944
+  },
+  {
+    "name": "Frames Bowling Lounge",
+    "neighborhood": "Hell's Kitchen",
+    "lat": 40.7571722,
+    "lng": -73.9932074
+  },
+  {
+    "name": "Fulton Hall",
+    "neighborhood": "Fort Greene",
+    "lat": 40.6877614,
+    "lng": -73.9785857
+  },
+  {
+    "name": "Turbo Pizza",
+    "neighborhood": "Bushwick",
+    "lat": 40.6941379,
+    "lng": -73.9184939
+  },
+  {
+    "name": "Carmelo's",
+    "neighborhood": "Bushwick",
+    "lat": 40.7027786,
+    "lng": -73.9205174
+  },
+  {
+    "name": "Lone Wolf",
+    "neighborhood": "Bushwick",
+    "lat": 40.694457,
+    "lng": -73.93051
+  },
+  {
+    "name": "Abe's Pagoda Bar",
+    "neighborhood": "Bushwick",
+    "lat": 40.7038877,
+    "lng": -73.9188896
+  },
+  {
+    "name": "Quijote Tapas Bar",
+    "neighborhood": "Astoria",
+    "lat": 40.7258943,
+    "lng": -74.0094182
+  },
+  {
+    "name": "Veronica's Bar",
+    "neighborhood": "Astoria",
+    "lat": 40.7552627,
+    "lng": -73.9272533
+  },
+  {
+    "name": "Secret Pour",
+    "neighborhood": "Bed-Stuy",
+    "lat": 40.6937282,
+    "lng": -73.9298594
+  },
+  {
+    "name": "Lou's Athletic Club",
+    "neighborhood": "Bushwick",
+    "lat": 40.6995926,
+    "lng": -73.920372
+  },
+  {
+    "name": "Rockefeller Park",
+    "neighborhood": "Battery Park City",
+    "lat": 40.7110166,
+    "lng": -74.0169369
+  },
+  {
+    "name": "Beckett's Sports Bar",
+    "neighborhood": "Financial District",
+    "lat": 40.7047951,
+    "lng": -74.0065116
+  },
+  {
+    "name": "Olly Olly Market",
+    "neighborhood": "Chelsea",
+    "lat": 40.7516871,
+    "lng": -74.0068424
+  },
+  {
+    "name": "Di's Corner Bar",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7023975,
+    "lng": -73.9008093
+  },
+  {
+    "name": "The Globe Tavern",
+    "neighborhood": "Woodside",
+    "lat": 40.7459372,
+    "lng": -73.9148561
+  },
+  {
+    "name": "The Common Ditch Social",
+    "neighborhood": "Financial District",
+    "lat": 40.7619579,
+    "lng": -73.9784421
+  },
+  {
+    "name": "The Tiger Room",
+    "neighborhood": "Bed-Stuy",
+    "lat": 40.6834348,
+    "lng": -73.9540936
+  },
+  {
+    "name": "New York Athletic Club",
+    "neighborhood": "Midtown",
+    "lat": 40.7663613,
+    "lng": -73.9790106
+  },
+  {
+    "name": "El Monumento",
+    "neighborhood": "Bushwick",
+    "lat": 40.6869864,
+    "lng": -73.9126682
+  },
+  {
+    "name": "GM Bani Grocery Deli Grill",
+    "neighborhood": "Bushwick",
+    "lat": 40.6975024,
+    "lng": -73.9323025
+  },
+  {
+    "name": "Montero Bar & Grill",
+    "neighborhood": "Cobble Hill",
+    "lat": 40.7660398,
+    "lng": -73.9556298
+  },
+  {
+    "name": "Industry Bar",
+    "neighborhood": "Hell's Kitchen",
+    "lat": 40.7643224,
+    "lng": -73.9873646
+  },
+  {
+    "name": "Brooklyn Inn",
+    "neighborhood": "Boerum Hill",
+    "lat": 40.6874711,
+    "lng": -73.9826919
+  },
+  {
+    "name": "Bootleg Bar",
+    "neighborhood": "Bushwick",
+    "lat": 40.6988008,
+    "lng": -73.9172377
+  },
+  {
+    "name": "The Weekender",
+    "neighborhood": "Woodside",
+    "lat": 40.7443986,
+    "lng": -73.9107588
+  },
+  {
+    "name": "Rosie's Roadside Tavern",
+    "neighborhood": "Maspeth",
+    "lat": 40.7365064,
+    "lng": -73.9867109
+  },
+  {
+    "name": "Merv’s Bar",
+    "neighborhood": "Bushwick",
+    "lat": 40.6996659,
+    "lng": -73.9157869
+  },
+  {
+    "name": "Talon Bar",
+    "neighborhood": "Bushwick",
+    "lat": 40.701142,
+    "lng": -73.9143303
+  },
+  {
+    "name": "La 53 Bar",
+    "neighborhood": "Woodside",
+    "lat": 40.7448428,
+    "lng": -73.9108153
+  },
+  {
+    "name": "Sharks Pool Club (Astoria)",
+    "neighborhood": "Astoria",
+    "lat": 40.7788711,
+    "lng": -73.9226508
+  },
+  {
+    "name": "Frog",
+    "neighborhood": "Bed-Stuy",
+    "lat": 40.6832704,
+    "lng": -73.9441823
+  },
+  {
+    "name": "The Wild Goose",
+    "neighborhood": "Woodside",
+    "lat": 40.7447817,
+    "lng": -73.9098649
+  },
+  {
+    "name": "The Broadway",
+    "neighborhood": "Bed-Stuy",
+    "lat": 40.8919657,
+    "lng": -73.8971712
+  },
+  {
+    "name": "The Seneca",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7042564,
+    "lng": -73.9104377
+  },
+  {
+    "name": "Windjammer Bar",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7091645,
+    "lng": -73.9069695
+  },
+  {
+    "name": "Banatul Folklore and Soccer Club",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7063222,
+    "lng": -73.9086725
+  },
+  {
+    "name": "Seneca Fiesta Corporation",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7041125,
+    "lng": -73.9096158
+  },
+  {
+    "name": "Marian's Brooklyn",
+    "neighborhood": "Bed-Stuy",
+    "lat": 40.6832704,
+    "lng": -73.9441823
+  },
+  {
+    "name": "Break Bar and Billiards",
+    "neighborhood": "Astoria",
+    "lat": 40.752165,
+    "lng": -73.8958282
+  },
+  {
+    "name": "McLoughlin's",
+    "neighborhood": "Astoria",
+    "lat": 40.7617418,
+    "lng": -73.9251669
+  },
+  {
+    "name": "Aunt Ginny's",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7055595,
+    "lng": -73.9070695
+  },
+  {
+    "name": "Finn's Corner",
+    "neighborhood": "Prospect Heights",
+    "lat": 40.6784339,
+    "lng": -73.9640584
+  },
+  {
+    "name": "Tequila Time Bar Cafe",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7033316,
+    "lng": -73.908163
+  },
+  {
+    "name": "Charlie's Sports Bar",
+    "neighborhood": "Woodside",
+    "lat": 40.7419229,
+    "lng": -73.904621
+  },
+  {
+    "name": "First Stop Bar & Grill",
+    "neighborhood": "Astoria",
+    "lat": 40.7587851,
+    "lng": -73.9183096
+  },
+  {
+    "name": "Bearded Lady",
+    "neighborhood": "Prospect Heights",
+    "lat": 40.6774342,
+    "lng": -73.9638702
+  },
+  {
+    "name": "GlenPatrick's Pub",
+    "neighborhood": "Maspeth",
+    "lat": 40.723158,
+    "lng": -73.912637
+  },
+  {
+    "name": "Ocean's 8 Billiards",
+    "neighborhood": "Prospect Heights",
+    "lat": 40.6773771,
+    "lng": -73.9730602
+  },
+  {
+    "name": "La Plazita Organic",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7006176,
+    "lng": -73.8998395
+  },
+  {
+    "name": "Kelly's Bar & Grill",
+    "neighborhood": "Astoria",
+    "lat": 40.7587851,
+    "lng": -73.9183096
+  },
+  {
+    "name": "B61 Bar",
+    "neighborhood": "Cobble Hill",
+    "lat": 40.687547,
+    "lng": -73.9973352
+  },
+  {
+    "name": "Station Bar",
+    "neighborhood": "Woodside",
+    "lat": 40.7458706,
+    "lng": -73.9034348
+  },
+  {
+    "name": "I O Cafe",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7047502,
+    "lng": -73.9023202
+  },
+  {
+    "name": "Brooklyn Social",
+    "neighborhood": "Carroll Gardens",
+    "lat": 40.6779987,
+    "lng": -73.9978207
+  },
+  {
+    "name": "Montauk Club",
+    "neighborhood": "Park Slope",
+    "lat": 40.6748272,
+    "lng": -73.971721
+  },
+  {
+    "name": "Body Shop Bar",
+    "neighborhood": "Crown Heights",
+    "lat": 40.6795633,
+    "lng": -73.9638965
+  },
+  {
+    "name": "Uncle Roger's",
+    "neighborhood": "Crown Heights",
+    "lat": 40.6746469,
+    "lng": -73.9502619
+  },
+  {
+    "name": "Ryan's Daughter",
+    "neighborhood": "Upper East Side",
+    "lat": 40.7762991,
+    "lng": -73.9504574
+  },
+  {
+    "name": "McCaffrey & Burke Bar & Grill",
+    "neighborhood": "Astoria",
+    "lat": 40.7587851,
+    "lng": -73.9183096
+  },
+  {
+    "name": "Bonus Room",
+    "neighborhood": "Bushwick",
+    "lat": 40.7030314,
+    "lng": -73.9333829
+  },
+  {
+    "name": "Carlow East",
+    "neighborhood": "Upper East Side",
+    "lat": 40.7786314,
+    "lng": -73.9564131
+  },
+  {
+    "name": "Phil Hughes Bar",
+    "neighborhood": "Upper East Side",
+    "lat": 40.782978,
+    "lng": -73.9517589
+  },
+  {
+    "name": "Dark Bullet Sake & Oyster Bar",
+    "neighborhood": "Upper West Side",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "Cozy Corner",
+    "neighborhood": "Ridgewood",
+    "lat": 40.701672,
+    "lng": -73.8987795
+  },
+  {
+    "name": "Meller’s Sports Hub and Grill",
+    "neighborhood": "Upper East Side",
+    "lat": 40.7792739,
+    "lng": -73.9505041
+  },
+  {
+    "name": "Loyal Order of Moose",
+    "neighborhood": "Maspeth",
+    "lat": 40.6119141,
+    "lng": -73.997263
+  },
+  {
+    "name": "St. John’s Recreation Center",
+    "neighborhood": "Crown Heights",
+    "lat": 40.6738837,
+    "lng": -73.9348989
+  },
+  {
+    "name": "Halyards",
+    "neighborhood": "Gowanus",
+    "lat": 40.6791695,
+    "lng": -73.9885041
+  },
+  {
+    "name": "Walsh's Pub",
+    "neighborhood": "Ridgewood",
+    "lat": 40.7034775,
+    "lng": -73.8953145
+  },
+  {
+    "name": "Ginger's Bar",
+    "neighborhood": "Park Slope",
+    "lat": 40.6713308,
+    "lng": -73.9843022
+  },
+  {
+    "name": "Reif's Bar",
+    "neighborhood": "Upper East Side",
+    "lat": 40.775479,
+    "lng": -73.9550233
+  },
+  {
+    "name": "BQE Billiards & Bar",
+    "neighborhood": "Jackson Heights",
+    "lat": 40.752165,
+    "lng": -73.8958282
+  },
+  {
+    "name": "Third Avenue Ale House",
+    "neighborhood": "Upper East Side",
+    "lat": 40.7827926,
+    "lng": -73.9513056
+  },
+  {
+    "name": "Ready Penny Inn",
+    "neighborhood": "Jackson Heights",
+    "lat": 40.7544101,
+    "lng": -73.8939497
+  },
+  {
+    "name": "The Dram Shop Bar",
+    "neighborhood": "Park Slope",
+    "lat": 40.6687941,
+    "lng": -73.9851157
+  },
+  {
+    "name": "Merrion Square Pub",
+    "neighborhood": "Upper East Side",
+    "lat": 40.7835601,
+    "lng": -73.9472416
+  },
+  {
+    "name": "City Snooker Pool House",
+    "neighborhood": "Jackson Heights",
+    "lat": 40.7261111,
+    "lng": -73.9805556
+  },
+  {
+    "name": "Alfonso's Bar",
+    "neighborhood": "Jackson Heights",
+    "lat": 40.7556561,
+    "lng": -73.8857755
+  },
+  {
+    "name": "Jake's Dilemma",
+    "neighborhood": "Upper West Side",
+    "lat": 40.7843285,
+    "lng": -73.977698
+  },
+  {
+    "name": "Social Cues (Vogue)",
+    "neighborhood": "Gowanus",
+    "lat": 40.69097,
+    "lng": -73.9558672
+  },
+  {
+    "name": "Olympia Sport Bar and Lounge",
+    "neighborhood": "Astoria",
+    "lat": 40.7191151,
+    "lng": -74.0032838
+  },
+  {
+    "name": "Olympia Billiards & Snooker Bar",
+    "neighborhood": "Jackson Heights",
+    "lat": 40.7468267,
+    "lng": -73.8884901
+  },
+  {
+    "name": "Red Hook Recreation Center",
+    "neighborhood": "Red Hook",
+    "lat": 40.6727519,
+    "lng": -74.0038631
+  },
+  {
+    "name": "Tee Dee’s Tavern",
+    "neighborhood": "Glendale",
+    "lat": 40.7462215,
+    "lng": -73.9775321
+  },
+  {
+    "name": "Ooh La La Lounge and Bar",
+    "neighborhood": "Crown Heights",
+    "lat": 40.8689919,
+    "lng": -73.9321732
+  },
+  {
+    "name": "Uno Cafe & Billiard",
+    "neighborhood": "Jackson Heights",
+    "lat": 40.7556561,
+    "lng": -73.8857755
+  },
+  {
+    "name": "Lexington Publick",
+    "neighborhood": "Upper East Side",
+    "lat": 40.7774388,
+    "lng": -73.9570946
+  },
+  {
+    "name": "Buttermilk Bar",
+    "neighborhood": "Park Slope",
+    "lat": 40.6648053,
+    "lng": -73.9897664
+  },
+  {
+    "name": "California Sports Bar",
+    "neighborhood": "Jackson Heights",
+    "lat": 40.7500328,
+    "lng": -73.8804319
+  },
+  {
+    "name": "Winners Bar",
+    "neighborhood": "Elmhurst",
+    "lat": 40.7418597,
+    "lng": -73.8807821
+  },
+  {
+    "name": "Nitehawk Cinema Prospect Park",
+    "neighborhood": "Park Slope",
+    "lat": 40.6616943,
+    "lng": -73.979899
+  },
+  {
+    "name": "CourtSide Lounge",
+    "neighborhood": "Glendale",
+    "lat": 40.7221035,
+    "lng": -73.9867932
+  },
+  {
+    "name": "No Partners Bar",
+    "neighborhood": "Astoria",
+    "lat": 40.7634157,
+    "lng": -73.9212273
+  },
+  {
+    "name": "Sandy Jack's",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6615405,
+    "lng": -73.9930168
+  },
+  {
+    "name": "El Tucan Bar",
+    "neighborhood": "Elmhurst",
+    "lat": 40.7365804,
+    "lng": -73.8783932
+  },
+  {
+    "name": "Bear Burgers Backyard",
+    "neighborhood": "Greenwood Heights",
+    "lat": 40.6596495,
+    "lng": -73.995606
+  },
+  {
+    "name": "Thomas Jefferson Recreation Center",
+    "neighborhood": "East Harlem",
+    "lat": 40.7932969,
+    "lng": -73.935939
+  },
+  {
+    "name": "SUNY Downstate Student Center",
+    "neighborhood": "Flatbush",
+    "lat": 40.653704,
+    "lng": -73.9455292
+  },
+  {
+    "name": "Tap a Keg",
+    "neighborhood": "Upper West Side",
+    "lat": 40.7792489,
+    "lng": -73.9743038
+  },
+  {
+    "name": "Fort Hamilton Distillery",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6357375,
+    "lng": -74.0015985
+  },
+  {
+    "name": "Ten Twenty Bar",
+    "neighborhood": "Morningside Heights",
+    "lat": 40.8141651,
+    "lng": -73.9597532
+  },
+  {
+    "name": "Billares Sol Y Luna",
+    "neighborhood": "Corona",
+    "lat": 40.7468875,
+    "lng": -73.8625876
+  },
+  {
+    "name": "Pelham Fritz Recreation Center",
+    "neighborhood": "Harlem",
+    "lat": 40.8049885,
+    "lng": -73.9448328
+  },
+  {
+    "name": "8 on Eighth Bar and Billiards",
+    "neighborhood": "Sunset Park",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "Geordie's Joint",
+    "neighborhood": "Woodhaven",
+    "lat": 40.6921828,
+    "lng": -73.8625683
+  },
+  {
+    "name": "Ha-Weeda Tavern and Billiards",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6514815,
+    "lng": -74.014222
+  },
+  {
+    "name": "Denny's (Bar)",
+    "neighborhood": "Kensington",
+    "lat": 40.7934345,
+    "lng": -73.7220756
+  },
+  {
+    "name": "Aloft New York LaGuardia Airport",
+    "neighborhood": "East Elmhurst",
+    "lat": 40.7703575,
+    "lng": -73.8699533
+  },
+  {
+    "name": "Aloft Harlem Hotel WXYZ Bar",
+    "neighborhood": "Harlem",
+    "lat": 40.8091502,
+    "lng": -73.9515478
+  },
+  {
+    "name": "Puerto Plata Seafood and Billiards",
+    "neighborhood": "Woodhaven",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "El Rey IV Restaurant & Billard",
+    "neighborhood": "Woodhaven",
+    "lat": 40.7060592,
+    "lng": -73.8092008
+  },
+  {
+    "name": "Walnut Bar and Grill",
+    "neighborhood": "Port Morris",
+    "lat": 40.8004356,
+    "lng": -73.9105726
+  },
+  {
+    "name": "Bar 47",
+    "neighborhood": "Mott Haven",
+    "lat": 40.8089897,
+    "lng": -73.9229147
+  },
+  {
+    "name": "Maple Billiard",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6442221,
+    "lng": -74.0075907
+  },
+  {
+    "name": "Linda Restaurant",
+    "neighborhood": "Kensington",
+    "lat": 40.6371969,
+    "lng": -73.9683994
+  },
+  {
+    "name": "The Billiard Company",
+    "neighborhood": "Forest Hills",
+    "lat": 40.7204211,
+    "lng": -73.8451568
+  },
+  {
+    "name": "Bronx Roadhouse",
+    "neighborhood": "Mott Haven",
+    "lat": 40.8089897,
+    "lng": -73.9229147
+  },
+  {
+    "name": "Irish Haven",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6419477,
+    "lng": -74.0169567
+  },
+  {
+    "name": "Q102 Pool Hall & Lounge",
+    "neighborhood": "Queens Village",
+    "lat": 40.7360054,
+    "lng": -73.7436017
+  },
+  {
+    "name": "MVP Union Billiards",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6444124,
+    "lng": -74.0143978
+  },
+  {
+    "name": "Feeney’s Pub",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6381787,
+    "lng": -74.0173125
+  },
+  {
+    "name": "BILLIARD 728",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6442221,
+    "lng": -74.0075907
+  },
+  {
+    "name": "Mike's Tavern",
+    "neighborhood": "Ozone Park",
+    "lat": 40.6797348,
+    "lng": -73.8499864
+  },
+  {
+    "name": "Hydra Hookah Lounge & Bar",
+    "neighborhood": "Ozone Park",
+    "lat": 40.6433951,
+    "lng": -73.9489646
+  },
+  {
+    "name": "La Maravilla Billiards & Bar",
+    "neighborhood": "Hamilton Heights",
+    "lat": 40.6080471,
+    "lng": -73.9732125
+  },
+  {
+    "name": "Swedish Football Club",
+    "neighborhood": "Sunset Park",
+    "lat": 40.6374288,
+    "lng": -74.0178834
+  },
+  {
+    "name": "Vanessa Bar Lounge",
+    "neighborhood": "Queens Village",
+    "lat": 40.7302543,
+    "lng": -73.8636012
+  },
+  {
+    "name": "Golden 9 Billiards & Bar",
+    "neighborhood": "Flushing",
+    "lat": 40.7591633,
+    "lng": -73.8321656
+  },
+  {
+    "name": "Last Call Bar",
+    "neighborhood": "Kew Gardens",
+    "lat": 40.7110998,
+    "lng": -73.9483032
+  },
+  {
+    "name": "The Recovery Room Sports Bar",
+    "neighborhood": "Flushing",
+    "lat": 40.7610807,
+    "lng": -73.9770877
+  },
+  {
+    "name": "Bowl 360 Ozone Park",
+    "neighborhood": "Ozone Park",
+    "lat": 40.67677,
+    "lng": -73.8437461
+  },
+  {
+    "name": "PC’s Bar & Grill",
+    "neighborhood": "Bay Ridge",
+    "lat": 40.631214,
+    "lng": -74.0217618
+  },
+  {
+    "name": "Chinese Pool Hall (逆风娱乐城)",
+    "neighborhood": "Flushing",
+    "lat": 40.7360054,
+    "lng": -73.7436017
+  },
+  {
+    "name": "ON CUE",
+    "neighborhood": "Flushing",
+    "lat": 40.7116235,
+    "lng": -73.9196098
+  },
+  {
+    "name": "Hunts Point Recreation Center",
+    "neighborhood": "Hunts Point",
+    "lat": 40.8149687,
+    "lng": -73.8892384
+  },
+  {
+    "name": "Prince Billiards",
+    "neighborhood": "Flushing",
+    "lat": 40.7552058,
+    "lng": -73.8048627
+  },
+  {
+    "name": "Blue Storm Billiard Lounge",
+    "neighborhood": "Flushing",
+    "lat": 40.6080471,
+    "lng": -73.9732125
+  },
+  {
+    "name": "B66 Club",
+    "neighborhood": "Bensonhurst",
+    "lat": 40.7542822,
+    "lng": -73.9793717
+  },
+  {
+    "name": "Johnny Pumps",
+    "neighborhood": "Bay Ridge",
+    "lat": 40.6290698,
+    "lng": -74.0229817
+  },
+  {
+    "name": "Carom Cafe Billiards",
+    "neighborhood": "Flushing",
+    "lat": 40.7662173,
+    "lng": -73.831648
+  },
+  {
+    "name": "Tian Yi Ju Le Bu",
+    "neighborhood": "Flushing",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "Mack Daddy's Bar",
+    "neighborhood": "Flatlands",
+    "lat": 40.6595836,
+    "lng": -73.9882872
+  },
+  {
+    "name": "Status Q Billiards",
+    "neighborhood": "Bay Ridge",
+    "lat": 40.752165,
+    "lng": -73.8958282
+  },
+  {
+    "name": "Bill's Bar",
+    "neighborhood": "Mill Basin",
+    "lat": 40.6098325,
+    "lng": -73.9075848
+  },
+  {
+    "name": "Black Horses Tavern",
+    "neighborhood": "Bensonhurst",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "Star Lounge Bar",
+    "neighborhood": "Bensonhurst",
+    "lat": 40.6049772,
+    "lng": -73.9934061
+  },
+  {
+    "name": "Cheap Shots Sports Bar & Lounge",
+    "neighborhood": "Kew Gardens",
+    "lat": 40.774712,
+    "lng": -73.912713
+  },
+  {
+    "name": "Tony's Billiard Cafe",
+    "neighborhood": "Concourse Village",
+    "lat": 40.7439734,
+    "lng": -73.9148875
+  },
+  {
+    "name": "Costello's Claddagh Inn",
+    "neighborhood": "Madison",
+    "lat": 40.7480566,
+    "lng": -73.9901828
+  },
+  {
+    "name": "Trackside Bar",
+    "neighborhood": "South Ozone Park",
+    "lat": 40.6701035,
+    "lng": -73.8190231
+  },
+  {
+    "name": "Nunez Billiards",
+    "neighborhood": "South Ozone Park",
+    "lat": 40.6701035,
+    "lng": -73.8190231
+  },
+  {
+    "name": "Set Lounge Bar & Billiards",
+    "neighborhood": "Gravesend",
+    "lat": 40.6080471,
+    "lng": -73.9732125
+  },
+  {
+    "name": "Caribbean Fest",
+    "neighborhood": "South Ozone Park",
+    "lat": 40.6701035,
+    "lng": -73.8190231
+  },
+  {
+    "name": "Paradise Alley",
+    "neighborhood": "Flushing",
+    "lat": 40.7412728,
+    "lng": -73.9820545
+  },
+  {
+    "name": "The Rail Bar & Grill",
+    "neighborhood": "Howard Beach",
+    "lat": 40.805184,
+    "lng": -73.9664024
+  },
+  {
+    "name": "Kelly's Tavern",
+    "neighborhood": "Bay Ridge",
+    "lat": 40.6168617,
+    "lng": -74.0304996
+  },
+  {
+    "name": "Diamond Auto Spa NYC",
+    "neighborhood": "Gravesend",
+    "lat": 40.6398306,
+    "lng": -74.1213659
+  },
+  {
+    "name": "Ajimi",
+    "neighborhood": "Bensonhurst",
+    "lat": 40.6049772,
+    "lng": -73.9934061
+  },
+  {
+    "name": "Parkside Pub",
+    "neighborhood": "Flushing",
+    "lat": 40.7578275,
+    "lng": -73.8288632
+  },
+  {
+    "name": "154 Seven Billiards",
+    "neighborhood": "Flushing",
+    "lat": 40.7552058,
+    "lng": -73.8048627
+  },
+  {
+    "name": "J. Hood Wright Recreation Center",
+    "neighborhood": "Washington Heights",
+    "lat": 40.8464187,
+    "lng": -73.9407703
+  },
+  {
+    "name": "Star Billiards",
+    "neighborhood": "Soundview",
+    "lat": 40.7552058,
+    "lng": -73.8048627
+  },
+  {
+    "name": "Kwame Ture Recreation Center",
+    "neighborhood": "Highbridge",
+    "lat": 40.8442469,
+    "lng": -73.9191621
+  },
+  {
+    "name": "King Billiards",
+    "neighborhood": "Flushing",
+    "lat": 40.7552058,
+    "lng": -73.8048627
+  },
+  {
+    "name": "Abc Billiards & Cafe",
+    "neighborhood": "Flushing",
+    "lat": 40.7538244,
+    "lng": -73.804193
+  },
+  {
+    "name": "Paddy's Tavern",
+    "neighborhood": "Flushing",
+    "lat": 40.7654301,
+    "lng": -73.8174291
+  },
+  {
+    "name": "Adiccion Pool Bar",
+    "neighborhood": "Stapleton",
+    "lat": 40.6372371,
+    "lng": -73.968411
+  },
+  {
+    "name": "Joe’s Bar & Grill G & P's",
+    "neighborhood": "Gravesend",
+    "lat": 40.5969453,
+    "lng": -73.974653
+  },
+  {
+    "name": "Gotham City Billiards Club",
+    "neighborhood": "Gravesend",
+    "lat": 40.7439734,
+    "lng": -73.9148875
+  },
+  {
+    "name": "Star Billiards Cafe",
+    "neighborhood": "Morris Heights",
+    "lat": 40.7439734,
+    "lng": -73.9148875
+  },
+  {
+    "name": "B.B.'S Pub and Grill",
+    "neighborhood": "Flushing",
+    "lat": 40.7732287,
+    "lng": -73.9847509
+  },
+  {
+    "name": "Breifne Pub",
+    "neighborhood": "Auburndale",
+    "lat": 40.7702778,
+    "lng": -73.7927778
+  },
+  {
+    "name": "Tamaqua Bar & Marina",
+    "neighborhood": "Gerritsen Beach",
+    "lat": 40.5940566,
+    "lng": -73.9301001
+  },
+  {
+    "name": "Patrón De Grecia",
+    "neighborhood": "Jamaica",
+    "lat": 40.7012775,
+    "lng": -73.7916091
+  },
+  {
+    "name": "Skyline Billiards",
+    "neighborhood": "Gravesend",
+    "lat": 40.6080471,
+    "lng": -73.9732125
+  },
+  {
+    "name": "Marlboro Memorial Post 1437",
+    "neighborhood": "Gravesend",
+    "lat": 40.6779494,
+    "lng": -74.0119372
+  },
+  {
+    "name": "Archer's Lounge & Sports Bar",
+    "neighborhood": "Parkchester",
+    "lat": 40.7128623,
+    "lng": -73.955265
+  },
+  {
+    "name": "McCabe's Bar Car",
+    "neighborhood": "Auburndale",
+    "lat": 40.752605,
+    "lng": -73.9778482
+  },
+  {
+    "name": "Q-Ball Billiards",
+    "neighborhood": "Sheepshead Bay",
+    "lat": 40.752165,
+    "lng": -73.8958282
+  },
+  {
+    "name": "PJ's",
+    "neighborhood": "Fresh Meadows",
+    "lat": 40.7297991,
+    "lng": -73.7796042
+  },
+  {
+    "name": "Dyckman Billiards Cafe",
+    "neighborhood": "Inwood",
+    "lat": 40.8673822,
+    "lng": -73.9228859
+  },
+  {
+    "name": "West Cork Union Hall",
+    "neighborhood": "West Brighton",
+    "lat": 40.6379755,
+    "lng": -74.1092767
+  },
+  {
+    "name": "Billar La Bestia",
+    "neighborhood": "Fordham",
+    "lat": 40.7715532,
+    "lng": -73.9850121
+  },
+  {
+    "name": "Post Billiards Cafe",
+    "neighborhood": "Inwood",
+    "lat": 40.7439734,
+    "lng": -73.9148875
+  },
+  {
+    "name": "Wise Game Club",
+    "neighborhood": "Brighton Beach",
+    "lat": 40.5765441,
+    "lng": -73.9657069
+  },
+  {
+    "name": "Roy's Roti Shop and Lounge",
+    "neighborhood": "Hollis",
+    "lat": 40.7118742,
+    "lng": -73.7698328
+  },
+  {
+    "name": "St. James Recreation Center",
+    "neighborhood": "Fordham",
+    "lat": 40.8645403,
+    "lng": -73.8990466
+  },
+  {
+    "name": "Set Lounge Bar & Billiards (Brighton Beach)",
+    "neighborhood": "Brighton Beach",
+    "lat": 40.5775708,
+    "lng": -73.9598031
+  },
+  {
+    "name": "Cue Bar",
+    "neighborhood": "Bayside",
+    "lat": 40.7597167,
+    "lng": -73.7694105
+  },
+  {
+    "name": "Deja Vu",
+    "neighborhood": "St. Albans",
+    "lat": 40.6912611,
+    "lng": -73.7655652
+  },
+  {
+    "name": "Jolly Tinker",
+    "neighborhood": "Bedford Park",
+    "lat": 40.8700999,
+    "lng": -73.8856912
+  },
+  {
+    "name": "Bases Loaded Sports Bar",
+    "neighborhood": "Pelham Bay",
+    "lat": 40.8472515,
+    "lng": -73.8322691
+  },
+  {
+    "name": "Buddy's Wonder Bar",
+    "neighborhood": "Port Richmond",
+    "lat": 40.6297279,
+    "lng": -74.1403613
+  },
+  {
+    "name": "Keenan's Bar",
+    "neighborhood": "Kingsbridge",
+    "lat": 40.87915,
+    "lng": -73.904435
+  },
+  {
+    "name": "Williamsbridge Oval Recreation Center",
+    "neighborhood": "Norwood",
+    "lat": 40.876668,
+    "lng": -73.8786072
+  },
+  {
+    "name": "Rab's Country Lanes",
+    "neighborhood": "Dongan Hills",
+    "lat": 40.5890493,
+    "lng": -74.0892951
+  },
+  {
+    "name": "The Punch Bowl",
+    "neighborhood": "Kingsbridge",
+    "lat": 40.8851442,
+    "lng": -73.900355
+  },
+  {
+    "name": "Pour House",
+    "neighborhood": "Queens Village",
+    "lat": 40.7267692,
+    "lng": -73.7415208
+  },
+  {
+    "name": "Joe Broadway's Billiards & Sports Pub",
+    "neighborhood": "Graniteville",
+    "lat": 40.6263384,
+    "lng": -74.1621376
+  },
+  {
+    "name": "The Rocks Billiards",
+    "neighborhood": "Arverne",
+    "lat": 40.5900257,
+    "lng": -73.7964478
+  },
+  {
+    "name": "Behan's Public House",
+    "neighborhood": "Woodlawn",
+    "lat": 40.8985695,
+    "lng": -73.8675528
+  },
+  {
+    "name": "The Burren",
+    "neighborhood": "Woodlawn",
+    "lat": 40.8881345,
+    "lng": -73.8728116
+  },
+  {
+    "name": "The Billiard Hideaway",
+    "neighborhood": "New Dorp",
+    "lat": 40.7080782,
+    "lng": -74.0020772
+  },
+  {
+    "name": "Griff's Place",
+    "neighborhood": "New Dorp",
+    "lat": 40.5739486,
+    "lng": -74.1162461
+  },
+  {
+    "name": "Bowlerland",
+    "neighborhood": "Baychester",
+    "lat": 40.8862214,
+    "lng": -73.8232571
+  },
+  {
+    "name": "Moonlight Pub",
+    "neighborhood": "Floral Park",
+    "lat": 40.7393564,
+    "lng": -73.7002573
+  },
+  {
+    "name": "Unique Lounge & Billiards",
+    "neighborhood": "Arden Heights",
+    "lat": 40.6080471,
+    "lng": -73.9732125
+  },
+  {
+    "name": "Aloysia's Lounge",
+    "neighborhood": "Tottenville",
+    "lat": 40.5090747,
+    "lng": -74.2468867
+  }
+]
