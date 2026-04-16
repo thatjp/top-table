@@ -9,7 +9,16 @@ export const metadata: Metadata = {
   description: "Map of NYC pool tables and bars with logged games and per-table leaderboards",
 };
 
-export default async function TablesPage() {
+type PageProps = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+export default async function TablesPage({ searchParams }: PageProps) {
+  const sp = await searchParams;
+  const initialSelectedPlaceIdParam = sp.v;
+  const initialSelectedPlaceId = Array.isArray(initialSelectedPlaceIdParam)
+    ? initialSelectedPlaceIdParam[0]
+    : initialSelectedPlaceIdParam ?? null;
   const demoMode = (await cookies()).get(DEMO_LEADERBOARD_COOKIE)?.value === "1";
   const venues = await listVenuesWithStats({ demo: demoMode });
   const mapKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_BROWSER_KEY?.trim() ?? "";
@@ -21,7 +30,11 @@ export default async function TablesPage() {
           No mapped tables yet. Log a game and choose a place from search to add one here.
         </p>
       ) : (
-        <TablesDirectory venues={venues} mapKey={mapKey} />
+        <TablesDirectory
+          venues={venues}
+          mapKey={mapKey}
+          initialSelectedPlaceId={initialSelectedPlaceId}
+        />
       )}
     </div>
   );

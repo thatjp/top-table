@@ -26,7 +26,7 @@ export async function Nav() {
             href="/"
             className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50"
           >
-            <span className="md:hidden">Top table</span>
+            <span className="md:hidden">Top Table</span>
             <span className="hidden md:inline">Top Table</span>
           </Link>
           <nav className="flex flex-1 flex-wrap items-center justify-end gap-3 text-sm font-medium md:justify-start">

@@ -1,6 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import {
+  MarkerClusterer,
+  SuperClusterAlgorithm,
+  type Cluster,
+  type Renderer,
+  type ClusterStats,
+} from "@googlemaps/markerclusterer";
 import { NYC_MAP_BOUNDS, NYC_MAP_CENTER } from "@/lib/nyc-map-scope";
 import type { VenueMapRow } from "@/lib/venue-leaderboard";
 
@@ -12,91 +19,74 @@ type Props = {
   selectedVenueClickSeq?: number;
 };
 
-type MarkerOverlayInstance = google.maps.OverlayView & {
-  setHighlighted: (highlighted: boolean) => void;
-  bounceBriefly: () => void;
-  getVenue: () => VenueMapRow;
-};
+/** Supercluster: clusters exist for map zoom levels ≤ this; above, points render individually. */
+const VENUE_CLUSTER_MAX_ZOOM = 14;
+/** Cluster radius in px (supercluster). */
+const VENUE_CLUSTER_RADIUS = 52;
+
+function getVenueHitIcon(): google.maps.Symbol {
+  return {
+    path: google.maps.SymbolPath.CIRCLE,
+    fillOpacity: 0,
+    strokeOpacity: 0,
+    scale: 1,
+  };
+}
+
+function venueMarkerLabel(highlighted: boolean): google.maps.MarkerLabel {
+  return {
+    text: "🎱",
+    fontSize: highlighted ? "24px" : "22px",
+    className: highlighted
+      ? "tables-map-venue-marker-label is-highlighted"
+      : "tables-map-venue-marker-label",
+  };
+}
+
+function bounceMarkerBriefly(marker: google.maps.Marker) {
+  marker.setAnimation(google.maps.Animation.BOUNCE);
+  window.setTimeout(() => {
+    marker.setAnimation(null);
+  }, 650);
+}
+
+/**
+ * Default cluster renderer uses multi-layer SVG + optional AdvancedMarker path.
+ * We only render multi-point clusters; single-point clusters use the real venue marker.
+ */
+class LightTablesClusterRenderer implements Renderer {
+  render(
+    { count, position }: Cluster,
+    _stats: ClusterStats,
+    _map: google.maps.Map,
+  ): google.maps.Marker {
+    return new google.maps.Marker({
+      position,
+      optimized: true,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: "#52525b",
+        fillOpacity: 0.95,
+        strokeColor: "#fafafa",
+        strokeWeight: 1,
+        scale: 15,
+      },
+      label: {
+        text: String(count),
+        color: "#fafafa",
+        fontSize: "11px",
+        fontWeight: "600",
+      },
+      zIndex: Number(google.maps.Marker.MAX_ZINDEX) + count,
+      title: `${count} venues`,
+    });
+  }
+}
 
 type PopupOverlayInstance = google.maps.OverlayView & {
   show: (venue: VenueMapRow) => void;
   hide: () => void;
 };
-
-function createEmojiVenueMarkerOverlay(args: {
-  map: google.maps.Map;
-  venue: VenueMapRow;
-  onClick: (venue: VenueMapRow) => void;
-}): MarkerOverlayInstance {
-  class EmojiVenueMarkerOverlay extends google.maps.OverlayView {
-    private mapRef: google.maps.Map;
-    private venue: VenueMapRow;
-    private onClick: (venue: VenueMapRow) => void;
-    private container: HTMLButtonElement | null = null;
-
-    constructor() {
-      super();
-      this.mapRef = args.map;
-      this.venue = args.venue;
-      this.onClick = args.onClick;
-    }
-
-    override onAdd() {
-      const panes = this.getPanes();
-      if (!panes) return;
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "tables-map-emoji-marker";
-      button.setAttribute("aria-label", this.venue.label);
-      button.textContent = "🎱";
-      button.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        this.onClick(this.venue);
-      });
-      this.container = button;
-      panes.overlayMouseTarget.appendChild(button);
-    }
-
-    override draw() {
-      if (!this.container) return;
-      const projection = this.getProjection();
-      if (!projection) return;
-      const point = projection.fromLatLngToDivPixel(
-        new google.maps.LatLng(this.venue.latitude, this.venue.longitude),
-      );
-      if (!point) return;
-      this.container.style.left = `${point.x}px`;
-      this.container.style.top = `${point.y}px`;
-    }
-
-    override onRemove() {
-      if (this.container?.parentNode) {
-        this.container.parentNode.removeChild(this.container);
-      }
-      this.container = null;
-    }
-
-    setHighlighted(highlighted: boolean) {
-      if (!this.container) return;
-      this.container.classList.toggle("is-highlighted", highlighted);
-    }
-
-    bounceBriefly() {
-      if (!this.container) return;
-      this.container.classList.add("is-bouncing");
-      setTimeout(() => {
-        this.container?.classList.remove("is-bouncing");
-      }, 700);
-    }
-
-    getVenue() {
-      return this.venue;
-    }
-  }
-
-  return new EmojiVenueMarkerOverlay() as MarkerOverlayInstance;
-}
 
 function createVenuePopupOverlay(): PopupOverlayInstance {
   class VenuePopupOverlay extends google.maps.OverlayView {
@@ -134,15 +124,107 @@ function createVenuePopupOverlay(): PopupOverlayInstance {
       this.container = null;
     }
 
+    private async loadTopPlayers(placeId: string) {
+      if (!this.container) return;
+      const body = this.container.querySelector<HTMLTableSectionElement>(
+        ".tables-map-venue-top3-body",
+      );
+      if (!body) return;
+      try {
+        const res = await fetch(
+          `/api/venues/${encodeURIComponent(placeId)}/mini-leaderboard`,
+        );
+        if (!res.ok) {
+          body.innerHTML =
+            '<tr><td colspan="2" class="tables-map-venue-top3-name">Top players unavailable.</td></tr>';
+          return;
+        }
+        const data = (await res.json()) as {
+          players?: { rank: number; displayName: string; wins: number; losses: number }[];
+          totalGames?: number;
+        };
+        const players = Array.isArray(data.players) ? data.players.slice(0, 3) : [];
+        // If this venue has fewer than 2 recorded games overall, show a friendly message.
+        const totalGames =
+          typeof data.totalGames === "number"
+            ? data.totalGames
+            : this.venue?.gamesPlayed ?? 0;
+        if (players.length === 0 || totalGames < 2) {
+          body.innerHTML =
+            '<tr><td colspan="2" class="tables-map-venue-top3-name">No top players... yet</td></tr>';
+          return;
+        }
+        body.innerHTML = players
+          .map(
+            (p) => `
+            <tr>
+              <td class="tables-map-venue-top3-name">${p.displayName}</td>
+              <td class="tables-map-venue-top3-record">${p.wins}-${p.losses}</td>
+            </tr>
+          `,
+          )
+          .join("");
+      } catch {
+        body.innerHTML =
+          '<tr><td colspan="3" class="tables-map-venue-top3-name">Top players unavailable.</td></tr>';
+      }
+    }
+
     show(venue: VenueMapRow) {
       this.venue = venue;
       this.visible = true;
       if (!this.container) return;
+      const busyFromGames = Math.max(0, Math.min(100, venue.gamesPlayed * 4));
+      const mapsUrl = venue.placeId
+        ? `https://www.google.com/maps/search/?api=1&query_place_id=${encodeURIComponent(
+            venue.placeId,
+          )}`
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+            `${venue.latitude},${venue.longitude}`,
+          )}`;
+
       this.container.innerHTML = `
         <div class="tables-map-venue-popup-card">
           <div class="tables-map-venue-popup-body">
-            <div class="tables-map-venue-popup-title">${venue.label}</div>
+            <div class="tables-map-venue-popup-header">
+              <div class="tables-map-venue-popup-title">${venue.label}</div>
+              <a
+                class="tables-map-venue-popup-link"
+                href="${mapsUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open in Google Maps"
+              >
+                ↗
+              </a>
+            </div>
             <div class="tables-map-venue-popup-meta">${venue.gamesPlayed} games · ${venue.uniquePlayers} players</div>
+            <div class="tables-map-venue-busy">
+              <div class="tables-map-venue-busy-header">
+                <span>Busy</span>
+                <span>${busyFromGames}%</span>
+              </div>
+              <div class="tables-map-venue-busy-scale" style="--busy-pct:${busyFromGames};">
+                <div class="tables-map-venue-busy-thumb"></div>
+              </div>
+            </div>
+            <div class="tables-map-venue-top3">
+              <div class="tables-map-venue-top3-title">Top players</div>
+              <table class="tables-map-venue-top3-table">
+                <tbody class="tables-map-venue-top3-body">
+                  <tr>
+                    <td colspan="2" class="tables-map-venue-top3-name">Loading…</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button
+              type="button"
+              class="tables-map-venue-more"
+              data-place-id="${venue.placeId}"
+            >
+              more
+            </button>
           </div>
         </div>
       `;
@@ -151,6 +233,17 @@ function createVenuePopupOverlay(): PopupOverlayInstance {
         this.container?.classList.add("is-visible");
       });
       this.draw();
+      const moreBtn = this.container.querySelector<HTMLButtonElement>(
+        ".tables-map-venue-more",
+      );
+      if (moreBtn && venue.placeId) {
+        moreBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = `/tables/${encodeURIComponent(venue.placeId)}`;
+        });
+      }
+      void this.loadTopPlayers(venue.placeId);
     }
 
     hide() {
@@ -173,19 +266,9 @@ export function VenuesMapClient({
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const mapRef = useRef<google.maps.Map | null>(null);
-  const markerByPlaceIdRef = useRef<Map<string, MarkerOverlayInstance>>(new Map());
+  const markerByPlaceIdRef = useRef<Map<string, google.maps.Marker>>(new Map());
+  const clustererRef = useRef<MarkerClusterer | null>(null);
   const popupOverlayRef = useRef<PopupOverlayInstance | null>(null);
-
-  function resetView() {
-    const map = mapRef.current;
-    if (!map || venues.length === 0) return;
-    popupOverlayRef.current?.hide();
-    const bounds = new google.maps.LatLngBounds();
-    for (const v of venues) {
-      bounds.extend({ lat: v.latitude, lng: v.longitude });
-    }
-    map.fitBounds(bounds, { top: 100, right: 100, bottom: 100, left: 100 });
-  }
 
   function openVenuePopup(venue: VenueMapRow) {
     popupOverlayRef.current?.show(venue);
@@ -228,29 +311,51 @@ export function VenuesMapClient({
       popupOverlay.setMap(map);
       popupOverlayRef.current = popupOverlay;
 
-      const bounds = new google.maps.LatLngBounds();
-      markerByPlaceIdRef.current.forEach((marker) => marker.setMap(null));
+      clustererRef.current?.setMap(null);
+      clustererRef.current = null;
       markerByPlaceIdRef.current.clear();
+
+      const bounds = new google.maps.LatLngBounds();
+      const venueMarkers: google.maps.Marker[] = [];
+
       for (const v of venues) {
         bounds.extend({ lat: v.latitude, lng: v.longitude });
-        const marker = createEmojiVenueMarkerOverlay({
-          map,
-          venue: v,
-          onClick: (venue) => {
-            const target = { lat: venue.latitude, lng: venue.longitude };
-            map.panTo(target);
-            map.setZoom(17);
-            markerByPlaceIdRef.current.forEach((m) =>
-              m.setHighlighted(m.getVenue().placeId === venue.placeId),
-            );
-            const selectedMarker = markerByPlaceIdRef.current.get(venue.placeId);
-            selectedMarker?.bounceBriefly();
-            openVenuePopup(venue);
-          },
+        const marker = new google.maps.Marker({
+          position: { lat: v.latitude, lng: v.longitude },
+          icon: getVenueHitIcon(),
+          label: venueMarkerLabel(false),
+          optimized: true,
+          title: v.label,
         });
-        marker.setMap(map);
+        marker.addListener("click", () => {
+          const target = { lat: v.latitude, lng: v.longitude };
+          map.panTo(target);
+          map.setZoom(17);
+          markerByPlaceIdRef.current.forEach((m, placeId) => {
+            m.setLabel(venueMarkerLabel(placeId === v.placeId));
+            m.setZIndex(
+              placeId === v.placeId ? Number(google.maps.Marker.MAX_ZINDEX) + 50 : undefined,
+            );
+          });
+          bounceMarkerBriefly(marker);
+          openVenuePopup(v);
+        });
         markerByPlaceIdRef.current.set(v.placeId, marker);
+        venueMarkers.push(marker);
       }
+
+      const clusterer = new MarkerClusterer({
+        map,
+        markers: venueMarkers,
+        algorithm: new SuperClusterAlgorithm({
+          maxZoom: VENUE_CLUSTER_MAX_ZOOM,
+          radius: VENUE_CLUSTER_RADIUS,
+          minPoints: 2,
+        }),
+        renderer: new LightTablesClusterRenderer(),
+      });
+      clustererRef.current = clusterer;
+
       map.fitBounds(bounds, { top: 100, right: 100, bottom: 100, left: 100 });
     })().catch(() => {
       /* Map failed — list below still works */
@@ -258,8 +363,12 @@ export function VenuesMapClient({
 
     return () => {
       cancelled = true;
+      clustererRef.current?.setMap(null);
+      clustererRef.current = null;
+      markerByPlaceIdRef.current.clear();
       popupOverlayRef.current?.setMap(null);
       popupOverlayRef.current = null;
+      mapRef.current = null;
     };
   }, [venues, apiKey]);
 
@@ -271,7 +380,10 @@ export function VenuesMapClient({
     if (!activeVenue) {
       if (venues.length === 0) return;
       popupOverlayRef.current?.hide();
-      markerByPlaceIdRef.current.forEach((marker) => marker.setHighlighted(false));
+      markerByPlaceIdRef.current.forEach((m) => {
+        m.setLabel(venueMarkerLabel(false));
+        m.setZIndex(undefined);
+      });
       const bounds = new google.maps.LatLngBounds();
       for (const v of venues) {
         bounds.extend({ lat: v.latitude, lng: v.longitude });
@@ -285,11 +397,13 @@ export function VenuesMapClient({
     map.setZoom(17);
 
     const marker = markerByPlaceIdRef.current.get(activeVenue.placeId);
-    markerByPlaceIdRef.current.forEach((m) =>
-      m.setHighlighted(m.getVenue().placeId === activeVenue.placeId),
-    );
+    markerByPlaceIdRef.current.forEach((m, placeId) => {
+      const highlighted = placeId === activeVenue.placeId;
+      m.setLabel(venueMarkerLabel(highlighted));
+      m.setZIndex(highlighted ? Number(google.maps.Marker.MAX_ZINDEX) + 50 : undefined);
+    });
     if (marker) {
-      marker.bounceBriefly();
+      bounceMarkerBriefly(marker);
     }
     if (selectedVenue) {
       openVenuePopup(selectedVenue);

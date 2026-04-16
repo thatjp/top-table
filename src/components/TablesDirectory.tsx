@@ -7,17 +7,25 @@ import type { VenueMapRow } from "@/lib/venue-leaderboard";
 type Props = {
   venues: VenueMapRow[];
   mapKey: string;
+  initialSelectedPlaceId?: string | null;
 };
 
 function normalizeQuery(input: string): string {
   return input.trim().toLowerCase();
 }
 
-export function TablesDirectory({ venues, mapKey }: Props) {
+export function TablesDirectory({ venues, mapKey, initialSelectedPlaceId = null }: Props) {
   const [query, setQuery] = useState("");
-  const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null);
-  const [selectedVenueClickSeq, setSelectedVenueClickSeq] = useState(0);
+  const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(
+    initialSelectedPlaceId,
+  );
+  const [selectedVenueClickSeq, setSelectedVenueClickSeq] = useState(
+    initialSelectedPlaceId ? 1 : 0,
+  );
   const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [lockToSelection, setLockToSelection] = useState(
+    initialSelectedPlaceId ? true : false,
+  );
 
   const filtered = useMemo(() => {
     const q = normalizeQuery(query);
@@ -31,8 +39,10 @@ export function TablesDirectory({ venues, mapKey }: Props) {
     : null;
   const hasDebouncedQuery = normalizeQuery(debouncedQuery).length >= 3;
   const hasQuery = normalizeQuery(query).length > 0;
-  const hasResults = hasQuery && filtered.length > 0;
-  const visibleRows = Math.min(filtered.length, 2);
+  const listItems =
+    lockToSelection && selectedVenue ? [selectedVenue] : filtered;
+  const hasResults = hasQuery && listItems.length > 0;
+  const visibleRows = Math.min(listItems.length, 2);
   const listMaxHeightRem = visibleRows * 4.25;
 
   useEffect(() => {
@@ -74,7 +84,7 @@ export function TablesDirectory({ venues, mapKey }: Props) {
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
-                if (selectedPlaceId) setSelectedPlaceId(null);
+                setLockToSelection(false);
               }}
               placeholder="Type a bar or venue name…"
               className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
@@ -96,13 +106,14 @@ export function TablesDirectory({ venues, mapKey }: Props) {
               className="divide-y divide-zinc-200 overflow-auto rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800 transition-[max-height] duration-200 ease-out"
               style={{ maxHeight: hasResults ? `${listMaxHeightRem}rem` : "0rem" }}
             >
-              {filtered.map((v) => (
+              {listItems.map((v) => (
                 <li key={v.placeId}>
                   <button
                     type="button"
                     onClick={() => {
                       setSelectedPlaceId(v.placeId);
                       setSelectedVenueClickSeq((n) => n + 1);
+                      setLockToSelection(true);
                     }}
                     className="flex w-full flex-col gap-1 px-4 py-3 text-left hover:bg-zinc-50 sm:flex-row sm:items-center sm:justify-between dark:hover:bg-zinc-900/50"
                   >
