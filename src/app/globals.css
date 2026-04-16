@@ -72,3 +72,193 @@ body {
 .venue-autocomplete-item {
   animation: venue-autocomplete-item-in 0.16s ease-out both;
 }
+
+.tables-map-overlay-root {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tables-map-hud-shell {
+  pointer-events: none;
+}
+
+.tables-map-hud {
+  width: min(320px, calc(100vw - 40px));
+  border-radius: 12px;
+  border: 1px solid rgb(228 228 231 / 0.9);
+  background: rgb(255 255 255 / 0.86);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.12);
+  padding: 10px 12px;
+  pointer-events: auto;
+}
+
+.tables-map-hud-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgb(63 63 70);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.tables-map-hud-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: rgb(82 82 91);
+  margin-bottom: 4px;
+}
+
+.tables-map-hud-row strong {
+  color: rgb(24 24 27);
+  font-weight: 600;
+  text-align: right;
+}
+
+.tables-map-hud-reset {
+  margin-top: 6px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgb(212 212 216);
+  background: rgb(250 250 250);
+  color: rgb(39 39 42);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 8px;
+}
+
+.tables-map-hud-reset:hover {
+  background: rgb(244 244 245);
+}
+
+.tables-map-emoji-marker {
+  --marker-scale: 1;
+  position: absolute;
+  transform: translate(-50%, -100%) scale(var(--marker-scale));
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.25));
+  transition: transform 0.14s ease, filter 0.14s ease;
+  z-index: 2;
+}
+
+.tables-map-emoji-marker:hover {
+  --marker-scale: 1.1;
+}
+
+.tables-map-emoji-marker.is-highlighted {
+  --marker-scale: 1.2;
+  filter: drop-shadow(0 3px 4px rgb(0 0 0 / 0.4));
+}
+
+@keyframes tables-map-emoji-bounce {
+  0%,
+  100% {
+    transform: translate(-50%, -100%) scale(1.2);
+  }
+  35% {
+    transform: translate(-50%, -114%) scale(1.28);
+  }
+  70% {
+    transform: translate(-50%, -102%) scale(1.2);
+  }
+}
+
+.tables-map-emoji-marker.is-bouncing {
+  animation: tables-map-emoji-bounce 0.7s ease;
+}
+
+.tables-map-venue-popup {
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, calc(-100% - 10px)) scaleY(0.55);
+  transform-origin: bottom center;
+  transition: opacity 0.14s ease-out, transform 0.18s ease-out;
+  z-index: 3;
+}
+
+.tables-map-venue-popup.is-visible {
+  opacity: 1;
+  transform: translate(-50%, calc(-100% - 26px)) scaleY(1);
+}
+
+.tables-map-venue-popup-card {
+  max-width: 240px;
+  border-radius: 10px;
+  border: 1px solid rgb(228 228 231 / 0.9);
+  background: rgb(255 255 255 / 0.95);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.18);
+  padding: 8px 10px;
+}
+
+.tables-map-venue-popup-body {
+  opacity: 0;
+  transition: opacity 0.12s ease-out 0.08s;
+}
+
+.tables-map-venue-popup.is-visible .tables-map-venue-popup-body {
+  opacity: 1;
+}
+
+.tables-map-venue-popup-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgb(24 24 27);
+  margin-bottom: 2px;
+}
+
+.tables-map-venue-popup-meta {
+  font-size: 0.72rem;
+  color: rgb(82 82 91);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tables-map-hud {
+    border-color: rgb(63 63 70 / 0.9);
+    background: rgb(24 24 27 / 0.84);
+    box-shadow: 0 10px 24px rgb(0 0 0 / 0.36);
+  }
+
+  .tables-map-hud-title {
+    color: rgb(212 212 216);
+  }
+
+  .tables-map-hud-row {
+    color: rgb(161 161 170);
+  }
+
+  .tables-map-hud-row strong {
+    color: rgb(244 244 245);
+  }
+
+  .tables-map-hud-reset {
+    border-color: rgb(82 82 91);
+    background: rgb(39 39 42);
+    color: rgb(244 244 245);
+  }
+
+  .tables-map-hud-reset:hover {
+    background: rgb(63 63 70);
+  }
+
+  .tables-map-venue-popup-card {
+    border-color: rgb(63 63 70 / 0.9);
+    background: rgb(24 24 27 / 0.95);
+    box-shadow: 0 10px 24px rgb(0 0 0 / 0.45);
+  }
+
+  .tables-map-venue-popup-title {
+    color: rgb(244 244 245);
+  }
+
+  .tables-map-venue-popup-meta {
+    color: rgb(161 161 170);
+  }
+}

@@ -9,7 +9,7 @@ const VenuesMapClient = dynamic(
     ssr: false,
     loading: () => (
       <div
-        className="mb-8 h-[min(420px,55vh)] w-full animate-pulse rounded-xl bg-zinc-100 dark:bg-zinc-900"
+        className="h-full w-full animate-pulse bg-zinc-100 dark:bg-zinc-900"
         aria-hidden
       />
     ),
@@ -19,8 +19,25 @@ const VenuesMapClient = dynamic(
 type Props = {
   venues: VenueMapRow[];
   apiKey: string;
+  focusedVenue?: VenueMapRow | null;
+  selectedVenue?: VenueMapRow | null;
+  selectedVenueClickSeq?: number;
 };
 
-export function VenuesMapSection({ venues, apiKey }: Props) {
-  return <VenuesMapClient venues={venues} apiKey={apiKey} />;
+export function VenuesMapSection({
+  venues,
+  apiKey,
+  focusedVenue = null,
+  selectedVenue = null,
+  selectedVenueClickSeq = 0,
+}: Props) {
+  return (
+    <VenuesMapClient
+      venues={venues}
+      apiKey={apiKey}
+      focusedVenue={focusedVenue}
+      selectedVenue={selectedVenue}
+      selectedVenueClickSeq={selectedVenueClickSeq}
+    />
+  );
 }
