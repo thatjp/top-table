@@ -12,11 +12,18 @@ export const metadata: Metadata = {
 };
 
 type PageProps = {
-  params: { id: string };
+  params: Promise<{ id?: string | string[] }>;
 };
 
+function firstDynamicParam(value: string | string[] | undefined): string | undefined {
+  if (value === undefined) return undefined;
+  return Array.isArray(value) ? value[0] : value;
+}
+
 export default async function GameSessionPage({ params }: PageProps) {
-  const { id } = params;
+  const resolved = await params;
+  const id = firstDynamicParam(resolved.id);
+  if (!id) notFound();
   const session = await auth();
   if (!session?.user?.id) {
     redirect(`/login?callbackUrl=/games/session/${id}`);

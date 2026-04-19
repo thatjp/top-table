@@ -11,12 +11,19 @@ import { getLeaderboardForPlace, getVenueMetrics } from "@/lib/venue-leaderboard
 export const dynamic = "force-dynamic";
 
 type PageProps = {
-  params: { placeId: string };
-  searchParams: Record<string, string | string[] | undefined>;
+  params: Promise<{ placeId?: string | string[] }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
+function firstDynamicParam(value: string | string[] | undefined): string | undefined {
+  if (value === undefined) return undefined;
+  return Array.isArray(value) ? value[0] : value;
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { placeId: raw } = params;
+  const resolved = await params;
+  const raw = firstDynamicParam(resolved.placeId);
+  if (!raw) return { title: "Table | Top Table" };
   const placeId = decodeURIComponent(raw);
   const demoMode = (await cookies()).get(DEMO_LEADERBOARD_COOKIE)?.value === "1";
   const metrics = await getVenueMetrics(placeId, { demo: demoMode });
@@ -31,9 +38,12 @@ function minGamesLabel(): number {
 }
 
 export default async function TableDetailPage({ params, searchParams }: PageProps) {
-  const { placeId: raw } = params;
+  const resolved = await params;
+  const raw = firstDynamicParam(resolved.placeId);
+  if (!raw) notFound();
   const placeId = decodeURIComponent(raw);
-  const period = parseLeaderboardPeriod(searchParams.period);
+  const sp = await searchParams;
+  const period = parseLeaderboardPeriod(sp.period);
 
   const demoMode = (await cookies()).get(DEMO_LEADERBOARD_COOKIE)?.value === "1";
   const metrics = await getVenueMetrics(placeId, { demo: demoMode });
